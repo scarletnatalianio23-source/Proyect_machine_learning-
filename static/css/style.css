@@ -1,0 +1,619 @@
+:root {
+    --night: #0f2b46;
+    --forest-dark: #0f3d2e;
+    --forest: #1f7a4d;
+    --leaf: #52b788;
+    --coral: #f3722c;
+    --amber: #f9c74f;
+    --teal: #2ec4b6;
+    --sky: #4cc9f0;
+    --plum: #7b5ea7;
+    --sand: #fff8ec;
+    --ink: #1d2b25;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body {
+    font-family: "DM Sans", system-ui, sans-serif;
+    color: var(--ink);
+    background-color: #fff;
+}
+
+h1, h2, .stat-value, .footer-brand {
+    font-family: "Fraunces", Georgia, serif;
+}
+
+/* ---------- Navigation ---------- */
+.navbar-forest {
+    background-color: rgba(15, 43, 70, 0.94);
+    backdrop-filter: blur(6px);
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, var(--coral), var(--amber), var(--leaf), var(--teal), var(--sky)) 1;
+}
+
+.navbar-forest .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar-forest .nav-link:hover {
+    color: var(--amber);
+}
+
+.navbar-forest .nav-link.disabled {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.brand-icon {
+    color: var(--leaf);
+}
+
+.badge-soon {
+    background-color: var(--amber);
+    color: var(--night);
+}
+
+/* "The project" dropdown */
+.dropdown-menu-forest {
+    min-width: 12rem;
+    padding: 0.5rem;
+    background: rgba(15, 43, 70, 0.97);
+    border: 0;
+    border-top: 3px solid var(--amber);
+    border-radius: 0.75rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.dropdown-menu-forest .dropdown-item {
+    color: rgba(255, 255, 255, 0.88);
+    border-radius: 0.5rem;
+    padding: 0.55rem 0.9rem;
+}
+
+.dropdown-menu-forest .dropdown-item:hover,
+.dropdown-menu-forest .dropdown-item:focus {
+    background: rgba(249, 199, 79, 0.18);
+    color: var(--amber);
+}
+
+@media (min-width: 992px) {
+    .navbar .dropdown:hover > .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0 80px;
+    color: #fff;
+    background:
+        radial-gradient(circle at 88% 12%, rgba(249, 199, 79, 0.45), transparent 38%),
+        radial-gradient(circle at 8% 88%, rgba(46, 196, 182, 0.30), transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(123, 94, 167, 0.18), transparent 60%),
+        linear-gradient(160deg, var(--night) 0%, var(--forest-dark) 58%, var(--forest) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-badge {
+    background-color: rgba(255, 255, 255, 0.14);
+    font-weight: 500;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+}
+
+.hero-title {
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--amber), var(--coral));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.hero-text {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.btn-sun {
+    background: linear-gradient(90deg, var(--amber), #f8a84a);
+    border: 0;
+    color: var(--night);
+    font-weight: 700;
+}
+
+.btn-sun:hover {
+    background: linear-gradient(90deg, #ffd86b, var(--amber));
+    color: var(--night);
+}
+
+/* Falling leaves */
+.leaves span {
+    position: absolute;
+    top: -30px;
+    left: var(--x);
+    width: var(--s);
+    height: var(--s);
+    background: var(--c);
+    border-radius: 0 100% 0 100%;
+    opacity: 0.75;
+    animation: fall var(--t) linear var(--w) infinite;
+}
+
+@keyframes fall {
+    0%   { transform: translate(0, -20px) rotate(0deg); }
+    50%  { transform: translate(45px, 55vh) rotate(180deg); }
+    100% { transform: translate(-25px, 110vh) rotate(360deg); }
+}
+
+/* ---------- Interactive tree ---------- */
+.tree-wrap {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.tree {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.ground {
+    fill: rgba(0, 0, 0, 0.28);
+}
+
+.limb {
+    fill: none;
+    stroke: #8b5a35;
+    stroke-linecap: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: grow 1.2s ease-out var(--d) forwards;
+}
+
+@keyframes grow {
+    to { stroke-dashoffset: 0; }
+}
+
+.twig-leaf {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d) backwards;
+}
+
+@keyframes pop {
+    from { transform: scale(0); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+.node {
+    cursor: pointer;
+    outline: none;
+}
+
+.node .body {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    animation: pop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d) backwards;
+}
+
+.node .canopy {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: sway 5s ease-in-out var(--sw) infinite alternate;
+}
+
+@keyframes sway {
+    from { transform: rotate(-2.5deg); }
+    to   { transform: rotate(2.5deg); }
+}
+
+.node:hover .body,
+.node:focus-visible .body {
+    transform: scale(1.1);
+}
+
+.node .core {
+    fill: var(--c);
+    stroke: #fff;
+    stroke-width: 3;
+    transition: stroke-width 0.2s ease;
+}
+
+.node:focus-visible .core {
+    stroke-width: 6;
+}
+
+.node .glyph {
+    fill: #0f2b46;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.node .glyph-shape {
+    fill: #0f2b46;
+}
+
+.node .glyph-check {
+    fill: none;
+    stroke: #0f2b46;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.node .label rect {
+    fill: rgba(15, 43, 70, 0.82);
+    stroke: var(--c);
+    stroke-width: 2;
+}
+
+.node .label text {
+    fill: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.node .label {
+    animation: fade-in 0.6s ease calc(var(--d) + 0.3s) backwards;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.node .ring {
+    fill: none;
+    stroke: var(--c);
+    stroke-width: 3;
+    opacity: 0;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.node.is-active .ring {
+    animation: ring-pulse 1.8s ease-out infinite;
+}
+
+.node.is-active .core {
+    stroke-width: 5;
+}
+
+.tree.has-active .node:not(.is-active) .body {
+    opacity: 0.7;
+}
+
+@keyframes ring-pulse {
+    from { transform: scale(0.9); opacity: 0.9; }
+    to   { transform: scale(1.35); opacity: 0; }
+}
+
+/* Leaves for the specific objectives */
+.sub-line {
+    fill: none;
+    stroke: var(--teal);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 0.5s ease calc(var(--i) * 0.12s);
+}
+
+.tree.open .sub-line {
+    stroke-dashoffset: 0;
+}
+
+.sub {
+    cursor: pointer;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.3);
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: opacity 0.4s ease calc(var(--i) * 0.12s + 0.25s),
+                transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) calc(var(--i) * 0.12s + 0.25s);
+}
+
+.tree.open .sub {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.tree.open .sub:hover,
+.tree.open .sub:focus-visible {
+    transform: scale(1.18);
+    transition-delay: 0s;
+}
+
+.sub circle {
+    fill: var(--teal);
+    stroke: #fff;
+    stroke-width: 3;
+}
+
+.sub text {
+    fill: #0f2b46;
+    font-weight: 700;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.sub.is-active circle {
+    fill: var(--amber);
+    stroke-width: 5;
+}
+
+.tree-hint {
+    margin: 0.5rem 0 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+/* ---------- Detail panel ---------- */
+.detail-card {
+    --accent: var(--teal);
+    min-height: 280px;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border-top: 8px solid var(--accent);
+    background: rgba(255, 255, 255, 0.97);
+    color: var(--ink);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s ease;
+}
+
+.detail-placeholder {
+    text-align: center;
+    color: #4a5a53;
+    padding: 1.5rem 0;
+}
+
+.detail-placeholder i {
+    font-size: 3rem;
+    background: linear-gradient(135deg, var(--coral), var(--amber), var(--teal));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.detail-content {
+    animation: slide-in 0.45s ease;
+}
+
+@keyframes slide-in {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.detail-badge {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #0f2b46;
+    font-weight: 700;
+}
+
+.detail-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.detail-lead {
+    color: #4a5a53;
+}
+
+.objectives {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    counter-reset: obj;
+}
+
+.objective {
+    position: relative;
+    margin-bottom: 0.75rem;
+    padding: 0.8rem 1rem 0.8rem 3.2rem;
+    border-radius: 0.9rem;
+    background: #f3f7f5;
+    border: 2px solid transparent;
+    cursor: pointer;
+    counter-increment: obj;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.objective::before {
+    content: counter(obj);
+    position: absolute;
+    left: 0.8rem;
+    top: 0.75rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #0f2b46;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.objective:hover {
+    transform: translateX(4px);
+}
+
+.objective.is-active {
+    background: #fff8e1;
+    border-color: var(--amber);
+}
+
+/* ---------- Key figures ---------- */
+.figures {
+    background: var(--sand);
+}
+
+.section-title {
+    font-weight: 700;
+    color: var(--night);
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 5px;
+    margin: 0.7rem auto 0;
+    border-radius: 5px;
+    background: linear-gradient(90deg, var(--coral), var(--amber), var(--teal));
+}
+
+.accent-coral { --ac: var(--coral); }
+.accent-amber { --ac: var(--amber); }
+.accent-teal  { --ac: var(--teal); }
+
+.stat-card {
+    border: 0;
+    border-top: 6px solid var(--ac);
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 24px rgba(15, 43, 70, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(15, 43, 70, 0.16);
+}
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--ac);
+    color: var(--night);
+    font-size: 1.5rem;
+}
+
+.stat-value {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: var(--night);
+}
+
+/* ---------- How it works ---------- */
+.how {
+    background: linear-gradient(180deg, #e9f8f5 0%, #ffffff 100%);
+}
+
+.step {
+    padding: 1.5rem 1rem;
+    border-radius: 1.25rem;
+    background: #fff;
+    border-bottom: 5px solid var(--ac);
+    box-shadow: 0 6px 18px rgba(15, 43, 70, 0.08);
+    height: 100%;
+}
+
+.step-number {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--ac);
+    color: var(--night);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* ---------- Footer ---------- */
+.footer-forest {
+    background: linear-gradient(160deg, var(--night), var(--forest-dark));
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-stripe {
+    height: 6px;
+    background: linear-gradient(90deg, var(--coral), var(--amber), var(--leaf), var(--teal), var(--sky), var(--plum));
+}
+
+.footer-brand {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer-brand i {
+    color: var(--leaf);
+}
+
+.footer-title {
+    font-family: "DM Sans", system-ui, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 1rem;
+}
+
+.footer-muted {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.footer-authors li {
+    margin-bottom: 0.4rem;
+    color: #fff;
+}
+
+.footer-authors i {
+    color: var(--teal);
+}
+
+.badge-role {
+    background: linear-gradient(90deg, var(--teal), var(--sky));
+    color: var(--night);
+    font-weight: 700;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .limb,
+    .tree.open .sub-line {
+        stroke-dashoffset: 0;
+    }
+}

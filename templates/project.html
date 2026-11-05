@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block title %}Project structure | Forest Awareness{% endblock %}
+
+{% block content %}
+
+<!-- Header with the project title -->
+<section class="page-hero">
+    <div class="container">
+        <span class="badge hero-badge mb-3">Project title</span>
+        <h1 class="display-5 hero-title mb-3">{{ project_title }}</h1>
+        <p class="lead hero-text mx-auto mb-4" style="max-width: 720px;">
+            An academic Machine Learning project to estimate deforestation in Colombia
+            using official IDEAM open data.
+        </p>
+        <nav class="section-chips" aria-label="Project sections">
+            <a href="#problem">Problem and justification</a>
+            <a href="#objectives">Objectives</a>
+            <a href="#framework">Framework</a>
+            <a href="#methodology">Methodology and schedule</a>
+            <a href="#references">References</a>
+        </nav>
+    </div>
+</section>
+
+<!-- Problem statement and justification -->
+<section id="problem" class="doc-section alt">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Problem statement and justification</h2>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <article class="doc-card accent-coral h-100">
+                    <span class="doc-tag">The problem</span>
+                    <p class="mb-0">{{ project.problem.text }}</p>
+                </article>
+            </div>
+            <div class="col-lg-6">
+                <article class="doc-card accent-amber h-100">
+                    <span class="doc-tag">Justification</span>
+                    {% for paragraph in justification %}
+                    <p class="{% if loop.last %}mb-0{% endif %}">{{ paragraph }}</p>
+                    {% endfor %}
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Objectives -->
+<section id="objectives" class="doc-section">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Project objectives</h2>
+
+        <article class="doc-card accent-amber mb-4">
+            <span class="doc-tag">General objective</span>
+            <p class="mb-0 fs-5">{{ project.general.text }}</p>
+        </article>
+
+        <div class="row g-4">
+            {% for item in project.specific['items'] %}
+            <div class="col-md-4">
+                <article class="doc-card accent-teal h-100">
+                    <div class="step-number step-number-sm">{{ loop.index }}</div>
+                    <span class="doc-tag">Specific objective {{ loop.index }}</span>
+                    <p class="mb-0">{{ item }}</p>
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Referential framework (optional) -->
+<section id="framework" class="doc-section alt">
+    <div class="container">
+        <h2 class="section-title text-center mb-3">Referential framework</h2>
+        <p class="text-center mb-5"><span class="badge badge-optional">Optional section</span></p>
+        <div class="row g-4">
+            {% for block in framework %}
+            <div class="col-md-4">
+                <article class="doc-card accent-{{ block.color }} h-100">
+                    <div class="stat-icon"><i class="bi {{ block.icon }}"></i></div>
+                    <h3 class="h5 mb-2">{{ block.title }}</h3>
+                    <p class="mb-0 text-secondary">{{ block.text }}</p>
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Methodology and schedule -->
+<section id="methodology" class="doc-section cool">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Methodology and development schedule</h2>
+
+        <div class="row g-4 mb-5">
+            {% for step in methodology %}
+            <div class="col-md-6 col-lg-3">
+                <div class="step accent-{{ step.color }} text-center">
+                    <div class="step-number">{{ loop.index }}</div>
+                    <h3 class="h5">{{ step.title }}</h3>
+                    <p class="text-secondary mb-0">{{ step.text }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h3 class="subsection-title text-center mb-4">Three-week schedule</h3>
+        <div class="timeline">
+            {% for item in schedule %}
+            <article class="timeline-item accent-{{ item.color }}">
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                    <span class="week-tag">{{ item.week }}</span>
+                    <span class="small text-secondary">{{ item.objective }}</span>
+                </div>
+                <h4 class="h5 mb-2">{{ item.title }}</h4>
+                <ul class="mb-0 ps-3">
+                    {% for task in item.tasks %}
+                    <li>{{ task }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- References (optional) -->
+<section id="references" class="doc-section">
+    <div class="container">
+        <h2 class="section-title text-center mb-3">References</h2>
+        <p class="text-center mb-5"><span class="badge badge-optional">Optional section</span></p>
+        <article class="doc-card accent-teal mx-auto" style="max-width: 820px;">
+            <ol class="mb-0 ps-3">
+                {% for reference in references %}
+                <li class="{% if not loop.last %}mb-2{% endif %}">{{ reference }}</li>
+                {% endfor %}
+            </ol>
+        </article>
+    </div>
+</section>
+
+{% endblock %}

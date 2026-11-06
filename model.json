@@ -1,0 +1,40 @@
+{
+  "features": [
+    "area_km2",
+    "population",
+    "cattle_heads",
+    "planted_area_ha",
+    "nbi_pct"
+  ],
+  "intercept": -4.872833194202338,
+  "coefficients": [
+    1.0611876075377857,
+    -0.09273430603270005,
+    0.15791761003984917,
+    -0.0003089054184223892,
+    0.019544154657240614
+  ],
+  "residual_sigma": 1.3347947339438524,
+  "loss_quantiles": {
+    "0.25": 36.0,
+    "0.5": 113.0,
+    "0.75": 416.5,
+    "0.9": 1138.6000000000001,
+    "0.95": 2005.1999999999998
+  },
+  "training_rows": 940,
+  "metrics": {
+    "Multiple linear regression": {
+      "r2_log": 0.552,
+      "mae_ha": 351.3
+    },
+    "Random Forest": {
+      "r2_log": 0.505,
+      "mae_ha": 404.9
+    },
+    "Always predicting the median": {
+      "r2_log": null,
+      "mae_ha": 494.6
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% block title %}Predict | Forest Awareness{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/predict.css') }}">
+
+<section class="pred-hero">
+    <div class="container">
+        <span class="pred-kicker"><i class="bi bi-stars me-1"></i>Intelligent module</span>
+        <h1 class="pred-title">Estimate yearly forest loss in a municipality</h1>
+        <p class="pred-lead">
+            Pick a municipality to pre-fill the form, or type your own values.
+            The model estimates how many hectares of forest could be lost in one year.
+        </p>
+    </div>
+</section>
+
+<section class="pred-body">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+                <form method="post" action="{{ url_for('predict_page') }}" class="pred-card" id="predict-form" novalidate>
+                    <h2 class="pred-card-title"><i class="bi bi-pencil-square me-2"></i>Enter the data</h2>
+
+                    <label class="form-label fw-semibold" for="municipality">Start from a municipality <span class="text-muted fw-normal">(optional)</span></label>
+                    <select class="form-select mb-4" id="municipality" name="municipality"
+                            data-municipalities='{{ municipalities|tojson }}'>
+                        <option value="">Custom values</option>
+                        {% for m in municipalities %}
+                        <option value="{{ m.label }}" {% if m.label == selected %}selected{% endif %}>{{ m.label }}</option>
+                        {% endfor %}
+                    </select>
+
+                    {% for name, label, unit, low, high, step, icon, help in fields %}
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold" for="{{ name }}">
+                            <i class="bi {{ icon }} me-1 field-icon"></i>{{ label }}
+                        </label>
+                        <div class="input-group">
+                            <input type="number" inputmode="decimal" class="form-control {% if name in errors %}is-invalid{% endif %}"
+                                   id="{{ name }}" name="{{ name }}" min="{{ low }}" max="{{ high }}" step="{{ step }}"
+                                   value="{{ values.get(name, '') }}" required>
+                            <span class="input-group-text">{{ unit }}</span>
+                            {% if name in errors %}<div class="invalid-feedback">{{ errors[name] }}</div>{% endif %}
+                        </div>
+                        <div class="form-text">{{ help }}</div>
+                    </div>
+                    {% endfor %}
+
+                    <div class="d-flex gap-2 mt-4">
+                        <button type="submit" class="btn btn-predict flex-grow-1">
+                            <i class="bi bi-magic me-2"></i>Predict forest loss
+                        </button>
+                        <a href="{{ url_for('predict_page') }}" class="btn btn-outline-secondary">Clear</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-lg-6">
+                {% if result %}
+                <div class="pred-card pred-result accent-{{ result.color }}" id="result" aria-live="polite">
+                    <span class="level-badge">{{ result.level }} loss</span>
+                    <p class="result-label mb-0">Estimated forest loss in one year</p>
+                    <p class="result-number">{{ '{:,}'.format(result.estimate) }} <span>hectares</span></p>
+                    <p class="result-range">
+                        Likely range: <strong>{{ '{:,}'.format(result.low) }}</strong> to
+                        <strong>{{ '{:,}'.format(result.high) }}</strong> ha
+                    </p>
+
+                    <div class="gauge" role="img" aria-label="Position of the estimate on the loss scale">
+                        <div class="gauge-bar"><span class="gauge-dot" style="left: {{ result.gauge }}%"></span></div>
+                        <div class="gauge-scale"><span>0</span><span>100</span><span>1,000</span><span>12,000+ ha</span></div>
+                    </div>
+
+                    <p class="result-compare">
+                        This is more than <strong>{{ result.percentile }}%</strong> of the municipalities in the
+                        dataset (median: {{ '{:,}'.format(result.median) }} ha per year).
+                    </p>
+
+                    <h3 class="drivers-title">What moves this estimate</h3>
+                    <ul class="drivers">
+                        {% for d in result.drivers %}
+                        <li>
+                            <span class="drv-name">{{ d.label }}</span>
+                            <span class="drv-track"><span class="drv-fill {{ d.direction }}" style="width: {{ d.width }}%"></span></span>
+                            <span class="drv-dir">
+                                {% if d.direction == 'up' %}<i class="bi bi-arrow-up-right"></i> raises{% else %}<i class="bi bi-arrow-down-right"></i> lowers{% endif %}
+                            </span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% else %}
+                <div class="pred-card pred-empty">
+                    <i class="bi bi-tree-fill empty-icon"></i>
+                    <h2 class="pred-card-title">Your estimate will appear here</h2>
+                    <p>Fill in the five values and press <strong>Predict forest loss</strong>.</p>
+                </div>
+                {% endif %}
+
+                <div class="pred-card pred-about mt-4">
+                    <h3 class="about-title"><i class="bi bi-info-circle me-2"></i>About this model</h3>
+                    <p class="mb-2">
+                        Multiple linear regression trained on {{ '{:,}'.format(rows) }} municipality-year records.
+                        It was compared with a Random Forest using five-fold cross-validation
+                        (all years of a municipality are kept in the same fold).
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table table-sm about-table mb-2">
+                            <thead><tr><th>Model</th><th>R²</th><th>Mean error</th></tr></thead>
+                            <tbody>
+                            {% for name, m in metrics.items() %}
+                                <tr><td>{{ name }}</td><td>{{ m.r2_log if m.r2_log is not none else '-' }}</td><td>{{ m.mae_ha }} ha</td></tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="about-note mb-0">
+                        <i class="bi bi-exclamation-triangle me-1"></i>
+                        Educational prototype. It is trained on a <strong>simulated</strong> dataset built for this
+                        academic project, so results are illustrative and are not official IDEAM figures.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function () {
+    var select = document.getElementById("municipality");
+    var list = JSON.parse(select.dataset.municipalities);
+    var names = ["area_km2", "population", "cattle_heads", "planted_area_ha", "nbi_pct"];
+
+    select.addEventListener("change", function () {
+        var m = list.find(function (item) { return item.label === select.value; });
+        if (!m) { return; }
+        names.forEach(function (n) {
+            var input = document.getElementById(n);
+            input.value = m[n];
+            input.classList.remove("is-invalid");
+        });
+    });
+
+    // Editing a value means the numbers no longer belong to the chosen municipality.
+    names.forEach(function (n) {
+        document.getElementById(n).addEventListener("input", function () { select.value = ""; });
+    });
+
+    var result = document.getElementById("result");
+    if (result && window.innerWidth < 992) { result.scrollIntoView({ behavior: "smooth", block: "start" }); }
+})();
+</script>
+{% endblock %}

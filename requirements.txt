@@ -1,2 +1,6 @@
 Flask==3.0.3
 gunicorn==22.0.0
+pandas>=2.0
+numpy>=1.26
+# Only to retrain the model (python train_model.py):
+# scikit-learn>=1.4

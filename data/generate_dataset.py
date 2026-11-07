@@ -6,7 +6,7 @@ names and departments are real, and the surface areas are approximate, but the
 population, cattle, planted area, poverty index and forest loss are simulated.
 They are NOT official IDEAM, DANE or SMByC figures.
 
-One row = one municipality in one year (2019-2023). Target: hectares of forest
+One row = one municipality in one year (2015-2023). Target: hectares of forest
 lost that year (`forest_loss_ha`).
 
 Usage:  python data/generate_dataset.py
@@ -215,7 +215,7 @@ NBI_MEAN = {"Andean": 40, "Caribbean": 58, "Pacific": 72, "Orinoquia": 48, "Amaz
 COCA_PROB = {"Andean": 0.10, "Caribbean": 0.15, "Pacific": 0.45, "Orinoquia": 0.25, "Amazon": 0.45}
 ARMED_RATE = {"Andean": 0.35, "Caribbean": 0.8, "Pacific": 1.3, "Orinoquia": 0.8, "Amazon": 1.2}
 REGION_EFFECT = {"Andean": 0.0, "Caribbean": -0.1, "Pacific": 0.35, "Orinoquia": 0.15, "Amazon": 0.85}
-YEARS = [2019, 2020, 2021, 2022, 2023]
+YEARS = list(range(2015, 2024))
 BIG_CITIES = {"Bogotá D.C.", "Medellín", "Cali", "Barranquilla", "Cartagena", "Bucaramanga", "Cúcuta"}
 
 

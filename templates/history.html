@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}History | Forest Awareness{% endblock %}
+{% block content %}
+<section class="page-hero"><div class="container">
+    <span class="page-kicker"><i class="bi bi-clock-history me-1"></i>History</span>
+    <h1>{% if scope_all %}All queries{% else %}My queries{% endif %}</h1>
+    <p>{% if scope_all %}Every estimate made on the platform.{% else %}The estimates you made, newest first.{% endif %}</p>
+</div></section>
+<section class="page-body"><div class="container">
+    <div class="card-x">
+        <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-3">
+            <div class="btn-group">
+                <a class="btn btn-sm {% if not scope_all %}btn-dark{% else %}btn-outline-dark{% endif %}" href="{{ url_for('history') }}">Mine</a>
+                {% if current_user['role'] in ('authority', 'admin') %}
+                <a class="btn btn-sm {% if scope_all %}btn-dark{% else %}btn-outline-dark{% endif %}" href="{{ url_for('history', scope='all') }}">Everyone</a>
+                {% endif %}
+            </div>
+            <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('history_csv', scope='all' if scope_all else None) }}">
+                <i class="bi bi-download me-1"></i>Download CSV
+            </a>
+        </div>
+        {% if rows %}
+        <div class="table-responsive">
+            <table class="table-x">
+                <thead><tr>
+                    <th>Date</th>{% if scope_all %}<th>User</th>{% endif %}<th>Municipality</th><th>Model</th>
+                    <th class="text-end">Area km²</th><th class="text-end">Cattle</th><th class="text-end">NBI %</th>
+                    <th class="text-end">Estimate</th><th>Level</th>
+                </tr></thead>
+                <tbody>
+                {% for r in rows %}
+                    <tr>
+                        <td>{{ r['created_at'][:16] }}</td>
+                        {% if scope_all %}<td>{{ r['user_name'] }}</td>{% endif %}
+                        <td>{{ r['municipality'] or 'Custom values' }}</td>
+                        <td>{{ r['model'] }}</td>
+                        <td class="text-end">{{ '{:,.0f}'.format(r['area_km2']) }}</td>
+                        <td class="text-end">{{ '{:,.0f}'.format(r['cattle_heads']) }}</td>
+                        <td class="text-end">{{ r['nbi_pct'] }}</td>
+                        <td class="text-end"><strong>{{ '{:,}'.format(r['estimate']) }}</strong> ha</td>
+                        <td><span class="chip {{ {'Low': 'teal', 'Moderate': 'amber', 'High': 'coral', 'Very high': 'plum'}[r['level']] }}">{{ r['level'] }}</span></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p class="mb-0">No queries yet. <a href="{{ url_for('predict_page') }}">Make your first prediction</a>.</p>
+        {% endif %}
+    </div>
+</div></section>
+{% endblock %}

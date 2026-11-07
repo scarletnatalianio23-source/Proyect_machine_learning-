@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Sign in | Forest Awareness{% endblock %}
+{% block content %}
+<section class="page-hero"><div class="container">
+    <span class="page-kicker"><i class="bi bi-shield-lock me-1"></i>Secure access</span>
+    <h1>Sign in</h1>
+    <p>Citizens, local authorities and administrators each see the tools that fit their role.</p>
+</div></section>
+<section class="page-body"><div class="container"><div class="auth-wrap">
+    <form method="post" class="card-x" novalidate>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <h2><i class="bi bi-box-arrow-in-right me-2"></i>Welcome back</h2>
+        <div class="mb-3">
+            <label for="email" class="form-label fw-semibold">Email</label>
+            <input type="email" class="form-control" id="email" name="email" autocomplete="username" required autofocus>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label fw-semibold">Password</label>
+            <input type="password" class="form-control" id="password" name="password" autocomplete="current-password" required>
+        </div>
+        <button class="btn btn-predict w-100" type="submit">Sign in</button>
+        <p class="text-center mt-3 mb-0">New here? <a href="{{ url_for('register') }}">Create a citizen account</a></p>
+    </form>
+    <div class="demo-box mt-3">
+        <strong>Demo accounts</strong> (academic prototype)
+        <ul class="mb-0 mt-1 ps-3">
+            {% for name, email, password, role in demo %}
+            <li>{{ ROLE_LABELS[role] }}: <code>{{ email }}</code> / <code>{{ password }}</code></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div></div></section>
+{% endblock %}

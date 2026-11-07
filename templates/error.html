@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} | Forest Awareness{% endblock %}
+{% block content %}
+<section class="page-hero"><div class="container">
+    <span class="page-kicker">Error {{ code }}</span>
+    <h1>{{ title }}</h1>
+    <p>{{ message }}</p>
+</div></section>
+<section class="page-body"><div class="container">
+    <a href="{{ url_for('home') }}" class="btn btn-predict"><i class="bi bi-house-door me-2"></i>Back to home</a>
+</div></section>
+{% endblock %}

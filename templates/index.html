@@ -35,9 +35,9 @@
                 </p>
                 <div class="d-flex flex-wrap justify-content-center gap-3">
                     <a href="#figures" class="btn btn-sun btn-lg">See key figures</a>
-                    <button class="btn btn-outline-light btn-lg" disabled>
-                        Try the predictor <span class="badge badge-soon ms-1">Soon</span>
-                    </button>
+                    <a href="{{ url_for('predict_page') }}" class="btn btn-outline-light btn-lg">
+                        Try the predictor <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
                 </div>
             </div>
         </div>

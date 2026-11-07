@@ -1,0 +1,125 @@
+{
+  "metrics": {
+    "linear": {
+      "mae": 454.8,
+      "rmse": 1735.4,
+      "r2": -0.266,
+      "r2_log": 0.585
+    },
+    "forest": {
+      "mae": 417.0,
+      "rmse": 1181.1,
+      "r2": 0.414,
+      "r2_log": 0.542
+    },
+    "boosting": {
+      "mae": 390.2,
+      "rmse": 1131.8,
+      "r2": 0.462,
+      "r2_log": 0.561
+    },
+    "boosting_kmeans": {
+      "mae": 392.6,
+      "rmse": 1146.7,
+      "r2": 0.447,
+      "r2_log": 0.558
+    }
+  },
+  "baseline": {
+    "mae": 542.9,
+    "rmse": 1611.5
+  },
+  "best": "boosting",
+  "clustering": {
+    "silhouette": 0.189,
+    "k": 4,
+    "profiles": [
+      {
+        "name": "Low pressure",
+        "cluster": 2,
+        "rows": 475,
+        "municipalities": 58,
+        "mean_loss": 57,
+        "area_km2": 600,
+        "cattle_heads": 12349,
+        "nbi_pct": 33.6,
+        "coca_share": 6
+      },
+      {
+        "name": "Moderate pressure",
+        "cluster": 0,
+        "rows": 370,
+        "municipalities": 52,
+        "mean_loss": 289,
+        "area_km2": 1200,
+        "cattle_heads": 8406,
+        "nbi_pct": 66.9,
+        "coca_share": 37
+      },
+      {
+        "name": "High pressure",
+        "cluster": 3,
+        "rows": 571,
+        "municipalities": 68,
+        "mean_loss": 611,
+        "area_km2": 2200,
+        "cattle_heads": 85212,
+        "nbi_pct": 58.6,
+        "coca_share": 0
+      },
+      {
+        "name": "Critical pressure",
+        "cluster": 1,
+        "rows": 276,
+        "municipalities": 31,
+        "mean_loss": 1827,
+        "area_km2": 3300,
+        "cattle_heads": 120292,
+        "nbi_pct": 59.3,
+        "coca_share": 100
+      }
+    ],
+    "gain_mae": -2.4
+  },
+  "rl": {
+    "teams": 10,
+    "departments": [
+      "Vichada",
+      "Guaviare",
+      "Caquetá",
+      "Vaupés",
+      "Meta",
+      "Chocó",
+      "Amazonas",
+      "Antioquia"
+    ],
+    "risk_ha": [
+      13422,
+      12859,
+      11230,
+      6001,
+      5274,
+      3181,
+      2529,
+      2116
+    ],
+    "allocation": [
+      3,
+      3,
+      2,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "results": {
+      "Q-learning agent": 24226,
+      "Optimal (benchmark)": 24226,
+      "Proportional to risk": 20938,
+      "All teams in the riskiest department": 10006,
+      "Random assignment (average)": 16908
+    }
+  },
+  "rows": 1692
+}

@@ -21,6 +21,7 @@
 
             <div class="col-lg-6">
                 <form method="post" action="{{ url_for('predict_page') }}" class="pred-card" id="predict-form" novalidate>
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                     <h2 class="pred-card-title"><i class="bi bi-pencil-square me-2"></i>Enter the data</h2>
 
                     <label class="form-label fw-semibold" for="municipality">Start from a municipality <span class="text-muted fw-normal">(optional)</span></label>
@@ -48,6 +49,17 @@
                     </div>
                     {% endfor %}
 
+                    <div class="mb-3 mt-4 model-pick">
+                        <label class="form-label fw-semibold" for="model"><i class="bi bi-cpu me-1 field-icon"></i>Model</label>
+                        <select class="form-select" id="model" name="model">
+                            <option value="best" {% if choice == 'best' %}selected{% endif %}>Best model ({{ model_names[best] }})</option>
+                            {% for key, label in model_names.items() %}
+                            <option value="{{ key }}" {% if choice == key %}selected{% endif %}>{{ label }}</option>
+                            {% endfor %}
+                            <option value="all" {% if choice == 'all' %}selected{% endif %}>Compare the three models</option>
+                        </select>
+                    </div>
+
                     <div class="d-flex gap-2 mt-4">
                         <button type="submit" class="btn btn-predict flex-grow-1">
                             <i class="bi bi-magic me-2"></i>Predict forest loss
@@ -61,12 +73,29 @@
                 {% if result %}
                 <div class="pred-card pred-result accent-{{ result.color }}" id="result" aria-live="polite">
                     <span class="level-badge">{{ result.level }} loss</span>
+                    <span class="model-tag"><i class="bi bi-cpu me-1"></i>{{ result.name }}{% if result.is_best %} &middot; best model{% endif %}</span>
                     <p class="result-label mb-0">Estimated forest loss in one year</p>
                     <p class="result-number">{{ '{:,}'.format(result.estimate) }} <span>hectares</span></p>
                     <p class="result-range">
                         Likely range: <strong>{{ '{:,}'.format(result.low) }}</strong> to
                         <strong>{{ '{:,}'.format(result.high) }}</strong> ha
                     </p>
+
+
+                    {% set felled = [ (result.estimate / 50)|round(0, 'ceil')|int, 100 ]|min %}
+                    <div class="forest" data-felled="{{ felled }}" role="img"
+                         aria-label="{{ felled }} of 100 trees felled">
+                        <div class="forest-grid" id="forest-grid"></div>
+                        <p class="forest-caption">
+                            <i class="bi bi-tree-fill tree-on"></i> standing
+                            <i class="bi bi-circle-fill stump-dot"></i> felled
+                            <span class="forest-scale">1 tree = 50 ha{% if result.estimate > 5000 %} &middot; scale capped at 5,000 ha{% endif %}</span>
+                        </p>
+                        <p class="forest-fields">
+                            <i class="bi bi-trophy-fill me-1"></i>
+                            About <strong>{{ '{:,}'.format((result.estimate * 1.4)|round|int) }}</strong> football fields of forest
+                        </p>
+                    </div>
 
                     <div class="gauge" role="img" aria-label="Position of the estimate on the loss scale">
                         <div class="gauge-bar"><span class="gauge-dot" style="left: {{ result.gauge }}%"></span></div>
@@ -77,6 +106,22 @@
                         This is more than <strong>{{ result.percentile }}%</strong> of the municipalities in the
                         dataset (median: {{ '{:,}'.format(result.median) }} ha per year).
                     </p>
+
+                    {% if result.all %}
+                    <h3 class="drivers-title">The three models on this municipality</h3>
+                    <table class="table-x mb-2">
+                        <thead><tr><th>Model</th><th class="text-end">Estimate</th><th class="text-end">Likely range</th></tr></thead>
+                        <tbody>
+                        {% for m in result.all %}
+                            <tr {% if m.key == best %}class="best"{% endif %}>
+                                <td>{{ m.name }}{% if m.key == best %} <span class="chip win">best</span>{% endif %}</td>
+                                <td class="text-end">{{ '{:,}'.format(m.estimate) }} ha</td>
+                                <td class="text-end">{{ '{:,}'.format(m.low) }} to {{ '{:,}'.format(m.high) }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    {% endif %}
 
                     <h3 class="drivers-title">What moves this estimate</h3>
                     <ul class="drivers">
@@ -95,27 +140,18 @@
                 <div class="pred-card pred-empty">
                     <i class="bi bi-tree-fill empty-icon"></i>
                     <h2 class="pred-card-title">Your estimate will appear here</h2>
-                    <p>Fill in the five values and press <strong>Predict forest loss</strong>.</p>
+                    <p>Fill in the values and press <strong>Predict forest loss</strong>.</p>
                 </div>
                 {% endif %}
 
                 <div class="pred-card pred-about mt-4">
-                    <h3 class="about-title"><i class="bi bi-info-circle me-2"></i>About this model</h3>
+                    <h3 class="about-title"><i class="bi bi-info-circle me-2"></i>About these models</h3>
                     <p class="mb-2">
-                        Multiple linear regression trained on {{ '{:,}'.format(rows) }} municipality-year records.
-                        It was compared with a Random Forest using five-fold cross-validation
-                        (all years of a municipality are kept in the same fold).
+                        Three regression models were trained on {{ '{:,}'.format(rows) }} municipality-year records and
+                        compared with the same validation. <strong>{{ model_names[best] }}</strong> had the lowest
+                        average error, so it is the default.
+                        <a href="{{ url_for('models_page') }}">See the full comparison</a>.
                     </p>
-                    <div class="table-responsive">
-                        <table class="table table-sm about-table mb-2">
-                            <thead><tr><th>Model</th><th>R²</th><th>Mean error</th></tr></thead>
-                            <tbody>
-                            {% for name, m in metrics.items() %}
-                                <tr><td>{{ name }}</td><td>{{ m.r2_log if m.r2_log is not none else '-' }}</td><td>{{ m.mae_ha }} ha</td></tr>
-                            {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
                     <p class="about-note mb-0">
                         <i class="bi bi-exclamation-triangle me-1"></i>
                         Educational prototype. It is trained on a <strong>simulated</strong> dataset built for this
@@ -134,7 +170,7 @@
 (function () {
     var select = document.getElementById("municipality");
     var list = JSON.parse(select.dataset.municipalities);
-    var names = ["area_km2", "population", "cattle_heads", "planted_area_ha", "nbi_pct"];
+    var names = ["area_km2", "population", "cattle_heads", "planted_area_ha", "nbi_pct", "coca_ha", "armed_groups"];
 
     select.addEventListener("change", function () {
         var m = list.find(function (item) { return item.label === select.value; });
@@ -150,6 +186,36 @@
     names.forEach(function (n) {
         document.getElementById(n).addEventListener("input", function () { select.value = ""; });
     });
+
+
+    var forest = document.querySelector(".forest");
+    if (forest) {
+        var grid = document.getElementById("forest-grid");
+        var felled = parseInt(forest.dataset.felled, 10) || 0;
+        // Felled trees are scattered in a fixed pseudo-random order, so the clearing looks natural.
+        var order = [];
+        for (var i = 0; i < 100; i++) { order.push(i); }
+        var seed = 7;
+        for (var j = order.length - 1; j > 0; j--) {
+            seed = (seed * 9301 + 49297) % 233280;
+            var k = Math.floor(seed / 233280 * (j + 1));
+            var tmp = order[j]; order[j] = order[k]; order[k] = tmp;
+        }
+        var cells = [];
+        for (var c = 0; c < 100; c++) {
+            var cell = document.createElement("span");
+            cell.className = "tree-cell";
+            cell.innerHTML = '<i class="bi bi-tree-fill tree"></i><i class="stump"></i>';
+            cell.style.setProperty("--sway", (c % 7) * 0.35 + "s");
+            grid.appendChild(cell);
+            cells.push(cell);
+        }
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        order.slice(0, felled).forEach(function (index, n) {
+            setTimeout(function () { cells[index].classList.add("felled"); },
+                       reduce ? 0 : 500 + n * Math.min(60, 2200 / Math.max(felled, 1)));
+        });
+    }
 
     var result = document.getElementById("result");
     if (result && window.innerWidth < 992) { result.scrollIntoView({ behavior: "smooth", block: "start" }); }

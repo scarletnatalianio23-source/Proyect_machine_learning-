@@ -1,4 +1,4 @@
-# BosqueIA
+# Forest Awareness
 
 An intelligent website to analyze and estimate deforestation in Colombia with Machine Learning.
 
@@ -6,7 +6,7 @@ An intelligent website to analyze and estimate deforestation in Colombia with Ma
 
 ## Problem
 
-Colombia loses natural forest every year, and the official IDEAM data are mostly published as reports and bulletins. BosqueIA aims to turn that data into a simple web tool that estimates the deforestation of a municipality from manually entered variables.
+Colombia loses natural forest every year, and the official IDEAM data are mostly published as reports and bulletins. Forest Awareness aims to turn that data into a simple web tool that estimates the deforestation of a municipality from manually entered variables.
 
 ## Home page
 

@@ -1,125 +1,137 @@
 {
+  "best": "forest",
   "metrics": {
     "linear": {
-      "mae": 454.8,
-      "rmse": 1735.4,
-      "r2": -0.266,
-      "r2_log": 0.585
+      "mae": 344.8,
+      "rmse": 1017.9,
+      "r2_log": 0.643
     },
     "forest": {
-      "mae": 417.0,
-      "rmse": 1181.1,
-      "r2": 0.414,
-      "r2_log": 0.542
+      "mae": 319.1,
+      "rmse": 880.3,
+      "r2_log": 0.636
     },
     "boosting": {
-      "mae": 390.2,
-      "rmse": 1131.8,
-      "r2": 0.462,
-      "r2_log": 0.561
-    },
-    "boosting_kmeans": {
-      "mae": 392.6,
-      "rmse": 1146.7,
-      "r2": 0.447,
-      "r2_log": 0.558
+      "mae": 345.9,
+      "rmse": 998.4,
+      "r2_log": 0.635
     }
   },
-  "baseline": {
-    "mae": 542.9,
-    "rmse": 1611.5
+  "per_year": {
+    "linear": {
+      "2021": 299.9,
+      "2022": 366.3,
+      "2023": 368.2
+    },
+    "forest": {
+      "2021": 287.0,
+      "2022": 333.5,
+      "2023": 336.8
+    },
+    "boosting": {
+      "2021": 313.0,
+      "2022": 356.1,
+      "2023": 368.7
+    }
   },
-  "best": "boosting",
+  "baselines": {
+    "Same as last year": {
+      "mae": 327.1,
+      "rmse": 931.7,
+      "r2_log": 0.517
+    },
+    "Average of the last 3 years": {
+      "mae": 346.0,
+      "rmse": 882.9,
+      "r2_log": 0.612
+    },
+    "Always the median": {
+      "mae": 555.9,
+      "rmse": 1785.3,
+      "r2_log": -0.0
+    }
+  },
   "clustering": {
-    "silhouette": 0.189,
+    "silhouette": 0.152,
     "k": 4,
     "profiles": [
       {
         "name": "Low pressure",
-        "cluster": 2,
-        "rows": 475,
-        "municipalities": 58,
-        "mean_loss": 57,
+        "municipalities": 55,
+        "mean_loss": 63,
         "area_km2": 600,
-        "cattle_heads": 12349,
-        "nbi_pct": 33.6,
-        "coca_share": 6
+        "cattle_heads": 9639,
+        "nbi_pct": 49.3,
+        "coca_share": 15
       },
       {
         "name": "Moderate pressure",
-        "cluster": 0,
-        "rows": 370,
-        "municipalities": 52,
-        "mean_loss": 289,
-        "area_km2": 1200,
-        "cattle_heads": 8406,
-        "nbi_pct": 66.9,
-        "coca_share": 37
+        "municipalities": 66,
+        "mean_loss": 190,
+        "area_km2": 1450,
+        "cattle_heads": 46938,
+        "nbi_pct": 45.3,
+        "coca_share": 2
       },
       {
         "name": "High pressure",
-        "cluster": 3,
-        "rows": 571,
-        "municipalities": 68,
-        "mean_loss": 611,
-        "area_km2": 2200,
-        "cattle_heads": 85212,
-        "nbi_pct": 58.6,
-        "coca_share": 0
+        "municipalities": 33,
+        "mean_loss": 237,
+        "area_km2": 1700,
+        "cattle_heads": 25986,
+        "nbi_pct": 58.0,
+        "coca_share": 100
       },
       {
         "name": "Critical pressure",
-        "cluster": 1,
-        "rows": 276,
-        "municipalities": 31,
-        "mean_loss": 1827,
-        "area_km2": 3300,
-        "cattle_heads": 120292,
-        "nbi_pct": 59.3,
-        "coca_share": 100
+        "municipalities": 34,
+        "mean_loss": 2907,
+        "area_km2": 7100,
+        "cattle_heads": 242137,
+        "nbi_pct": 57.9,
+        "coca_share": 32
       }
-    ],
-    "gain_mae": -2.4
+    ]
   },
   "rl": {
     "teams": 10,
     "departments": [
-      "Vichada",
-      "Guaviare",
       "Caquetá",
-      "Vaupés",
+      "Guaviare",
+      "Vichada",
       "Meta",
-      "Chocó",
-      "Amazonas",
-      "Antioquia"
+      "Guainía",
+      "Putumayo",
+      "Antioquia",
+      "Casanare"
     ],
     "risk_ha": [
-      13422,
-      12859,
-      11230,
-      6001,
-      5274,
-      3181,
-      2529,
-      2116
+      18397,
+      14105,
+      13641,
+      8209,
+      5280,
+      5022,
+      3410,
+      3129
     ],
     "allocation": [
       3,
-      3,
+      2,
       2,
       1,
       1,
-      0,
+      1,
       0,
       0
     ],
     "results": {
-      "Q-learning agent": 24226,
-      "Optimal (benchmark)": 24226,
-      "Proportional to risk": 20938,
-      "All teams in the riskiest department": 10006,
-      "Random assignment (average)": 16908
+      "Q-learning agent": 29689,
+      "Optimal (benchmark)": 29706,
+      "Proportional to risk": 24198,
+      "All teams in the riskiest department": 13714,
+      "Random assignment (average)": 21253
     }
   },
-  "rows": 1692
+  "validation_rows": 564
 }

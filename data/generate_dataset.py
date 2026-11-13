@@ -216,6 +216,9 @@ COCA_PROB = {"Andean": 0.10, "Caribbean": 0.15, "Pacific": 0.45, "Orinoquia": 0.
 ARMED_RATE = {"Andean": 0.35, "Caribbean": 0.8, "Pacific": 1.3, "Orinoquia": 0.8, "Amazon": 1.2}
 REGION_EFFECT = {"Andean": 0.0, "Caribbean": -0.1, "Pacific": 0.35, "Orinoquia": 0.15, "Amazon": 0.85}
 YEARS = list(range(2015, 2024))
+# National pressure by year (simulated): a peak around 2017 and a rebound in 2022.
+YEAR_SHOCK = {2015: -0.05, 2016: -0.08, 2017: 0.18, 2018: 0.12, 2019: -0.10,
+              2020: -0.02, 2021: 0.06, 2022: 0.20, 2023: 0.10}
 BIG_CITIES = {"Bogotá D.C.", "Medellín", "Cali", "Barranquilla", "Cartagena", "Bucaramanga", "Cúcuta"}
 
 
@@ -240,6 +243,7 @@ def generate(seed: int = 2026) -> pd.DataFrame:
         coca0 = float(np.exp(rng.normal(np.log(150), 1.2))) if rng.random() < COCA_PROB[region] else 0.0
         armed0 = rng.poisson(ARMED_RATE[region] + (0.3 if coca0 > 0 else 0))
         muni_effect = rng.normal(0, 0.45)  # unobserved local factor
+        e_prev = rng.normal(0, 0.96)       # year-to-year shock that persists (AR(1))
         for year in YEARS:
             t = year - 2019
             pop = pop0 * (1 + 0.01 * t)
@@ -248,6 +252,8 @@ def generate(seed: int = 2026) -> pd.DataFrame:
             nbi = float(np.clip(nbi0 - 0.4 * t + rng.normal(0, 0.8), 3, 100))
             coca = coca0 * float(np.exp(rng.normal(0, 0.15)))
             armed = int(np.clip(armed0 + rng.choice([-1, 0, 0, 1]), 0, 5))
+            e = 0.55 * e_prev + rng.normal(0, 0.8)
+            e_prev = e
             eta = (
                 2.95
                 + 0.72 * (np.log(area) - 5.8)
@@ -257,10 +263,10 @@ def generate(seed: int = 2026) -> pd.DataFrame:
                 + 0.010 * (nbi - 52)
                 + 0.15 * armed
                 - 0.05 * (np.log(pop) - 9.5)
-                + 0.03 * t
+                + YEAR_SHOCK[year]
                 + REGION_EFFECT[region]
                 + muni_effect
-                + rng.normal(0, 0.9)
+                + e
             )
             loss = float(np.clip(np.round(np.expm1(eta)), 0, 12000))
             if name in BIG_CITIES:

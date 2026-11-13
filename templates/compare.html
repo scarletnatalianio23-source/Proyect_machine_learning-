@@ -4,133 +4,214 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
 {% endblock %}
 
+{% macro plain() %}<div class="plain"><i class="bi bi-chat-heart-fill"></i><div><strong>In plain words</strong><p class="mb-0">{{ caller() }}</p></div></div>{% endmacro %}
+
 {% block content %}
 {% set m = b.metrics %}
 {% set best = b.best %}
-{% set base_mae = b.baseline.mae %}
-<section class="page-hero"><div class="container">
-    <span class="page-kicker"><i class="bi bi-bar-chart-line me-1"></i>Model comparison</span>
-    <h1>Which model predicts forest loss best?</h1>
-    <p>Three regression models were trained on the same data and checked with the same five-fold validation,
-       so the comparison is fair.</p>
+{% set base = b.baselines %}
+{% set ns = namespace(rmse=best, r2=best) %}
+{% for k in model_names %}
+    {% if m[k].rmse < m[ns.rmse].rmse %}{% set ns.rmse = k %}{% endif %}
+    {% if m[k].r2_log > m[ns.r2].r2_log %}{% set ns.r2 = k %}{% endif %}
+{% endfor %}
+{% set maes = [m.linear.mae, m.forest.mae, m.boosting.mae] %}
+{% set spread = ((maes|max - maes|min) / maes|min * 100)|round(1) %}
+
+<section class="xhero"><div class="container">
+    <h1>Which model should forecast forest loss?</h1>
+    <p>Three Machine Learning models are tested on the same task and the same data. We compare them, analyze the
+       differences and conclude which one is the most suitable for this project.</p>
 </div></section>
 
-<section class="page-body"><div class="container">
+<section class="xbody"><div class="container">
 
-    <div class="winner-banner mb-4">
-        <i class="bi bi-trophy-fill"></i>
-        <div>
-            <h2>{{ model_names[best] }} has the lowest average error</h2>
-            <p>Mean absolute error of {{ m[best].mae }} ha per municipality and year, compared with
-               {{ base_mae }} ha when always guessing the median
-               ({{ ((base_mae - m[best].mae) / base_mae * 100)|round(0)|int }}% lower).</p>
-        </div>
+    <!-- 1. The task and the candidates -->
+    <div class="card-x mb-4">
+        <h2><i class="bi bi-bullseye me-2"></i>The task</h2>
+        <p class="mb-0">Forecast the hectares of forest a municipality will lose <strong>next year</strong>, using how much it lost in the
+           last three years and its current conditions: area, population, cattle, planted area, unmet basic needs, coca cultivation
+           and armed groups. The data cover {{ b.municipalities }} municipalities from {{ b.years[0] }} to {{ b.years[-1] }}
+           (simulated, inspired by public municipal data).</p>
+        {% call plain() %}We give each model the last three years of forest loss of a town plus a few facts about it, and ask it to guess how much
+           forest the town will lose next year. Then we check which model guesses best.{% endcall %}
     </div>
 
-    <div class="row g-4">
-        <div class="col-lg-7">
-            <div class="card-x">
-                <h2><i class="bi bi-table me-2"></i>Results</h2>
-                <div class="table-responsive">
-                    <table class="table-x">
-                        <thead>
-                            <tr><th>Model</th><th class="text-end">MAE (ha)</th><th class="text-end">RMSE (ha)</th>
-                                <th class="text-end">R²</th><th class="text-end">R² (log scale)</th></tr>
-                        </thead>
-                        <tbody>
-                        {% for key, label in model_names.items() %}
-                            <tr {% if key == best %}class="best"{% endif %}>
-                                <td>{{ label }}{% if key == best %} <span class="chip win">best</span>{% endif %}</td>
-                                <td class="text-end">{{ m[key].mae }}</td>
-                                <td class="text-end">{{ m[key].rmse }}</td>
-                                <td class="text-end">{{ m[key].r2 }}</td>
-                                <td class="text-end">{{ m[key].r2_log }}</td>
-                            </tr>
-                        {% endfor %}
-                            <tr>
-                                <td class="text-muted">Always predicting the median</td>
-                                <td class="text-end text-muted">{{ b.baseline.mae }}</td>
-                                <td class="text-end text-muted">{{ b.baseline.rmse }}</td>
-                                <td class="text-end text-muted">-</td><td class="text-end text-muted">-</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="lead-note mt-3 mb-0">
-                    <strong>MAE</strong> is the average mistake in hectares. <strong>RMSE</strong> punishes big mistakes more.
-                    <strong>R²</strong> is the share of the variation the model explains (1 is perfect). The models learn on a
-                    logarithmic scale because a few municipalities lose thousands of hectares; R² on that scale is shown in the last column.
-                </p>
-            </div>
-        </div>
-        <div class="col-lg-5">
-            <div class="card-x amber">
-                <h2><i class="bi bi-bar-chart-fill me-2"></i>Average error</h2>
-                <div class="chart-box"><canvas id="chart-errors"></canvas></div>
-            </div>
-        </div>
+    <div class="row g-4 mb-4">
+        <div class="col-lg-4"><div class="card-x">
+            <h3>1. Multiple linear regression</h3>
+            <p class="lead-note">Draws the best straight-line relationship between the inputs and the log of next year's loss.</p>
+            <p class="cand-plain"><i class="bi bi-chat-heart-fill"></i> Like drawing the best straight line through the past.</p>
+            <p class="mb-1"><span class="chip win">Strength</span> Simple, fast, easy to explain.</p>
+            <p class="mb-0"><span class="chip coral">Limit</span> Cannot capture interactions, such as cattle and area reinforcing each other.</p>
+        </div></div>
+        <div class="col-lg-4"><div class="card-x amber">
+            <h3>2. Random Forest</h3>
+            <p class="lead-note">Hundreds of decision trees trained on different samples; the forecast is their average (Breiman, 2001).</p>
+            <p class="cand-plain"><i class="bi bi-chat-heart-fill"></i> Like asking hundreds of experts and taking the average of their answers.</p>
+            <p class="mb-1"><span class="chip win">Strength</span> Handles non-linear patterns and outliers with little tuning.</p>
+            <p class="mb-0"><span class="chip coral">Limit</span> Less transparent; cannot extrapolate beyond the values it has seen.</p>
+        </div></div>
+        <div class="col-lg-4"><div class="card-x coral">
+            <h3>3. Gradient Boosting</h3>
+            <p class="lead-note">Trees built one after another, each one correcting the mistakes of the previous ones (Friedman, 2001).</p>
+            <p class="cand-plain"><i class="bi bi-chat-heart-fill"></i> Like a relay team where each member fixes the previous one's mistakes.</p>
+            <p class="mb-1"><span class="chip win">Strength</span> Often the most accurate on tabular data.</p>
+            <p class="mb-0"><span class="chip coral">Limit</span> More sensitive to settings and to small datasets.</p>
+        </div></div>
     </div>
 
-    <div class="row g-4 mt-1">
+    <!-- 2. Method -->
+    <div class="card-x sky mb-4">
+        <h2><i class="bi bi-hourglass-split me-2"></i>How the comparison was made</h2>
+        <p>A forecasting model must be tested on <em>the future</em>, not on random rows. For each test year the models were trained only with
+           earlier years and then asked to forecast that year, which they had never seen:</p>
+        <div class="row g-3 mb-3">
+            {% for y in b.test_years %}
+            <div class="col-md-4"><div class="profile-card p{{ loop.index0 }}">
+                <h4>Test {{ y }}</h4>
+                <p class="mb-0 small">Trained with targets before {{ y }}, forecast {{ y }}.</p>
+            </div></div>
+            {% endfor %}
+        </div>
+        {% call plain() %}It works like an exam: each model only studies the past and is then tested on a year it has never seen. The model that
+           makes the smallest mistakes wins.{% endcall %}
+        <details class="tech">
+            <summary>Technical details</summary>
+            <p class="lead-note mb-0">
+                <strong>MAE</strong> is the average mistake in hectares. <strong>RMSE</strong> also punishes big mistakes.
+                <strong>R² (log scale)</strong> is the share of variation explained, measured on the logarithmic scale the models learn on.
+                Two simple rules are included as a reference: <em>same as last year</em> and <em>average of the last 3 years</em>.
+            </p>
+        </details>
+    </div>
+
+    <!-- 3. Results -->
+    <div class="row g-4 mb-4">
+        <div class="col-lg-7"><div class="card-x">
+            <h2><i class="bi bi-table me-2"></i>Results</h2>
+            {% call plain() %}On average, {{ model_names[best] }} misses by about <strong>{{ m[best].mae }} hectares</strong> per town each year.
+               A shorter bar means a smaller mistake, so shorter is better.{% endcall %}
+            {% set top = [m.linear.mae, m.forest.mae, m.boosting.mae, base.values()|map(attribute='mae')|max]|max %}
+            <div class="mt-3">
+                {% for key, label in model_names.items() %}
+                <div class="bar-row"><span class="{% if key == best %}fw-bold{% endif %}">{{ label }}</span>
+                    <span class="bar-track"><span class="bar-fill {% if key == best %}is-best{% endif %}" style="width: {{ (m[key].mae / top * 100)|round|int }}%"></span></span>
+                    <strong>{{ m[key].mae }}</strong></div>
+                {% endfor %}
+                {% for name, v in base.items() %}
+                <div class="bar-row text-muted"><span>{{ name }}</span>
+                    <span class="bar-track"><span class="bar-fill is-rule" style="width: {{ (v.mae / top * 100)|round|int }}%"></span></span>
+                    <span>{{ v.mae }}</span></div>
+                {% endfor %}
+            </div>
+            <details class="tech">
+                <summary>Technical details: full table (MAE, RMSE, R²)</summary>
+            <div class="table-responsive">
+                <table class="table-x">
+                    <thead><tr><th>Model</th><th class="text-end">MAE (ha)</th><th class="text-end">RMSE (ha)</th><th class="text-end">R² (log)</th></tr></thead>
+                    <tbody>
+                    {% for key, label in model_names.items() %}
+                        <tr {% if key == best %}class="best"{% endif %}>
+                            <td>{{ label }}{% if key == best %} <span class="chip win">lowest MAE</span>{% endif %}</td>
+                            <td class="text-end">{{ m[key].mae }}</td><td class="text-end">{{ m[key].rmse }}</td><td class="text-end">{{ m[key].r2_log }}</td>
+                        </tr>
+                    {% endfor %}
+                    {% for name, v in base.items() %}
+                        <tr><td class="text-muted">{{ name }} <span class="chip">rule</span></td>
+                            <td class="text-end text-muted">{{ v.mae }}</td><td class="text-end text-muted">{{ v.rmse }}</td><td class="text-end text-muted">{{ v.r2_log }}</td></tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            </details>
+        </div></div>
+        <div class="col-lg-5"><div class="card-x amber">
+            <h2><i class="bi bi-bar-chart-fill me-2"></i>Average error</h2>
+            <div class="chart-box"><canvas id="chart-errors"></canvas></div>
+            {% call plain() %}Each pair of bars is one model. MAE is the typical mistake; RMSE also counts the big mistakes extra. Shorter bars are better.{% endcall %}
+        </div></div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-lg-5"><div class="card-x plum">
+            <h2><i class="bi bi-calendar3 me-2"></i>Error by test year</h2>
+            <div class="chart-box"><canvas id="chart-years"></canvas></div>
+            {% call plain() %}Each model had to forecast three different years. If one model has the shortest bar every year, it is a safe choice, not luck.{% endcall %}
+            <details class="tech"><summary>Technical details</summary><p class="lead-note mb-0">MAE in hectares for each year the models had to forecast.</p></details>
+        </div></div>
         {% for key, label in model_names.items() %}
-        <div class="col-lg-4">
-            <div class="card-x coral">
-                <h3>{{ label }}</h3>
-                <div class="chart-box"><canvas id="scatter-{{ key }}"></canvas></div>
-                <p class="lead-note mt-2 mb-0">Predicted against real hectares (log scale). Points close to the diagonal are good predictions.</p>
-            </div>
-        </div>
+        {% if loop.first %}<div class="col-lg-7"><div class="card-x coral"><h2><i class="bi bi-bullseye me-2"></i>Forecast against reality</h2>
+            <div class="row g-2">{% endif %}
+            <div class="col-md-4"><div class="small fw-semibold text-center">{{ label }}</div><div class="chart-box" style="height:210px"><canvas id="scatter-{{ key }}"></canvas></div></div>
+        {% if loop.last %}</div>{% call plain() %}Each dot is a town in one year. The closer a dot is to the dashed line, the closer the guess was to what really happened.{% endcall %}
+            <details class="tech"><summary>Technical details</summary><p class="lead-note mb-0">Each point is a municipality-year on a logarithmic scale.</p></details></div></div>{% endif %}
         {% endfor %}
     </div>
 
-    <div class="row g-4 mt-1">
-        <div class="col-lg-7">
-            <div class="card-x sky">
-                <h2><i class="bi bi-list-stars me-2"></i>What matters most to each model</h2>
-                <div class="chart-box tall"><canvas id="chart-importance"></canvas></div>
-                <p class="lead-note mt-2 mb-0">Share of the model's decisions that depend on each variable.</p>
-            </div>
-        </div>
-        <div class="col-lg-5">
-            <div class="card-x plum">
-                <h2><i class="bi bi-journal-text me-2"></i>Conclusion</h2>
-                <p>
-                    {{ model_names[best] }} is the most accurate of the three, with an average error of {{ m[best].mae }} ha,
-                    {{ ((m.linear.mae - m[best].mae) / m.linear.mae * 100)|round(0)|int }}% lower than the linear regression
-                    ({{ m.linear.mae }} ha). Tree-based models can capture interactions that a straight line cannot, for
-                    example how cattle and area reinforce each other.
-                </p>
-                <p>
-                    The linear regression is still useful: on the logarithmic scale its R² is {{ m.linear.r2_log }}, and it is
-                    the easiest model to explain. Its weakness appears when the estimate is converted back to hectares,
-                    where a small log error becomes a large one for the biggest municipalities (RMSE {{ m.linear.rmse }} ha).
-                </p>
-                <p class="mb-0">
-                    {% if b.clustering.gain_mae > 0 %}
-                    As an experiment, adding the K-Means risk profile as an extra input lowered the Gradient Boosting error by
-                    {{ b.clustering.gain_mae }} ha, a small improvement. Its main value is describing groups of municipalities,
-                    shown in the authority dashboard.
-                    {% else %}
-                    As an experiment, adding the K-Means risk profile as an extra input raised the Gradient Boosting error by
-                    {{ (-b.clustering.gain_mae)|round(1) }} ha, so it did not help prediction. Its value is describing groups
-                    of municipalities, shown in the authority dashboard.
-                    {% endif %}
-                </p>
-            </div>
+    <div class="card-x sky mb-4">
+        <h2><i class="bi bi-list-stars me-2"></i>What each model relies on</h2>
+        <div class="chart-box tall"><canvas id="chart-importance"></canvas></div>
+        {% call plain() %}These bars show which clues each model pays the most attention to. The losses of the last three years are the main clue.{% endcall %}
+        <details class="tech"><summary>Technical details</summary><p class="lead-note mb-0">Share of each model's decisions that depends on each variable. The first three are the losses of the last three years.</p></details>
+    </div>
+
+    <!-- 4. Deductions -->
+    <div class="card-x mb-4">
+        <h2><i class="bi bi-lightbulb me-2"></i>Analysis and deductions</h2>
+        <div class="row g-3">
+            <div class="col-md-6"><div class="profile-card">
+                <h4>1. The winner is consistent</h4>
+                <p class="mb-0 small">{{ model_names[best] }} has the lowest MAE ({{ m[best].mae }} ha) and wins in {{ year_wins }} of the {{ b.test_years|length }} test years.
+                {% if ns.rmse == best %}It also has the lowest RMSE, so it makes fewer large mistakes.{% else %}{{ model_names[ns.rmse] }} has the lowest RMSE, so it makes fewer large mistakes.{% endif %}</p>
+            </div></div>
+            <div class="col-md-6"><div class="profile-card p1">
+                <h4>2. The models are close</h4>
+                <p class="mb-0 small">The best and the worst MAE differ by only {{ spread }}%.
+                {% if ns.r2 != best %}On the log scale, {{ model_names[ns.r2] }} has the best R² ({{ m[ns.r2].r2_log }}).{% endif %}
+                With this much data, the choice matters less than having good inputs.</p>
+            </div></div>
+            <div class="col-md-6"><div class="profile-card p2">
+                <h4>3. Recent history is the key input</h4>
+                <p class="mb-0 small">In {{ model_names[best] }}, {{ b.lag_share[best] }}% of the decisions depend on the losses of the last three years
+                ({{ b.lag_share.linear }}% in the linear model). Deforestation is persistent: places that lost forest recently tend to keep losing it.</p>
+            </div></div>
+            <div class="col-md-6"><div class="profile-card p3">
+                <h4>4. The gain over simple rules is modest</h4>
+                <p class="mb-0 small">Compared with "same as last year" ({{ base['Same as last year'].mae }} ha), {{ model_names[best] }} lowers the MAE by {{ gain_last }}%.
+                The models add what a rule cannot: the effect of conditions such as cattle or coca, a likely range, the chance of a high alert and what-if scenarios.</p>
+            </div></div>
+            <div class="col-md-6"><div class="profile-card">
+                <h4>5. More complex is not always better</h4>
+                <p class="mb-0 small">{% if m.boosting.mae < m.forest.mae %}Gradient Boosting beat Random Forest on MAE, so extra complexity paid off.{% else %}Gradient Boosting did not beat Random Forest ({{ m.boosting.mae }} against {{ m.forest.mae }} ha).{% endif %}
+                {% if m.linear.mae < m.boosting.mae %}The simple linear regression was also ahead of it.{% else %}The linear regression was behind it.{% endif %}
+                Boosting needs careful tuning and more data than the {{ b.rows }} records available.</p>
+            </div></div>
+            <div class="col-md-6"><div class="profile-card p1">
+                <h4>6. Limits to keep in mind</h4>
+                <p class="mb-0 small">The data are simulated, so these numbers show the method, not the real state of Colombia. The scenario simulator shows
+                associations learned from the data, not proven cause and effect.</p>
+            </div></div>
         </div>
     </div>
 
-    <div class="card-x mt-4">
-        <h2><i class="bi bi-gear me-2"></i>How the comparison was done</h2>
-        <div class="row g-3">
-            <div class="col-md-4"><strong>Data.</strong> {{ '{:,}'.format(b.rows) }} records of {{ b.municipalities }} municipalities, {{ b.years[0] }} to {{ b.years[-1] }}. Simulated, inspired by public municipal data.</div>
-            <div class="col-md-4"><strong>Inputs.</strong> {{ feature_names|join(', ') }}.</div>
-            <div class="col-md-4"><strong>Validation.</strong> Five folds. All years of a municipality stay in the same fold, so a model is never tested on a place it has already seen.</div>
+    <!-- 5. Conclusion -->
+    <div class="winner-banner">
+        <i class="bi bi-trophy-fill"></i>
+        <div>
+            <h2>Conclusion: {{ model_names[best] }}</h2>
+            <p>It gives the lowest average error ({{ m[best].mae }} ha), is the most stable across the test years and handles the
+               uneven, outlier-heavy shape of deforestation better than a straight line. It is therefore the final model of this
+               platform, and it is the one used in the next step to forecast, classify alerts and simulate scenarios.</p>
+            <p class="winner-plain"><strong>In plain words:</strong> it is the model that guesses best and makes the smallest mistakes, so it is the one that makes the predictions.</p>
         </div>
+    </div>
+    <div class="text-center mt-4">
+        <a href="{{ url_for('predict_page') }}" class="btn btn-predict btn-lg px-4">Next: access the model <i class="bi bi-arrow-right ms-1"></i></a>
         {% if current_user and current_user['role'] == 'admin' %}
-        <form method="post" action="{{ url_for('admin_retrain') }}" class="mt-3">
+        <form method="post" action="{{ url_for('admin_retrain') }}" class="d-inline ms-2">
             <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-            <button class="btn btn-outline-secondary btn-sm" type="submit"><i class="bi bi-arrow-repeat me-1"></i>Retrain the models</button>
+            <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-arrow-repeat me-1"></i>Retrain the models</button>
         </form>
         {% endif %}
     </div>
@@ -142,21 +223,28 @@
 {% block scripts %}
 <script>
 (function () {
+    if (typeof Chart === "undefined") { return; }
     var data = JSON.parse(document.getElementById("chart-data").dataset.chart);
     var keys = Object.keys(data.models);
-    var colors = { linear: "#2ec4b6", forest: "#f9c74f", boosting: "#f3722c" };
-    if (typeof Chart === "undefined") { return; }
-    Chart.defaults.font.family = "'DM Sans', sans-serif";
+    var colors = { linear: "#6f9a55", forest: "#e8b648", boosting: "#d9782d" };
+    Chart.defaults.font.family = "'Nunito Sans', sans-serif";
 
     new Chart(document.getElementById("chart-errors"), {
         type: "bar",
-        data: {
-            labels: keys.map(function (k) { return data.models[k]; }),
-            datasets: [
-                { label: "MAE (ha)", data: keys.map(function (k) { return data.metrics[k].mae; }), backgroundColor: "#2ec4b6", borderRadius: 6 },
-                { label: "RMSE (ha)", data: keys.map(function (k) { return data.metrics[k].rmse; }), backgroundColor: "#f3722c", borderRadius: 6 }
-            ]
-        },
+        data: { labels: keys.map(function (k) { return data.models[k]; }),
+                datasets: [
+                    { label: "MAE (ha)", data: keys.map(function (k) { return data.metrics[k].mae; }), backgroundColor: "#6f9a55", borderRadius: 6 },
+                    { label: "RMSE (ha)", data: keys.map(function (k) { return data.metrics[k].rmse; }), backgroundColor: "#d9782d", borderRadius: 6 }] },
+        options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom" } }, scales: { y: { beginAtZero: true } } }
+    });
+
+    new Chart(document.getElementById("chart-years"), {
+        type: "bar",
+        data: { labels: data.years,
+                datasets: keys.map(function (k) {
+                    return { label: data.models[k], backgroundColor: colors[k], borderRadius: 5,
+                             data: data.years.map(function (y) { return data.per_year[k][y]; }) };
+                }) },
         options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom" } }, scales: { y: { beginAtZero: true } } }
     });
 
@@ -165,28 +253,21 @@
         new Chart(document.getElementById("scatter-" + k), {
             type: "scatter",
             data: { datasets: [
-                { data: pts, backgroundColor: colors[k] + "99", pointRadius: 3 },
-                { type: "line", data: [{ x: 1, y: 1 }, { x: 40000, y: 40000 }], borderColor: "#0f2b46", borderDash: [5, 4], pointRadius: 0, borderWidth: 1.5 }
-            ] },
-            options: {
-                maintainAspectRatio: false, animation: false, plugins: { legend: { display: false } },
-                scales: {
-                    x: { type: "logarithmic", min: 1, max: 40000, title: { display: true, text: "Real (ha)" } },
-                    y: { type: "logarithmic", min: 1, max: 40000, title: { display: true, text: "Predicted (ha)" } }
-                }
-            }
+                { data: pts, backgroundColor: colors[k] + "99", pointRadius: 2.5 },
+                { type: "line", data: [{ x: 1, y: 1 }, { x: 40000, y: 40000 }], borderColor: "#1f2a1c", borderDash: [5, 4], pointRadius: 0, borderWidth: 1.5 }] },
+            options: { maintainAspectRatio: false, animation: false, plugins: { legend: { display: false } },
+                       scales: { x: { type: "logarithmic", min: 1, max: 40000, ticks: { maxTicksLimit: 4 } },
+                                 y: { type: "logarithmic", min: 1, max: 40000, ticks: { maxTicksLimit: 4 } } } }
         });
     });
 
     new Chart(document.getElementById("chart-importance"), {
         type: "bar",
-        data: {
-            labels: data.features,
-            datasets: keys.map(function (k) {
-                return { label: data.models[k], backgroundColor: colors[k], borderRadius: 4,
-                         data: data.importance[k].map(function (v) { return Math.round(v * 1000) / 10; }) };
-            })
-        },
+        data: { labels: data.features,
+                datasets: keys.map(function (k) {
+                    return { label: data.models[k], backgroundColor: colors[k], borderRadius: 4,
+                             data: data.importance[k].map(function (v) { return Math.round(v * 1000) / 10; }) };
+                }) },
         options: { indexAxis: "y", maintainAspectRatio: false, plugins: { legend: { position: "bottom" } },
                    scales: { x: { title: { display: true, text: "% of importance" } } } }
     });

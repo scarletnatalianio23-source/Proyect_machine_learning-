@@ -5,35 +5,34 @@
 {% endblock %}
 
 {% block content %}
-<section class="page-hero"><div class="container">
-    <span class="page-kicker"><i class="bi bi-building me-1"></i>For authorities</span>
+<section class="xhero"><div class="container">
     <h1>Authority dashboard</h1>
     <p>Priority municipalities, risk profiles and a suggestion of where to send limited monitoring teams.</p>
 </div></section>
 
-<section class="page-body"><div class="container">
+<section class="xbody"><div class="container">
 
     <div class="row g-3 mb-4">
         <div class="col-6 col-lg-3"><div class="kpi"><div class="n">{{ '{:,}'.format(totals.loss_latest) }}</div><div class="t">ha lost in {{ b.latest_year }} (simulated)</div></div></div>
-        <div class="col-6 col-lg-3"><div class="kpi"><div class="n">{{ b.municipalities }}</div><div class="t">municipalities in the dataset</div></div></div>
-        <div class="col-6 col-lg-3"><div class="kpi"><div class="n">{{ totals.queries }}</div><div class="t">queries made on the platform</div></div></div>
+        <div class="col-6 col-lg-3"><div class="kpi"><div class="n">{{ '{:,}'.format(totals.forecast_next) }}</div><div class="t">ha forecast for {{ b.latest_year + 1 }} (all municipalities)</div></div></div>
+        <div class="col-6 col-lg-3"><div class="kpi"><div class="n">{{ totals.forecasts }}</div><div class="t">forecasts made on the platform</div></div></div>
         <div class="col-6 col-lg-3"><div class="kpi"><div class="n">{{ totals.users }}</div><div class="t">registered users</div></div></div>
     </div>
 
     <div class="card-x coral mb-4">
-        <h2><i class="bi bi-exclamation-triangle me-2"></i>Priority municipalities ({{ b.latest_year }})</h2>
-        <p class="lead-note">Ranked by the {{ model_names[b.best] }} model's estimate. The last column is the simulated recorded loss.</p>
+        <h2><i class="bi bi-exclamation-triangle me-2"></i>Priority municipalities for {{ b.latest_year + 1 }}</h2>
+        <p class="lead-note">Ranked by the {{ model_names[b.best] }} forecast for {{ b.latest_year + 1 }}. The last column is the loss recorded in {{ b.latest_year }} (simulated).</p>
         <div class="table-responsive">
             <table class="table-x">
                 <thead><tr><th>#</th><th>Municipality</th><th>Department</th><th>Risk profile</th>
-                    <th class="text-end">Estimated (ha)</th><th class="text-end">Recorded (ha)</th></tr></thead>
+                    <th class="text-end">Forecast (ha)</th><th class="text-end">Last year (ha)</th></tr></thead>
                 <tbody>
-                {% for r in b.top_municipalities %}
+                {% for r in b.ranking %}
                     <tr>
                         <td>{{ loop.index }}</td><td><strong>{{ r.municipality }}</strong></td><td>{{ r.department }}</td>
                         <td><span class="chip {{ {'Low pressure': 'teal', 'Moderate pressure': 'amber', 'High pressure': 'coral', 'Critical pressure': 'plum'}[r.profile] }}">{{ r.profile }}</span></td>
-                        <td class="text-end">{{ '{:,}'.format(r.predicted_ha) }}</td>
-                        <td class="text-end">{{ '{:,}'.format(r.forest_loss_ha) }}</td>
+                        <td class="text-end">{{ '{:,}'.format(r.forecast_ha) }}</td>
+                        <td class="text-end">{{ '{:,}'.format(r.lag0|int) }}</td>
                     </tr>
                 {% endfor %}
                 </tbody>
@@ -43,7 +42,7 @@
 
     <div class="card-x amber mb-4">
         <h2><i class="bi bi-diagram-3 me-2"></i>Risk profiles (K-Means)</h2>
-        <p class="lead-note">An unsupervised model groups municipality-years with similar conditions, without being told the forest loss.
+        <p class="lead-note">An unsupervised model groups municipalities with similar conditions, without being told the forecast.
            Silhouette score: <strong>{{ b.clustering.silhouette }}</strong> (closer to 1 means clearer groups).</p>
         <div class="row g-3">
             {% for p in b.clustering.profiles %}
@@ -72,7 +71,7 @@
                    60% as effective as the previous one, so spreading teams pays off.</p>
                 <div class="table-responsive">
                     <table class="table-x">
-                        <thead><tr><th>Department</th><th class="text-end">Estimated risk (ha)</th><th class="text-end">Teams</th></tr></thead>
+                        <thead><tr><th>Department</th><th class="text-end">Forecast risk (ha)</th><th class="text-end">Teams</th></tr></thead>
                         <tbody>
                         {% for d, risk, n in rl_rows %}
                             <tr><td>{{ d }}</td><td class="text-end">{{ '{:,}'.format(risk) }}</td>
@@ -90,7 +89,7 @@
                 {% for name, value in rl.results.items() %}
                 <div class="mb-2">
                     <div class="d-flex justify-content-between small"><span>{{ name }}</span><strong>{{ '{:,}'.format(value) }} ha</strong></div>
-                    <div class="bar-track"><span class="bar-fill" style="width: {{ (value / top * 100)|round|int }}%; {% if name == 'Q-learning agent' %}background: var(--plum, #9b5de5);{% endif %}"></span></div>
+                    <div class="bar-track"><span class="bar-fill" style="width: {{ (value / top * 100)|round|int }}%; {% if name == 'Q-learning agent' %}background: var(--plum, #7a4d2c);{% endif %}"></span></div>
                 </div>
                 {% endfor %}
                 <p class="lead-note mt-3 mb-0">The "optimal" line is a benchmark computed exactly for this simplified game.</p>
@@ -98,31 +97,38 @@
         </div>
     </div>
 
+    <div class="card-x coral mb-4">
+        <h2><i class="bi bi-graph-up me-2"></i>Total loss by natural region</h2>
+        <div class="chart-box tall"><canvas id="chart-trend"></canvas></div>
+        <p class="lead-note mt-2 mb-0">Hectares lost per year in the simulated dataset.</p>
+    </div>
+
     <div class="row g-4">
         <div class="col-lg-7">
             <div class="card-x">
-                <h2><i class="bi bi-clock-history me-2"></i>Latest queries</h2>
+                <h2><i class="bi bi-clock-history me-2"></i>Latest forecasts</h2>
                 {% if recent %}
                 <div class="table-responsive"><table class="table-x">
-                    <thead><tr><th>Date</th><th>User</th><th>Municipality</th><th class="text-end">Estimate</th><th>Level</th></tr></thead>
+                    <thead><tr><th>Date</th><th>User</th><th>Municipality</th><th class="text-end">Forecast</th><th>Alert</th></tr></thead>
                     <tbody>
                     {% for r in recent %}
                         <tr><td>{{ r['created_at'][:16] }}</td><td>{{ r['user_name'] }}</td><td>{{ r['municipality'] or 'Custom values' }}</td>
-                            <td class="text-end">{{ '{:,}'.format(r['estimate']) }} ha</td><td>{{ r['level'] }}</td></tr>
+                            <td class="text-end">{{ '{:,}'.format(r['forecast_year1']) }} ha</td><td>{{ r['level'] }}</td></tr>
                     {% endfor %}
                     </tbody></table></div>
-                {% else %}<p>No queries yet.</p>{% endif %}
+                {% else %}<p>No forecasts yet.</p>{% endif %}
                 <a class="btn btn-sm btn-outline-secondary mt-2" href="{{ url_for('history', scope='all') }}">See all</a>
                 <a class="btn btn-sm btn-outline-secondary mt-2" href="{{ url_for('history_csv', scope='all') }}"><i class="bi bi-download me-1"></i>CSV</a>
             </div>
         </div>
         <div class="col-lg-5">
             <div class="card-x amber">
-                <h2><i class="bi bi-pie-chart me-2"></i>Queries by risk level</h2>
+                <h2><i class="bi bi-pie-chart me-2"></i>Forecasts by alert level</h2>
                 {% if by_level %}<div class="chart-box"><canvas id="chart-levels"></canvas></div>{% else %}<p>No data yet.</p>{% endif %}
             </div>
         </div>
     </div>
+    <div id="trend-data" data-trend='{{ trend|tojson }}' hidden></div>
     <div id="level-data" data-levels='{{ by_level|map(attribute="level")|list|tojson }}' data-counts='{{ by_level|map(attribute="n")|list|tojson }}' hidden></div>
 </div></section>
 {% endblock %}
@@ -130,10 +136,21 @@
 {% block scripts %}
 <script>
 (function () {
+    if (typeof Chart === "undefined") { return; }
+    var trend = JSON.parse(document.getElementById("trend-data").dataset.trend);
+    var palette = { Amazon: "#6f9a55", Andean: "#e8b648", Caribbean: "#b58a5a", Orinoquia: "#d9782d", Pacific: "#7a4d2c" };
+    new Chart(document.getElementById("chart-trend"), {
+        type: "line",
+        data: { labels: trend.years, datasets: Object.keys(trend.regions).map(function (r) {
+            return { label: r, data: trend.regions[r], borderColor: palette[r], backgroundColor: palette[r], tension: .3, pointRadius: 3 };
+        }) },
+        options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom" } },
+                   scales: { y: { beginAtZero: true, title: { display: true, text: "Hectares per year" } } } }
+    });
     var box = document.getElementById("level-data");
     var canvas = document.getElementById("chart-levels");
-    if (!canvas || typeof Chart === "undefined") { return; }
-    var colors = { "Low": "#2ec4b6", "Moderate": "#f9c74f", "High": "#f3722c", "Very high": "#9b5de5" };
+    if (!canvas) { return; }
+    var colors = { "Low": "#6f9a55", "Moderate": "#e8b648", "High": "#d9782d", "Critical": "#7a4d2c" };
     var labels = JSON.parse(box.dataset.levels);
     new Chart(canvas, {
         type: "doughnut",

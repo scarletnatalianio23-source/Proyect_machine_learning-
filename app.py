@@ -1,121 +1,35 @@
 import csv
 import io
+import re
 import json
 import math
 import os
 import secrets
 import sqlite3
 from functools import wraps
-from pathlib import Path
 
-import pandas as pd
+from markupsafe import Markup, escape
 from flask import (Flask, Response, abort, flash, g, redirect, render_template,
                    request, session, url_for)
 from werkzeug.security import check_password_hash, generate_password_hash
 
 import db
 import ml
-
-BASE_DIR = Path(__file__).resolve().parent
+from content import DOC, PROJECT, STATS
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "dev-only-change-me")
 app.teardown_appcontext(db.close_db)
+
+
+@app.template_filter("apa")
+def apa(text):
+    """Show *italics* and make URLs clickable in a reference."""
+    safe = str(escape(text))
+    safe = re.sub(r"\*(.+?)\*", r"<em>\1</em>", safe)
+    safe = re.sub(r"(https?://[^\s<]+)", r'<a href="\1" target="_blank" rel="noopener">\1</a>', safe)
+    return Markup(safe)
 db.init_db()
-
-# Context figures shown on the home page.
-# Source: IDEAM - Sistema de Monitoreo de Bosques y Carbono (SMByC).
-STATS = [
-    {
-        "icon": "bi-globe-americas",
-        "color": "teal",
-        "label": "Where we stand",
-        "value": "52%",
-        "description": "of Colombia's territory is covered by natural forest",
-    },
-    {
-        "icon": "bi-tree-fill",
-        "color": "coral",
-        "label": "2025",
-        "value": "119,483",
-        "description": "hectares of forest lost in Colombia during 2025",
-    },
-    {
-        "icon": "bi-graph-up-arrow",
-        "color": "amber",
-        "label": "The trend",
-        "value": "+5.2%",
-        "description": "increase compared to 2024, when 113,608 hectares were lost",
-    },
-]
-
-# Content of the interactive tree on the home page.
-# Each branch of the tree opens one of these entries.
-PROJECT = {
-    "problem": {
-        "title": "Problem",
-        "color": "#f3722c",
-        "text": (
-            "Colombia is about 52% covered by natural forest, yet it keeps losing it: "
-            "according to IDEAM, 119,483 hectares were deforested in 2025, 5.2% more "
-            "than in 2024. The loss is concentrated in departments such as Meta, "
-            "Caquetá, Guaviare and Putumayo, and it is linked to extensive cattle "
-            "ranching, agribusiness, illicit crops, illegal mining and infrastructure. "
-            "Official data exist, but they are mostly published as reports and "
-            "bulletins, and there is no simple tool that lets a student, a community "
-            "or a local authority estimate how forest loss could change in a "
-            "municipality given its conditions."
-        ),
-    },
-    "general": {
-        "title": "General objective",
-        "color": "#f9c74f",
-        "text": (
-            "Develop an intelligent website that, using regression models trained "
-            "on municipal data inspired by IDEAM sources, estimates the hectares of "
-            "forest lost in a municipality from manually entered data."
-        ),
-    },
-    "specific": {
-        "title": "Specific objectives",
-        "color": "#2ec4b6",
-        "items": [
-            "Collect and clean the deforestation dataset by municipality "
-            "and year, together with its explanatory variables.",
-            "Train and compare three models using metrics such as R², MAE and RMSE.",
-            "Build a web interface with user roles, a data-entry form and a "
-            "visualization of the results.",
-        ],
-    },
-    "framework": {
-        "title": "Referential framework",
-        "color": "#9b5de5",
-        "items": [
-            "Deforestation: permanent loss of natural forest cover, tracked in Colombia by IDEAM's SMByC.",
-            "Drivers: extensive cattle ranching, agriculture, illicit crops, illegal mining and infrastructure.",
-            "Regression: a supervised Machine Learning technique that estimates a continuous value (hectares) from input variables.",
-            "Data: a synthetic municipal dataset inspired by Mendoza Montoya (2025).",
-        ],
-    },
-    "methodology": {
-        "title": "Methodology",
-        "color": "#4cc9f0",
-        "items": [
-            "Prepare the dataset and check ranges, outliers and missing values.",
-            "Train a multiple linear regression, a Random Forest and a Gradient Boosting model.",
-            "Evaluate with five-fold cross-validation (MAE, RMSE and R²).",
-            "Deploy the models in a Flask web app with login and roles.",
-        ],
-    },
-    "references": {
-        "title": "References",
-        "color": "#f15bb5",
-        "items": [
-            "IDEAM. Sistema de Monitoreo de Bosques y Carbono (SMByC).",
-            "Mendoza Montoya, E. (2025). Municipal-level data on deforestation, prosecutions, and socioeconomic indicators in Colombia (2021-2023) (Version 1) [Data set]. Mendeley Data. https://doi.org/10.17632/mn5s748pyt.1",
-        ],
-    },
-}
 
 # ---------------------------------------------------------------------------
 # Data and models (loaded once; retrained from the admin panel)
@@ -126,26 +40,26 @@ STATE = {}
 def load_state(retrain=False):
     bundle = ml.train() if retrain else ml.load_bundle()
     data = ml.load_data()
-    latest = data[data["year"] == data["year"].max()].sort_values(["municipality", "department"])
-    STATE["bundle"] = bundle
-    STATE["data"] = data
-    STATE["municipalities"] = [
-        {
+    year = int(data["year"].max())
+    wide = data.pivot_table(index=["municipality", "department"], columns="year", values="forest_loss_ha")
+    latest = data[data["year"] == year].sort_values(["municipality", "department"])
+    items = []
+    for r in latest.itertuples():
+        hist = [int(v) for v in wide.loc[(r.municipality, r.department)].tolist()]
+        items.append({
             "label": f"{r.municipality} ({r.department})",
-            "area_km2": r.area_km2, "population": int(r.population),
-            "cattle_heads": int(r.cattle_heads), "planted_area_ha": r.planted_area_ha,
-            "nbi_pct": r.nbi_pct, "coca_ha": r.coca_ha, "armed_groups": int(r.armed_groups),
-        }
-        for r in latest.itertuples()
-    ]
-    STATE["latest_by_dept"] = (
-        data[data["year"] == data["year"].max()].groupby("department")["forest_loss_ha"].mean().round().to_dict()
-    )
+            "area_km2": r.area_km2, "population": int(r.population), "cattle_heads": int(r.cattle_heads),
+            "planted_area_ha": r.planted_area_ha, "nbi_pct": r.nbi_pct, "coca_ha": r.coca_ha,
+            "armed_groups": int(r.armed_groups),
+            "loss_a": hist[-3], "loss_b": hist[-2], "loss_c": hist[-1], "history": hist,
+        })
+    STATE.update(bundle=bundle, data=data, municipalities=items, year=year,
+                 by_label={m["label"]: m for m in items})
 
 
 load_state()
 
-FIELDS = [
+CONDITION_FIELDS = [
     # name, label, unit, min, max, step, icon, help text
     ("area_km2", "Municipal area", "km²", 5, 70000, "any", "bi-bounding-box", "Total surface of the municipality."),
     ("population", "Population", "people", 100, 8000000, 1, "bi-people-fill", "Number of inhabitants."),
@@ -157,6 +71,15 @@ FIELDS = [
      "Hectares of illicit coca crops. Use 0 if there are none."),
     ("armed_groups", "Armed groups present", "groups", 0, 5, 1, "bi-shield-exclamation",
      "Number of armed groups with presence in the municipality (0 to 5)."),
+]
+HISTORY_FIELDS = ["loss_a", "loss_b", "loss_c"]
+SCENARIO_FIELDS = [
+    # name, label, min, max, step, suffix
+    ("cattle_pct", "Cattle", -60, 60, 5, "%"),
+    ("planted_pct", "Planted area", -60, 60, 5, "%"),
+    ("coca_pct", "Coca cultivation", -100, 50, 10, "%"),
+    ("nbi_delta", "Unmet basic needs", -20, 10, 1, " pts"),
+    ("armed_delta", "Armed groups", -2, 1, 1, ""),
 ]
 
 # ---------------------------------------------------------------------------
@@ -197,8 +120,8 @@ def login_required(view):
     @wraps(view)
     def wrapped(*args, **kwargs):
         if g.user is None:
-            flash("Please sign in to continue.", "info")
-            return redirect(url_for("login", next=request.full_path.rstrip("?")))
+            flash("Please sign in to use the model.", "info")
+            return redirect(url_for("access", next=request.full_path.rstrip("?")))
         return view(*args, **kwargs)
     return wrapped
 
@@ -216,7 +139,7 @@ def roles_required(*roles):
 
 
 def safe_next(target):
-    return target if target and target.startswith("/") and not target.startswith("//") else url_for("home")
+    return target if target and target.startswith("/") and not target.startswith("//") else url_for("predict_page")
 
 
 @app.errorhandler(403)
@@ -231,52 +154,71 @@ def bad_request(e):
                            message=getattr(e, "description", "Bad request.")), 400
 
 
-@app.route("/login", methods=["GET", "POST"])
-def login():
+@app.route("/access", methods=["GET", "POST"])
+def access():
+    """View 3: choose a role, then sign in or create an account."""
     if g.user:
-        return redirect(url_for("home"))
+        return redirect(url_for("predict_page"))
+    tab = request.args.get("tab", "login")
     if request.method == "POST":
-        email = request.form.get("email", "").strip().lower()
-        row = db.get_db().execute("SELECT * FROM users WHERE email = ?", (email,)).fetchone()
-        if row and row["active"] and check_password_hash(row["password_hash"], request.form.get("password", "")):
-            session.clear()
-            session["user_id"] = row["id"]
-            flash(f"Welcome back, {row['name']}.", "success")
-            return redirect(safe_next(request.args.get("next")))
-        flash("Wrong email or password, or the account is disabled.", "danger")
-    return render_template("login.html", demo=db.DEMO_USERS)
-
-
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    if g.user:
-        return redirect(url_for("home"))
-    if request.method == "POST":
-        name = request.form.get("name", "").strip()
+        action = request.form.get("action", "login")
+        role = request.form.get("role", "citizen")
         email = request.form.get("email", "").strip().lower()
         password = request.form.get("password", "")
-        errors = []
-        if len(name) < 2:
-            errors.append("Enter your name.")
-        if "@" not in email or "." not in email.split("@")[-1]:
-            errors.append("Enter a valid email.")
-        if len(password) < 8:
-            errors.append("The password needs at least 8 characters.")
-        if password != request.form.get("password2", ""):
-            errors.append("The passwords do not match.")
-        if not errors:
-            try:
-                conn = db.get_db()
-                conn.execute("INSERT INTO users (name, email, password_hash, role) VALUES (?, ?, ?, 'citizen')",
-                             (name, email, generate_password_hash(password)))
-                conn.commit()
-                flash("Account created. You can sign in now.", "success")
-                return redirect(url_for("login"))
-            except sqlite3.IntegrityError:
-                errors.append("That email is already registered.")
-        for message in errors:
-            flash(message, "danger")
-    return render_template("register.html")
+        if role not in db.ROLES:
+            abort(400, "Unknown role.")
+        if action == "login":
+            tab = "login"
+            row = db.get_db().execute("SELECT * FROM users WHERE email = ?", (email,)).fetchone()
+            if not (row and row["active"] and check_password_hash(row["password_hash"], password)):
+                flash("Wrong email or password, or the account is disabled.", "danger")
+            elif row["role"] != role:
+                flash(f"That account is registered as {db.ROLE_LABELS[row['role']]}, not {db.ROLE_LABELS[role]}. "
+                      "Choose your role again.", "danger")
+            else:
+                session.clear()
+                session["user_id"] = row["id"]
+                flash(f"Welcome, {row['name']}.", "success")
+                return redirect(safe_next(request.args.get("next")))
+        else:
+            tab = "register"
+            name = request.form.get("name", "").strip()
+            errors = []
+            if len(name) < 2:
+                errors.append("Enter your name.")
+            if "@" not in email or "." not in email.split("@")[-1]:
+                errors.append("Enter a valid email.")
+            if len(password) < 8:
+                errors.append("The password needs at least 8 characters.")
+            if password != request.form.get("password2", ""):
+                errors.append("The passwords do not match.")
+            if role != "citizen" and not secrets.compare_digest(
+                    request.form.get("code", "").strip(), db.ROLE_CODES[role]):
+                errors.append(f"The institutional access code for {db.ROLE_LABELS[role]} is not valid.")
+            if not errors:
+                try:
+                    conn = db.get_db()
+                    conn.execute("INSERT INTO users (name, email, password_hash, role) VALUES (?, ?, ?, ?)",
+                                 (name, email, generate_password_hash(password), role))
+                    conn.commit()
+                    flash("Account created. Sign in with your role and credentials.", "success")
+                    return redirect(url_for("access", tab="login"))
+                except sqlite3.IntegrityError:
+                    errors.append("That email is already registered.")
+            for message in errors:
+                flash(message, "danger")
+    return render_template("access.html", tab=tab, demo=db.DEMO_USERS, roles=db.ROLES,
+                           chosen_role=request.form.get("role", "citizen"), codes=db.ROLE_CODES)
+
+
+@app.route("/login")
+def login():
+    return redirect(url_for("access", tab="login", **({"next": request.args["next"]} if "next" in request.args else {})))
+
+
+@app.route("/register")
+def register():
+    return redirect(url_for("access", tab="register"))
 
 
 @app.route("/logout", methods=["POST"])
@@ -287,24 +229,42 @@ def logout():
 
 
 # ---------------------------------------------------------------------------
-# Public pages
+# View 1: the project  |  View 2: model comparison (both public)
 # ---------------------------------------------------------------------------
 @app.route("/")
 def home():
-    return render_template("index.html", stats=STATS, project=PROJECT)
+    return render_template("index.html", stats=STATS, project=PROJECT, doc=DOC)
 
 
 @app.route("/project")
 def project_page():
-    return render_template("project.html", stats=STATS, project=PROJECT)
+    return redirect(url_for("home") + "#documentation")
+
+
+@app.route("/models")
+def models_page():
+    bundle = STATE["bundle"]
+    names = [ml.FEATURE_LABELS[f] for f in ml.FEATURE_NAMES]
+    m = bundle["metrics"]
+    best = bundle["best"]
+    base = bundle["baselines"]
+    gain_last = round((base["Same as last year"]["mae"] - m[best]["mae"]) / base["Same as last year"]["mae"] * 100, 1)
+    return render_template(
+        "compare.html", b=bundle, model_names=ml.MODEL_NAMES, feature_names=names, gain_last=gain_last,
+        year_wins=sum(1 for y in bundle["test_years"]
+                      if min(ml.MODEL_NAMES, key=lambda k: bundle["per_year"][k][y]) == best),
+        chart={"scatter": bundle["scatter"], "importance": bundle["importance"], "features": names,
+               "models": ml.MODEL_NAMES, "metrics": m, "per_year": bundle["per_year"],
+               "years": bundle["test_years"]},
+    )
 
 
 # ---------------------------------------------------------------------------
-# Predict
+# View 3: the early-warning model (needs login)
 # ---------------------------------------------------------------------------
 def parse_form(form):
     values, errors = {}, {}
-    for name, _label, unit, low, high, _step, _icon, _help in FIELDS:
+    for name, _label, unit, low, high, _step, _icon, _help in CONDITION_FIELDS:
         raw = (form.get(name) or "").strip().replace(",", "")
         try:
             number = float(raw)
@@ -318,7 +278,66 @@ def parse_form(form):
             errors[name] = "Use a whole number."
             continue
         values[name] = number
+    for name in HISTORY_FIELDS:
+        raw = (form.get(name) or "").strip().replace(",", "")
+        try:
+            number = float(raw)
+        except ValueError:
+            errors[name] = "Enter a number."
+            continue
+        if not math.isfinite(number) or not (0 <= number <= 60000):
+            errors[name] = "Must be between 0 and 60,000 ha."
+            continue
+        values[name] = number
     return values, errors
+
+
+def parse_scenario(form):
+    scen = {}
+    for name, _label, low, high, _step, _suffix in SCENARIO_FIELDS:
+        try:
+            value = float(form.get(name, 0) or 0)
+        except ValueError:
+            value = 0
+        scen[name] = min(max(value, low), high) if math.isfinite(value) else 0
+    return scen if any(scen.values()) else None
+
+
+ADVICE = {
+    "citizen": {
+        "Low": ["Forest loss is expected to stay low. Keep reporting anything unusual you see.",
+                "Share this forecast with your community council or local environmental group."],
+        "Moderate": ["Pressure on the forest is moderate. Follow local land-use decisions and community meetings.",
+                     "Report suspicious clearing to your local government and regional environmental authority."],
+        "High": ["High forest loss is likely. Ask your municipality what monitoring and prevention actions are planned.",
+                 "Report illegal clearing to your regional environmental authority and join community watch activities."],
+        "Critical": ["Very high forest loss is likely. This municipality needs urgent attention.",
+                     "Contact your regional environmental authority and local government, and support community reporting."],
+    },
+    "authority": {
+        "Low": ["Keep routine satellite monitoring; no extra resources are needed for now.",
+                "Use the simulator to check how changes in cattle or coca would shift the forecast."],
+        "Moderate": ["Add this municipality to the watch list and review early alerts monthly.",
+                     "Coordinate with the local government on land-use control."],
+        "High": ["Schedule field verification and strengthen monitoring in the coming months.",
+                 "Check the dashboard to see how many teams the agent suggests sending to this department."],
+        "Critical": ["Prioritize this municipality for monitoring teams and inter-institutional action now.",
+                     "Use the scenario simulator to compare interventions on cattle, coca and poverty before deciding."],
+    },
+}
+
+
+def build_chart(selected, history, fc, fc_s, last_year):
+    full = selected["history"] if selected and [selected["loss_a"], selected["loss_b"], selected["loss_c"]] == history else history
+    years = list(range(last_year - len(full) + 1, last_year + 1))
+    return {
+        "years": years + [f["year"] for f in fc],
+        "history": full + [None] * len(fc),
+        "forecast": [None] * (len(full) - 1) + [full[-1]] + [f["estimate"] for f in fc],
+        "low": [None] * (len(full) - 1) + [full[-1]] + [f["low"] for f in fc],
+        "high": [None] * (len(full) - 1) + [full[-1]] + [f["high"] for f in fc],
+        "scenario": ([None] * (len(full) - 1) + [full[-1]] + [f["estimate"] for f in fc_s]) if fc_s else None,
+    }
 
 
 @app.route("/predict", methods=["GET", "POST"])
@@ -326,97 +345,69 @@ def parse_form(form):
 def predict_page():
     bundle = STATE["bundle"]
     best = bundle["best"]
+    last_year = STATE["year"]
+    role = g.user["role"]
+    can_simulate = role in ("authority", "admin")
     values, errors, result = {}, {}, None
-    choice = request.form.get("model", "best")
-    if choice not in ("best", "all", *ml.MODEL_NAMES):
-        choice = "best"
+    scen_values = {n: 0 for n, *_ in SCENARIO_FIELDS}
 
     if request.method == "POST":
         values, errors = parse_form(request.form)
+        if can_simulate:
+            scen = parse_scenario(request.form)
+            scen_values = {n: request.form.get(n, 0) for n, *_ in SCENARIO_FIELDS}
+        else:
+            scen = None
         if not errors:
-            main_key = best if choice in ("best", "all") else choice
-            main = ml.predict(bundle, values, main_key)
-            level, color = ml.level_for(bundle, main["estimate"])
-            all_models = [ml.predict(bundle, values, k) for k in ml.MODEL_NAMES] if choice == "all" else []
-            data = STATE["data"]
-            gauge = min(100, round(math.log1p(main["estimate"]) / math.log1p(12000) * 100))
+            cond = {k: values[k] for k in ml.CONDITIONS}
+            history = [values[k] for k in HISTORY_FIELDS]
+            fc = ml.forecast(bundle, history, cond, best, last_year)
+            level, color = ml.alert_level(bundle, fc[0]["estimate"])
+            prob = ml.prob_high(bundle, fc[0])
+            last = history[-1]
+            change = round((fc[0]["estimate"] - last) / max(last, 1) * 100)
+            selected = STATE["by_label"].get(request.form.get("municipality", ""))
+            fc_s = ml.forecast(bundle, history, cond, best, last_year, scen=scen) if scen else None
+            avoided = (sum(f["estimate"] for f in fc) - sum(f["estimate"] for f in fc_s)) if fc_s else None
             result = {
-                **main, "level": level, "color": color, "gauge": gauge,
-                "percentile": round(float((data["forest_loss_ha"] < main["estimate"]).mean()) * 100),
+                "name": ml.MODEL_NAMES[best], "forecast": fc, "level": level, "color": color,
+                "prob": prob, "change": change, "last": round(last), "scenario": fc_s, "avoided": avoided,
+                "advice": ADVICE["authority" if can_simulate else "citizen"][level],
+                "drivers": ml.drivers(bundle, history, cond, best, last_year),
+                "chart": build_chart(selected, [int(v) for v in history], fc, fc_s, last_year),
                 "median": round(bundle["quantiles"]["0.5"]),
-                "drivers": ml.drivers(bundle, values, main_key),
-                "all": all_models, "is_best": main_key == best,
             }
             conn = db.get_db()
             conn.execute(
-                """INSERT INTO queries (user_id, municipality, model, area_km2, population, cattle_heads,
-                   planted_area_ha, nbi_pct, coca_ha, armed_groups, estimate, level)
-                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-                (g.user["id"], request.form.get("municipality") or None, main["name"],
-                 *[values[f] for f in ml.FEATURES], main["estimate"], level),
+                """INSERT INTO forecasts (user_id, municipality, model, loss_last_year, forecast_year1,
+                   forecast_year3, level, prob_high, avoided_ha) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                (g.user["id"], request.form.get("municipality") or None, ml.MODEL_NAMES[best], round(last),
+                 fc[0]["estimate"], fc[2]["estimate"], level, prob, round(avoided) if avoided is not None else None),
             )
             conn.commit()
-        values = {k: request.form.get(k, "") for k, *_ in FIELDS}
+        values = {k: request.form.get(k, "") for k in [f[0] for f in CONDITION_FIELDS] + HISTORY_FIELDS}
     return render_template(
-        "predict.html", fields=FIELDS, values=values, errors=errors, result=result,
-        municipalities=STATE["municipalities"], best=best, model_names=ml.MODEL_NAMES,
-        choice=choice, rows=bundle["rows"], selected=request.form.get("municipality", ""),
+        "predict.html", fields=CONDITION_FIELDS, history_fields=HISTORY_FIELDS, scenario_fields=SCENARIO_FIELDS,
+        scen_values=scen_values, values=values, errors=errors, result=result, can_simulate=can_simulate,
+        municipalities=STATE["municipalities"], selected=request.form.get("municipality", ""),
+        best_name=ml.MODEL_NAMES[best], last_year=last_year, mae=bundle["metrics"][best]["mae"],
     )
-
-
-# ---------------------------------------------------------------------------
-# Model comparison, risk map
-# ---------------------------------------------------------------------------
-@app.route("/models")
-@login_required
-def models_page():
-    bundle = STATE["bundle"]
-    names = [ml.FEATURE_LABELS[f] for f in ml.FEATURES]
-    return render_template(
-        "compare.html", b=bundle, model_names=ml.MODEL_NAMES, feature_names=names,
-        chart={"scatter": bundle["scatter"], "importance": bundle["importance"], "features": names,
-               "models": ml.MODEL_NAMES, "metrics": bundle["metrics"]},
-    )
-
-
-TILE_MAP = {
-    "Atlántico": (3, 0), "Magdalena": (4, 0), "La Guajira": (5, 0),
-    "Córdoba": (1, 1), "Sucre": (2, 1), "Bolívar": (3, 1), "Cesar": (4, 1), "Norte de Santander": (5, 1),
-    "Chocó": (0, 2), "Antioquia": (2, 2), "Santander": (4, 2), "Boyacá": (5, 2), "Arauca": (6, 2),
-    "Valle del Cauca": (0, 3), "Risaralda": (1, 3), "Caldas": (2, 3), "Tolima": (3, 3),
-    "Cundinamarca": (4, 3), "Casanare": (5, 3), "Vichada": (6, 3),
-    "Cauca": (0, 4), "Quindío": (1, 4), "Huila": (3, 4), "Meta": (4, 4), "Guaviare": (5, 4), "Guainía": (6, 4),
-    "Nariño": (0, 5), "Putumayo": (2, 5), "Caquetá": (3, 5), "Vaupés": (5, 5),
-    "Amazonas": (4, 6),
-}
-
-
-@app.route("/map")
-@login_required
-def risk_map():
-    bundle = STATE["bundle"]
-    tiles = [
-        {"department": d, "col": c, "row": r, "values": bundle["dept_year"].get(d, [])}
-        for d, (c, r) in TILE_MAP.items()
-    ]
-    return render_template("risk_map.html", tiles=tiles, years=bundle["years"], trend=bundle["trend"])
 
 
 # ---------------------------------------------------------------------------
 # History and CSV
 # ---------------------------------------------------------------------------
-QUERY_COLUMNS = ["created_at", "municipality", "model", "area_km2", "population", "cattle_heads",
-                 "planted_area_ha", "nbi_pct", "coca_ha", "armed_groups", "estimate", "level"]
+CSV_COLUMNS = ["created_at", "municipality", "model", "loss_last_year", "forecast_year1", "forecast_year3",
+               "level", "prob_high", "avoided_ha"]
 
 
-def fetch_queries(scope_all, limit=None):
-    sql = """SELECT q.*, u.name AS user_name, u.role AS user_role FROM queries q
-             JOIN users u ON u.id = q.user_id"""
+def fetch_forecasts(scope_all, limit=None):
+    sql = """SELECT f.*, u.name AS user_name FROM forecasts f JOIN users u ON u.id = f.user_id"""
     args = []
     if not scope_all:
-        sql += " WHERE q.user_id = ?"
+        sql += " WHERE f.user_id = ?"
         args.append(g.user["id"])
-    sql += " ORDER BY q.id DESC"
+    sql += " ORDER BY f.id DESC"
     if limit:
         sql += " LIMIT ?"
         args.append(limit)
@@ -431,7 +422,8 @@ def wants_all():
 @login_required
 def history():
     scope_all = wants_all()
-    return render_template("history.html", rows=fetch_queries(scope_all, 200), scope_all=scope_all)
+    return render_template("history.html", rows=fetch_forecasts(scope_all, 200), scope_all=scope_all,
+                           year=STATE["year"])
 
 
 @app.route("/history.csv")
@@ -440,10 +432,10 @@ def history_csv():
     scope_all = wants_all()
     out = io.StringIO()
     writer = csv.writer(out)
-    writer.writerow((["user"] if scope_all else []) + QUERY_COLUMNS)
-    for r in fetch_queries(scope_all):
-        writer.writerow(([r["user_name"]] if scope_all else []) + [r[c] for c in QUERY_COLUMNS])
-    name = "queries_all.csv" if scope_all else "my_queries.csv"
+    writer.writerow((["user"] if scope_all else []) + CSV_COLUMNS)
+    for r in fetch_forecasts(scope_all):
+        writer.writerow(([r["user_name"]] if scope_all else []) + [r[c] for c in CSV_COLUMNS])
+    name = "forecasts_all.csv" if scope_all else "my_forecasts.csv"
     return Response(out.getvalue(), mimetype="text/csv",
                     headers={"Content-Disposition": f"attachment; filename={name}"})
 
@@ -458,16 +450,16 @@ def dashboard():
     conn = db.get_db()
     totals = {
         "users": conn.execute("SELECT COUNT(*) FROM users").fetchone()[0],
-        "queries": conn.execute("SELECT COUNT(*) FROM queries").fetchone()[0],
+        "forecasts": conn.execute("SELECT COUNT(*) FROM forecasts").fetchone()[0],
     }
     data = STATE["data"]
-    latest = data[data["year"] == bundle["latest_year"]]
-    totals["loss_latest"] = int(latest["forest_loss_ha"].sum())
-    by_level = conn.execute("SELECT level, COUNT(*) AS n FROM queries GROUP BY level").fetchall()
+    totals["loss_latest"] = int(data[data["year"] == bundle["latest_year"]]["forest_loss_ha"].sum())
+    totals["forecast_next"] = bundle["forecast_total"]
+    by_level = conn.execute("SELECT level, COUNT(*) AS n FROM forecasts GROUP BY level").fetchall()
     rl = bundle["rl"]
     return render_template(
         "dashboard.html", b=bundle, model_names=ml.MODEL_NAMES, totals=totals, by_level=by_level, rl=rl,
-        recent=fetch_queries(True, 8), trend=bundle["trend"],
+        recent=fetch_forecasts(True, 8), trend=bundle["trend"],
         rl_rows=sorted(zip(rl["departments"], rl["risk_ha"], rl["allocation"]), key=lambda r: -r[2]),
     )
 
@@ -479,7 +471,7 @@ def dashboard():
 @roles_required("admin")
 def admin_users():
     users = db.get_db().execute(
-        """SELECT u.*, (SELECT COUNT(*) FROM queries q WHERE q.user_id = u.id) AS n_queries
+        """SELECT u.*, (SELECT COUNT(*) FROM forecasts f WHERE f.user_id = u.id) AS n_forecasts
            FROM users u ORDER BY u.id""").fetchall()
     return render_template("admin_users.html", users=users, roles=db.ROLES)
 

@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}Access | Forest Awareness{% endblock %}
+{% block content %}
+<section class="xhero"><div class="container">
+    <h1>Choose your role and enter</h1>
+    <p>The early-warning model is available after you register or sign in. Each role sees the tools that fit its work.</p>
+</div></section>
+
+<section class="xbody"><div class="container"><div class="auth-wrap">
+    <div class="card-x">
+        <div class="access-tabs">
+            <a href="{{ url_for('access', tab='login', next=request.args.get('next')) }}" class="{% if tab == 'login' %}on{% endif %}">Sign in</a>
+            <a href="{{ url_for('access', tab='register') }}" class="{% if tab == 'register' %}on{% endif %}">Create account</a>
+        </div>
+
+        <form method="post" novalidate id="access-form">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="action" value="{{ 'register' if tab == 'register' else 'login' }}">
+
+            <div class="mb-3">
+                <label for="role" class="form-label fw-semibold"><i class="bi bi-person-badge me-1 field-icon"></i>I am a</label>
+                <select class="form-select" id="role" name="role">
+                    {% for r in roles %}
+                    <option value="{{ r }}" {% if r == chosen_role %}selected{% endif %}>{{ ROLE_LABELS[r] }}</option>
+                    {% endfor %}
+                </select>
+                <div class="role-note mt-1" id="role-note" aria-live="polite"></div>
+            </div>
+
+            {% if tab == 'register' %}
+            <div class="mb-3">
+                <label for="name" class="form-label fw-semibold">Full name</label>
+                <input class="form-control" id="name" name="name" autocomplete="name" value="{{ request.form.get('name', '') }}" required>
+            </div>
+            {% endif %}
+            <div class="mb-3">
+                <label for="email" class="form-label fw-semibold">Email</label>
+                <input type="email" class="form-control" id="email" name="email" autocomplete="username"
+                       value="{{ request.form.get('email', '') }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label fw-semibold">Password</label>
+                <input type="password" class="form-control" id="password" name="password" minlength="{{ 8 if tab == 'register' else 1 }}"
+                       autocomplete="{{ 'new-password' if tab == 'register' else 'current-password' }}" required>
+                {% if tab == 'register' %}<div class="form-text">At least 8 characters.</div>{% endif %}
+            </div>
+            {% if tab == 'register' %}
+            <div class="mb-3">
+                <label for="password2" class="form-label fw-semibold">Repeat password</label>
+                <input type="password" class="form-control" id="password2" name="password2" autocomplete="new-password" required>
+            </div>
+            <div class="mb-3" id="code-box" hidden>
+                <label for="code" class="form-label fw-semibold"><i class="bi bi-key me-1 field-icon"></i>Institutional access code</label>
+                <input class="form-control" id="code" name="code" autocomplete="off">
+                <div class="form-text">Authority and administrator accounts need the code given by the institution.</div>
+            </div>
+            {% endif %}
+
+            <button class="btn btn-predict w-100" type="submit">{{ 'Create account and continue' if tab == 'register' else 'Sign in and continue' }}</button>
+        </form>
+    </div>
+
+</div></div></section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function () {
+    var select = document.getElementById("role");
+    var note = document.getElementById("role-note");
+    var codeBox = document.getElementById("code-box");
+    var notes = {
+        citizen: "See the forecast and alert level of any municipality and keep your own history.",
+        authority: "Everything a citizen sees, plus the what-if scenario simulator, the dashboard with priorities and reports.",
+        admin: "Everything an authority sees, plus user management and model retraining."
+    };
+    function update() {
+        note.textContent = notes[select.value] || "";
+        if (codeBox) { codeBox.hidden = select.value === "citizen"; }
+    }
+    select.addEventListener("change", update);
+    update();
+})();
+</script>
+{% endblock %}

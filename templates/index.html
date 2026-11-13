@@ -1,42 +1,41 @@
 {% extends "base.html" %}
 
+{# Leaf cluster reused by the three main branches of the tree #}
 {% macro canopy() %}
-    <circle cx="-20" cy="-4" r="26" fill="#2d9f63"/>
-    <circle cx="18" cy="-9" r="24" fill="#52b788"/>
-    <circle cx="0" cy="14" r="27" fill="#1f7a4d"/>
-    <circle cx="0" cy="-24" r="21" fill="#74c69d"/>
+    <circle cx="-20" cy="-4" r="26" fill="#5f8a4a"/>
+    <circle cx="18" cy="-9" r="24" fill="#7fa05a"/>
+    <circle cx="0" cy="14" r="27" fill="#3f6b3a"/>
+    <circle cx="0" cy="-24" r="21" fill="#9bb870"/>
 {% endmacro %}
 
 {% block content %}
 
-<section id="home" class="hero">
-    <div class="leaves" aria-hidden="true">
-        <span style="--x: 6%;  --t: 13s; --w: 0s;  --c: #f9c74f; --s: 16px"></span>
-        <span style="--x: 18%; --t: 17s; --w: 4s;  --c: #f3722c; --s: 12px"></span>
-        <span style="--x: 31%; --t: 12s; --w: 7s;  --c: #52b788; --s: 18px"></span>
-        <span style="--x: 47%; --t: 15s; --w: 2s;  --c: #4cc9f0; --s: 10px"></span>
-        <span style="--x: 58%; --t: 18s; --w: 9s;  --c: #f9c74f; --s: 14px"></span>
-        <span style="--x: 70%; --t: 14s; --w: 5s;  --c: #f3722c; --s: 17px"></span>
-        <span style="--x: 83%; --t: 16s; --w: 1s;  --c: #2ec4b6; --s: 13px"></span>
-        <span style="--x: 93%; --t: 12s; --w: 8s;  --c: #b8e986; --s: 15px"></span>
-    </div>
+<div class="home-dark">
+<!-- Falling leaves over the whole page -->
+<div class="home-leaves" aria-hidden="true">
+    {% set leaf_colors = ['#e8b648', '#d9782d', '#7fa05a', '#b58a5a', '#f2ead4', '#9bb870'] %}
+    {% for i in range(18) %}
+    <span style="--x: {{ (i * 37 + 5) % 97 }}%; --t: {{ 16 + (i * 7) % 15 }}s; --w: -{{ (i * 5) % 22 }}s; --c: {{ leaf_colors[i % 6] }}; --s: {{ 10 + (i * 3) % 10 }}px"></span>
+    {% endfor %}
+</div>
 
+<!-- Hero with the interactive tree -->
+<section id="home" class="hero">
     <div class="container hero-content">
         <div class="row justify-content-center text-center mb-4">
             <div class="col-lg-9">
-                <span class="badge hero-badge mb-3">Machine Learning · IDEAM open data</span>
                 <h1 class="display-4 hero-title mb-3">
                     Anticipate how much forest we lose
                     <span class="gradient-text">before it's gone</span>
                 </h1>
                 <p class="lead hero-text mb-4">
-                    Forest Awareness will use official deforestation data from Colombia to estimate the
-                    hectares of forest lost in a municipality, based on the information you enter.
+                    Forest Awareness forecasts how many hectares of forest a Colombian municipality could lose
+                    in the coming years, shows an alert level and lets authorities test what-if scenarios.
                 </p>
                 <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <a href="#figures" class="btn btn-sun btn-lg">See key figures</a>
+                    <a href="#documentation" class="btn btn-sun btn-lg">Read the project</a>
                     <a href="{{ url_for('predict_page') }}" class="btn btn-outline-light btn-lg">
-                        Try the predictor <i class="bi bi-arrow-right ms-1"></i>
+                        Try the early-warning model <i class="bi bi-arrow-right ms-1"></i>
                     </a>
                 </div>
             </div>
@@ -202,62 +201,182 @@
 </section>
 
 <!-- Key figures -->
-<section id="figures" class="figures py-5">
+<section id="figures" class="figures-dark">
     <div class="container">
-        <h2 class="section-title text-center mb-5">Key figures</h2>
+        <div class="text-center mb-5">
+            <h2 class="section-title section-title-light">Key figures</h2>
+            <p class="figures-intro">Colombia's forests in three numbers.</p>
+        </div>
+
         <div class="row g-4">
             {% for item in stats %}
-            <div class="col-md-4">
-                <div class="card stat-card accent-{{ item.color }} h-100">
-                    <div class="card-body p-4">
-                        <div class="stat-icon"><i class="bi {{ item.icon }}"></i></div>
-                        <p class="stat-value mb-1">{{ item.value }}</p>
-                        <p class="mb-0 text-secondary">{{ item.description }}</p>
-                    </div>
-                </div>
+            <div class="col-lg-4">
+                <article class="fig-card accent-{{ item.color }} reveal" data-reveal style="--i: {{ loop.index0 }}">
+                    <div class="fig-icon"><i class="bi {{ item.icon }}"></i></div>
+                    <span class="fig-label">{{ item.label }}</span>
+                    <p class="fig-number" data-target="{{ item.target }}" data-prefix="{{ item.prefix }}" data-suffix="{{ item.suffix }}" data-decimals="{{ item.decimals }}">{{ item.value }}</p>
+                    <h3 class="fig-headline">{{ item.headline }}</h3>
+                    <p class="fig-text">{{ item.description }}</p>
+                    <p class="fig-extra"><i class="bi {{ item.extra_icon }} me-2"></i>{{ item.extra }}</p>
+                </article>
             </div>
             {% endfor %}
         </div>
-        <p class="small text-secondary text-center mt-4 mb-0">
+
+        <p class="small text-center mt-4 mb-0 figures-source">
             Source: IDEAM, Sistema de Monitoreo de Bosques y Carbono (SMByC).
         </p>
     </div>
 </section>
 
-<!-- How it works -->
-<section id="how-it-works" class="how py-5">
+<section id="documentation" class="doc-section">
     <div class="container">
-        <h2 class="section-title text-center mb-5">How it will work</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="step accent-coral text-center">
-                    <div class="step-number">1</div>
-                    <h3 class="h5">Enter the data</h3>
-                    <p class="text-secondary mb-0">Fill in a form with the characteristics of the municipality and the year.</p>
+        <div class="text-center mb-5">
+            <h2 class="doc-heading">Project documentation</h2>
+        </div>
+
+        <article class="doc-block doc-title-block reveal" data-reveal>
+            <span class="doc-num">1</span>
+            <div>
+                <h3>Project title</h3>
+                <p class="doc-title-text">{{ doc.title }}</p>
+            </div>
+        </article>
+
+        <article class="doc-block reveal" data-reveal>
+            <span class="doc-num">2</span>
+            <div>
+                <h3>Problem statement and justification</h3>
+                <h4>Problem statement</h4>
+                {% for paragraph in doc.problem %}<p>{{ paragraph }}</p>{% endfor %}
+                <h4>Justification</h4>
+                {% for paragraph in doc.justification %}<p>{{ paragraph }}</p>{% endfor %}
+            </div>
+        </article>
+
+        <article class="doc-block reveal" data-reveal>
+            <span class="doc-num">3</span>
+            <div>
+                <h3>Project objectives</h3>
+                <h4>General objective</h4>
+                <p>{{ doc.general }}</p>
+                <h4>Specific objectives</h4>
+                <ol class="doc-list">
+                    {% for item in doc.specific %}<li>{{ item }}</li>{% endfor %}
+                </ol>
+            </div>
+        </article>
+
+        <article class="doc-block reveal" data-reveal>
+            <span class="doc-num">4</span>
+            <div>
+                <h3>Referential framework</h3>
+                <div class="doc-grid">
+                    {% for item in doc.framework %}
+                    <div class="doc-card c{{ loop.index0 % 5 }}">
+                        <h4>{{ item.title }}</h4>
+                        <p>{{ item.text }}</p>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="step accent-amber text-center">
-                    <div class="step-number">2</div>
-                    <h3 class="h5">The model analyzes</h3>
-                    <p class="text-secondary mb-0">A model trained on IDEAM data processes the information.</p>
-                </div>
+        </article>
+
+        <article class="doc-block reveal" data-reveal>
+            <span class="doc-num">5</span>
+            <div>
+                <h3>Methodology and development schedule</h3>
+                <p>{{ doc.method_note }}</p>
+                <ol class="doc-schedule">
+                    {% for phase in doc.phases %}
+                    <li class="c{{ loop.index0 % 5 }}">
+                        <span class="doc-weeks">{{ phase.weeks }}</span>
+                        <div><strong>{{ phase.name }}</strong><span>{{ phase.text }}</span></div>
+                    </li>
+                    {% endfor %}
+                </ol>
             </div>
-            <div class="col-md-4">
-                <div class="step accent-teal text-center">
-                    <div class="step-number">3</div>
-                    <h3 class="h5">Get the estimate</h3>
-                    <p class="text-secondary mb-0">Receive the hectares of forest expected to be lost.</p>
-                </div>
+        </article>
+
+        <article class="doc-block reveal" data-reveal>
+            <span class="doc-num">6</span>
+            <div>
+                <h3>References</h3>
+                <ul class="doc-refs">
+                    {% for ref in doc.references %}<li>{{ ref|apa }}</li>{% endfor %}
+                </ul>
             </div>
+        </article>
+
+        <div class="text-center mt-5">
+            <a href="{{ url_for('models_page') }}" class="btn btn-sun btn-lg">Next: compare the models <i class="bi bi-arrow-right ms-1"></i></a>
         </div>
     </div>
 </section>
+
+</div>
 
 {% endblock %}
 
 {% block scripts %}
 <script>
+    // Reveal blocks when they scroll into view
+    (function () {
+        document.documentElement.classList.add("js");
+        const targets = document.querySelectorAll("[data-reveal]");
+
+        if (!("IntersectionObserver" in window)) {
+            targets.forEach(function (el) { el.classList.add("in"); });
+            return;
+        }
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("in");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        targets.forEach(function (el) { observer.observe(el); });
+    })();
+
+    // Key figures count up when they appear
+    (function () {
+        var numbers = document.querySelectorAll(".fig-number");
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        function format(n, decimals) {
+            return n.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+        }
+
+        function run(el) {
+            var target = parseFloat(el.dataset.target);
+            var decimals = parseInt(el.dataset.decimals, 10) || 0;
+            var prefix = el.dataset.prefix || "";
+            var suffix = el.dataset.suffix || "";
+            if (reduce || isNaN(target)) { return; }
+            var start = null, duration = 1800;
+            function step(ts) {
+                if (start === null) { start = ts; }
+                var p = Math.min((ts - start) / duration, 1);
+                var eased = 1 - Math.pow(1 - p, 3);
+                el.textContent = prefix + format(target * eased, decimals) + suffix;
+                if (p < 1) { requestAnimationFrame(step); }
+            }
+            requestAnimationFrame(step);
+        }
+
+        if (!("IntersectionObserver" in window)) { return; }
+        var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) { run(entry.target); obs.unobserve(entry.target); }
+            });
+        }, { threshold: 0.6 });
+        numbers.forEach(function (el) { obs.observe(el); });
+    })();
+
     const PROJECT = JSON.parse(document.getElementById("detail").dataset.project);
 
     (function () {

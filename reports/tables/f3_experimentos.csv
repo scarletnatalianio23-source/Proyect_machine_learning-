@@ -1,0 +1,7 @@
+Modelo,Reducción,Mejores parámetros,MAE CV (ha),Desv. entre pliegues,MAE 2020,MAE 2021,MAE 2022,MAE entrenamiento (ha),Componentes,Combinaciones,Tiempo búsqueda (s),Brecha CV − entrenamiento
+Regresión lineal,Sin PCA,—,316.5,35.8,283.5,299.8,366.3,291.2,10,1,2.3,25.3
+Regresión lineal,Con PCA (95 %),—,329.1,42.5,290.1,309.0,388.2,303.0,8,1,0.1,26.1
+Random Forest,Sin PCA,"max_depth=None, min_samples_leaf=1, n_estimators=300",294.7,23.4,274.0,282.7,327.5,133.2,10,12,41.6,161.5
+Random Forest,Con PCA (95 %),"max_depth=10, min_samples_leaf=1, n_estimators=300",318.1,24.7,336.9,283.2,334.1,147.6,8,12,39.0,170.5
+Gradient Boosting,Sin PCA,"learning_rate=0.05, max_depth=3, n_estimators=150, subsample=0.8",325.7,29.3,296.9,314.4,365.9,214.9,10,12,16.3,110.8
+Gradient Boosting,Con PCA (95 %),"learning_rate=0.05, max_depth=2, n_estimators=300, subsample=0.8",326.9,29.8,305.6,306.2,369.1,221.7,8,12,17.8,105.2

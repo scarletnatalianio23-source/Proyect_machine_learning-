@@ -1,0 +1,12 @@
+Verificación,Resultado
+Filas (municipio-año),1692
+Municipios (municipio + departamento),188
+Departamentos / regiones,31 / 5
+Rango de años,2015-2023 (9 años)
+Panel balanceado (filas por municipio),[9]
+Valores nulos (total),0
+Filas duplicadas,0
+Valores negativos en variables numéricas,0
+"nbi_pct fuera de [0, 100]",0
+Área constante dentro de cada municipio (valores distintos máx.),1
+Años con pérdida = 0 ha (%),4.4

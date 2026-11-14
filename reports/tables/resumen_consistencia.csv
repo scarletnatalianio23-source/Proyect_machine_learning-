@@ -1,0 +1,13 @@
+Elemento,Valor
+Dataset,"1,692 filas · 188 municipios · 2015-2023 (SIMULADO)"
+Tarea,Regresión: pérdida de bosque (ha) del año siguiente
+Partición,Dev (2018-2022): 940 filas · CV temporal 2020/2021/2022 · Prueba 2023: 188 filas
+PCA,10 variables → 8 componentes (≥95 % varianza); PC1 = 40.5 %
+Experimentos,6 configuraciones · 150 ajustes
+Modelo seleccionado,"Random Forest · Sin PCA · max_depth=None, min_samples_leaf=1, n_estimators=300"
+MAE en validación cruzada,294.7 ha
+MAE / RMSE en PRUEBA 2023,337.2 ha / 967.5 ha
+R² (log) / R² (ha) en PRUEBA,0.597 / 0.726
+Cobertura del intervalo (prueba),55.3 %
+Criterios de éxito,"{'C1': 'CUMPLE', 'C2': 'NO CUMPLE', 'C3': 'CUMPLE'}"
+Archivo del modelo,"models/crispml_pipeline.joblib (6.73 MB, scikit-learn 1.6.1)"

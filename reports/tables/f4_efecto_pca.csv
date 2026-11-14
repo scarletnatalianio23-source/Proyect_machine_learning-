@@ -1,0 +1,4 @@
+Modelo,MAE sin PCA (ha),MAE con PCA (ha),Cambio por PCA (%),Dimensiones (sin → con),Tiempo búsqueda sin PCA (s),Tiempo búsqueda con PCA (s)
+Gradient Boosting,325.7,326.9,0.4,10 → 8,16.3,17.8
+Random Forest,294.7,318.1,7.9,10 → 8,41.6,39.0
+Regresión lineal,316.5,329.1,4.0,10 → 8,2.3,0.1

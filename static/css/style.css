@@ -1,15 +1,17 @@
 :root {
-    --night: #0f2b46;
-    --forest-dark: #0f3d2e;
-    --forest: #1f7a4d;
-    --leaf: #52b788;
-    --coral: #f3722c;
-    --amber: #f9c74f;
-    --teal: #2ec4b6;
-    --sky: #4cc9f0;
-    --plum: #7b5ea7;
-    --sand: #fff8ec;
-    --ink: #1d2b25;
+    --night: #1f2a1c;
+    --forest-dark: #16241a;
+    --forest: #3f6b3a;
+    --leaf: #7fa05a;
+    --coral: #d9782d;
+    --amber: #e8b648;
+    --teal: #6f9a55;
+    --sky: #b58a5a;
+    --plum: #7a4d2c;
+    --sand: #f8f3e6;
+    --ink: #2a2a22;
+    --font-head: "Josefin Sans", "Nunito Sans", sans-serif;
+    --font-body: "Nunito Sans", system-ui, sans-serif;
 }
 
 html {
@@ -18,18 +20,18 @@ html {
 }
 
 body {
-    font-family: "DM Sans", system-ui, sans-serif;
+    font-family: var(--font-body);
     color: var(--ink);
     background-color: #fff;
 }
 
 h1, h2, .stat-value, .footer-brand {
-    font-family: "Fraunces", Georgia, serif;
+    font-family: var(--font-head);
 }
 
 /* ---------- Navigation ---------- */
 .navbar-forest {
-    background-color: rgba(15, 43, 70, 0.94);
+    background-color: rgba(31, 42, 28, 0.94);
     backdrop-filter: blur(6px);
     border-bottom: 3px solid transparent;
     border-image: linear-gradient(90deg, var(--coral), var(--amber), var(--leaf), var(--teal), var(--sky)) 1;
@@ -60,7 +62,7 @@ h1, h2, .stat-value, .footer-brand {
 .dropdown-menu-forest {
     min-width: 12rem;
     padding: 0.5rem;
-    background: rgba(15, 43, 70, 0.97);
+    background: rgba(31, 42, 28, 0.97);
     border: 0;
     border-top: 3px solid var(--amber);
     border-radius: 0.75rem;
@@ -75,7 +77,7 @@ h1, h2, .stat-value, .footer-brand {
 
 .dropdown-menu-forest .dropdown-item:hover,
 .dropdown-menu-forest .dropdown-item:focus {
-    background: rgba(249, 199, 79, 0.18);
+    background: rgba(232, 182, 72, 0.18);
     color: var(--amber);
 }
 
@@ -93,9 +95,9 @@ h1, h2, .stat-value, .footer-brand {
     padding: 120px 0 80px;
     color: #fff;
     background:
-        radial-gradient(circle at 88% 12%, rgba(249, 199, 79, 0.45), transparent 38%),
-        radial-gradient(circle at 8% 88%, rgba(46, 196, 182, 0.30), transparent 45%),
-        radial-gradient(circle at 50% 50%, rgba(123, 94, 167, 0.18), transparent 60%),
+        radial-gradient(circle at 88% 12%, rgba(232, 182, 72, 0.45), transparent 38%),
+        radial-gradient(circle at 8% 88%, rgba(111, 154, 85, 0.30), transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(122, 77, 44, 0.18), transparent 60%),
         linear-gradient(160deg, var(--night) 0%, var(--forest-dark) 58%, var(--forest) 100%);
 }
 
@@ -129,14 +131,14 @@ h1, h2, .stat-value, .footer-brand {
 }
 
 .btn-sun {
-    background: linear-gradient(90deg, var(--amber), #f8a84a);
+    background: linear-gradient(90deg, var(--amber), #f0a040);
     border: 0;
     color: var(--night);
     font-weight: 700;
 }
 
 .btn-sun:hover {
-    background: linear-gradient(90deg, #ffd86b, var(--amber));
+    background: linear-gradient(90deg, #f2c969, var(--amber));
     color: var(--night);
 }
 
@@ -239,25 +241,25 @@ h1, h2, .stat-value, .footer-brand {
 }
 
 .node .glyph {
-    fill: #0f2b46;
+    fill: #1f2a1c;
     font-weight: 700;
     font-size: 22px;
 }
 
 .node .glyph-shape {
-    fill: #0f2b46;
+    fill: #1f2a1c;
 }
 
 .node .glyph-check {
     fill: none;
-    stroke: #0f2b46;
+    stroke: #1f2a1c;
     stroke-width: 4;
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 
 .node .label rect {
-    fill: rgba(15, 43, 70, 0.82);
+    fill: rgba(31, 42, 28, 0.82);
     stroke: var(--c);
     stroke-width: 2;
 }
@@ -350,7 +352,7 @@ h1, h2, .stat-value, .footer-brand {
 }
 
 .sub text {
-    fill: #0f2b46;
+    fill: #1f2a1c;
     font-weight: 700;
     font-size: 16px;
     pointer-events: none;
@@ -383,7 +385,7 @@ h1, h2, .stat-value, .footer-brand {
 
 .detail-placeholder {
     text-align: center;
-    color: #4a5a53;
+    color: #5a5546;
     padding: 1.5rem 0;
 }
 
@@ -410,7 +412,7 @@ h1, h2, .stat-value, .footer-brand {
     padding: 0.4rem 1rem;
     border-radius: 999px;
     background: var(--accent);
-    color: #0f2b46;
+    color: #1f2a1c;
     font-weight: 700;
 }
 
@@ -421,7 +423,7 @@ h1, h2, .stat-value, .footer-brand {
 }
 
 .detail-lead {
-    color: #4a5a53;
+    color: #5a5546;
 }
 
 .objectives {
@@ -436,7 +438,7 @@ h1, h2, .stat-value, .footer-brand {
     margin-bottom: 0.75rem;
     padding: 0.8rem 1rem 0.8rem 3.2rem;
     border-radius: 0.9rem;
-    background: #f3f7f5;
+    background: #f4efe0;
     border: 2px solid transparent;
     cursor: pointer;
     counter-increment: obj;
@@ -455,7 +457,7 @@ h1, h2, .stat-value, .footer-brand {
     justify-content: center;
     border-radius: 50%;
     background: var(--accent);
-    color: #0f2b46;
+    color: #1f2a1c;
     font-weight: 700;
     font-size: 0.9rem;
 }
@@ -497,13 +499,13 @@ h1, h2, .stat-value, .footer-brand {
     border: 0;
     border-top: 6px solid var(--ac);
     border-radius: 1.25rem;
-    box-shadow: 0 8px 24px rgba(15, 43, 70, 0.1);
+    box-shadow: 0 8px 24px rgba(31, 42, 28, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .stat-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 14px 30px rgba(15, 43, 70, 0.16);
+    box-shadow: 0 14px 30px rgba(31, 42, 28, 0.16);
 }
 
 .stat-icon {
@@ -527,7 +529,7 @@ h1, h2, .stat-value, .footer-brand {
 
 /* ---------- How it works ---------- */
 .how {
-    background: linear-gradient(180deg, #e9f8f5 0%, #ffffff 100%);
+    background: linear-gradient(180deg, #f1ecda 0%, #ffffff 100%);
 }
 
 .step {
@@ -535,7 +537,7 @@ h1, h2, .stat-value, .footer-brand {
     border-radius: 1.25rem;
     background: #fff;
     border-bottom: 5px solid var(--ac);
-    box-shadow: 0 6px 18px rgba(15, 43, 70, 0.08);
+    box-shadow: 0 6px 18px rgba(31, 42, 28, 0.08);
     height: 100%;
 }
 
@@ -551,6 +553,344 @@ h1, h2, .stat-value, .footer-brand {
     color: var(--night);
     font-weight: 700;
     font-size: 1.5rem;
+}
+
+/* ---------- Journey: Key figures + How it works share one background ---------- */
+.journey {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 92% 5%, rgba(232, 182, 72, 0.28), transparent 32%),
+        radial-gradient(circle at 4% 58%, rgba(111, 154, 85, 0.16), transparent 38%),
+        radial-gradient(circle at 96% 92%, rgba(217, 120, 45, 0.14), transparent 34%),
+        linear-gradient(180deg, #f8f3e6 0%, #f3ead2 55%, #eef1dc 100%);
+}
+
+.journey > section {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+.journey-leaves {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.journey-leaves span {
+    position: absolute;
+    top: -30px;
+    left: var(--x);
+    width: var(--s);
+    height: var(--s);
+    background: var(--c);
+    border-radius: 0 100% 0 100%;
+    opacity: 0.45;
+    animation: drift var(--t) linear var(--w) infinite;
+}
+
+@keyframes drift {
+    0%   { top: -30px; transform: translateX(0) rotate(0deg); }
+    50%  { transform: translateX(40px) rotate(180deg); }
+    100% { top: 100%; transform: translateX(-20px) rotate(360deg); }
+}
+
+.section-title {
+    font-weight: 700;
+    color: var(--night);
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 5px;
+    margin: 0.7rem auto 0;
+    border-radius: 5px;
+    background: linear-gradient(90deg, var(--coral), var(--amber), var(--teal));
+}
+
+.accent-coral { --ac: var(--coral); }
+.accent-amber { --ac: var(--amber); }
+.accent-teal  { --ac: var(--teal); }
+
+/* Reveal on scroll (only active when JavaScript adds the "js" class) */
+.js .reveal {
+    opacity: 0;
+    transform: translateX(-26px);
+    transition: opacity 0.6s ease calc(var(--i, 0) * 0.18s),
+                transform 0.6s ease calc(var(--i, 0) * 0.18s);
+}
+
+.js .reveal.in {
+    opacity: 1;
+    transform: none;
+}
+
+/* ---------- Key figures: timeline on a tree branch ---------- */
+.fig-timeline {
+    --rail: 96px;
+    --trunk: calc(var(--rail) * 0.448);
+    --node: 44px;
+    position: relative;
+    padding-left: var(--rail);
+    padding-bottom: 24px;
+}
+
+.branch-root {
+    position: absolute;
+    left: 0;
+    top: -6px;
+    width: var(--rail);
+    height: auto;
+    overflow: visible;
+}
+
+.branch-trunk {
+    position: absolute;
+    left: calc(var(--trunk) - 7px);
+    top: calc(var(--rail) * 1.25 - 18px);
+    bottom: 0;
+    width: 14px;
+    border-radius: 0 0 8px 8px;
+    background: linear-gradient(90deg, #6f4528, #9a6a3f 55%, #7a4d2c);
+    transform-origin: top;
+}
+
+.js .fig-timeline .branch-trunk {
+    transform: scaleY(0);
+    transition: transform 1.6s ease-out;
+}
+
+.js .fig-timeline.in .branch-trunk {
+    transform: scaleY(1);
+}
+
+/* Small leaves growing along the branch */
+.bl {
+    position: absolute;
+    top: var(--y);
+    left: calc(var(--trunk) + var(--dx));
+    width: var(--s);
+    height: var(--s);
+    background: var(--c);
+    border-radius: 0 100% 0 100%;
+    transform: rotate(var(--r));
+    animation: leaf-sway 4s ease-in-out var(--w) infinite alternate;
+}
+
+@keyframes leaf-sway {
+    from { transform: rotate(calc(var(--r) - 8deg)); }
+    to   { transform: rotate(calc(var(--r) + 8deg)); }
+}
+
+.tl-item {
+    position: relative;
+    margin-bottom: 1.75rem;
+}
+
+.tl-item:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Twig that joins the branch to each card */
+.tl-item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(var(--trunk) - var(--rail));
+    width: calc(var(--rail) - var(--trunk));
+    height: 6px;
+    margin-top: -3px;
+    border-radius: 3px;
+    background: #8b5a35;
+}
+
+.tl-node {
+    position: absolute;
+    top: 50%;
+    left: calc(var(--trunk) - var(--rail) - var(--node) / 2);
+    z-index: 2;
+    width: var(--node);
+    height: var(--node);
+    margin-top: calc(var(--node) / -2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: var(--ac);
+    color: var(--night);
+    font-size: 1.15rem;
+    box-shadow: 0 4px 10px rgba(31, 42, 28, 0.25);
+}
+
+.tl-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 2rem;
+    padding: 1.5rem 1.75rem;
+    border-left: 6px solid var(--ac);
+    border-radius: 1.25rem;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(31, 42, 28, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tl-item:hover .tl-card {
+    transform: translateX(6px);
+    box-shadow: 0 14px 30px rgba(31, 42, 28, 0.16);
+}
+
+.tl-head {
+    min-width: 11rem;
+}
+
+.tl-label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0.8rem;
+    border-radius: 999px;
+    background: var(--ac);
+    color: var(--night);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.tl-value {
+    font-family: var(--font-head);
+    font-size: 2.7rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--night);
+}
+
+.tl-text {
+    flex: 1 1 14rem;
+    margin: 0;
+    font-size: 1.05rem;
+    color: #5a5546;
+}
+
+@media (max-width: 575.98px) {
+    .fig-timeline {
+        --rail: 72px;
+        --node: 38px;
+    }
+
+    .tl-card {
+        padding: 1.1rem 1.1rem;
+    }
+
+    .tl-value {
+        font-size: 2.2rem;
+    }
+}
+
+/* ---------- How it works: stepping stones ---------- */
+.stones {
+    position: relative;
+}
+
+.stones::before {
+    content: "";
+    position: absolute;
+    left: 6%;
+    right: 6%;
+    top: 60%;
+    border-top: 4px dotted rgba(139, 90, 53, 0.4);
+    z-index: 0;
+}
+
+.stone-col {
+    position: relative;
+    z-index: 1;
+}
+
+.js .stone-col.reveal {
+    transform: translateY(32px) scale(0.94);
+}
+
+.js .stone-col.reveal.in {
+    transform: none;
+}
+
+.stone {
+    position: relative;
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stone:hover {
+    transform: translateY(-8px) rotate(-1deg);
+}
+
+.stone-shape {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 12px 14px rgba(31, 42, 28, 0.22));
+}
+
+.stone-moss   { fill: var(--ac); opacity: 0.85; }
+.stone-shine  { fill: #fff; opacity: 0.45; }
+.stone-crack  { fill: none; stroke: #6b6455; stroke-width: 2; stroke-linecap: round; opacity: 0.35; }
+
+.stone-body {
+    position: relative;
+    z-index: 1;
+    padding: 2.6rem 2.3rem 2.2rem;
+}
+
+.stone-number {
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: var(--ac);
+    color: var(--night);
+    font-size: 1.4rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(31, 42, 28, 0.25);
+}
+
+.stone-body h3 {
+    color: var(--night);
+    font-weight: 700;
+}
+
+.stone-body p {
+    margin: 0;
+    color: #3e3a2e;
+}
+
+@media (min-width: 768px) {
+    .stone-col:nth-child(2) {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .stones::before {
+        display: none;
+    }
+
+    .stone-col:nth-child(odd) .stone  { margin-right: 1.5rem; }
+    .stone-col:nth-child(even) .stone { margin-left: 1.5rem; }
 }
 
 /* ---------- Footer ---------- */
@@ -575,7 +915,7 @@ h1, h2, .stat-value, .footer-brand {
 }
 
 .footer-title {
-    font-family: "DM Sans", system-ui, sans-serif;
+    font-family: var(--font-body);
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -626,9 +966,9 @@ h1, h2, .stat-value, .footer-brand {
     text-align: center;
     color: #fff;
     background:
-        radial-gradient(circle at 88% 12%, rgba(249, 199, 79, 0.45), transparent 38%),
-        radial-gradient(circle at 8% 88%, rgba(46, 196, 182, 0.30), transparent 45%),
-        radial-gradient(circle at 50% 50%, rgba(123, 94, 167, 0.18), transparent 60%),
+        radial-gradient(circle at 88% 12%, rgba(232, 182, 72, 0.45), transparent 38%),
+        radial-gradient(circle at 8% 88%, rgba(111, 154, 85, 0.30), transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(122, 77, 44, 0.18), transparent 60%),
         linear-gradient(160deg, var(--night) 0%, var(--forest-dark) 58%, var(--forest) 100%);
 }
 
@@ -665,7 +1005,7 @@ h1, h2, .stat-value, .footer-brand {
 }
 
 .doc-section.cool {
-    background: linear-gradient(180deg, #e9f8f5 0%, #ffffff 100%);
+    background: linear-gradient(180deg, #f1ecda 0%, #ffffff 100%);
 }
 
 .doc-card {
@@ -673,14 +1013,14 @@ h1, h2, .stat-value, .footer-brand {
     border-radius: 1.25rem;
     background: #fff;
     border-top: 6px solid var(--ac);
-    box-shadow: 0 8px 24px rgba(15, 43, 70, 0.1);
+    box-shadow: 0 8px 24px rgba(31, 42, 28, 0.1);
     line-height: 1.7;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .doc-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 14px 30px rgba(15, 43, 70, 0.16);
+    box-shadow: 0 14px 30px rgba(31, 42, 28, 0.16);
 }
 
 .doc-tag {
@@ -703,7 +1043,7 @@ h1, h2, .stat-value, .footer-brand {
 }
 
 .badge-optional {
-    background: rgba(15, 43, 70, 0.08);
+    background: rgba(31, 42, 28, 0.08);
     color: var(--night);
     border: 1px dashed var(--night);
     font-weight: 500;
@@ -712,7 +1052,7 @@ h1, h2, .stat-value, .footer-brand {
 }
 
 .subsection-title {
-    font-family: "Fraunces", Georgia, serif;
+    font-family: var(--font-head);
     font-weight: 700;
     color: var(--night);
 }
@@ -743,7 +1083,7 @@ h1, h2, .stat-value, .footer-brand {
     border-radius: 1.25rem;
     border-left: 6px solid var(--ac);
     background: #fff;
-    box-shadow: 0 6px 18px rgba(15, 43, 70, 0.08);
+    box-shadow: 0 6px 18px rgba(31, 42, 28, 0.08);
 }
 
 .timeline-item:last-child {

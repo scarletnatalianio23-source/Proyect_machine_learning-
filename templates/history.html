@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}History | Forest Awareness{% endblock %}
+{% block content %}
+<section class="xhero"><div class="container">
+    <h1>{% if scope_all %}All forecasts{% else %}My forecasts{% endif %}</h1>
+    <p>{% if scope_all %}Every forecast made on the platform.{% else %}The forecasts you made, newest first.{% endif %}</p>
+</div></section>
+<section class="xbody"><div class="container">
+    <div class="card-x">
+        <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-3">
+            <div class="btn-group">
+                <a class="btn btn-sm {% if not scope_all %}btn-dark{% else %}btn-outline-dark{% endif %}" href="{{ url_for('history') }}">Mine</a>
+                {% if current_user['role'] in ('authority', 'admin') %}
+                <a class="btn btn-sm {% if scope_all %}btn-dark{% else %}btn-outline-dark{% endif %}" href="{{ url_for('history', scope='all') }}">Everyone</a>
+                {% endif %}
+            </div>
+            <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('history_csv', scope='all' if scope_all else None) }}">
+                <i class="bi bi-download me-1"></i>Download CSV
+            </a>
+        </div>
+        {% if rows %}
+        <div class="table-responsive">
+            <table class="table-x">
+                <thead><tr>
+                    <th>Date</th>{% if scope_all %}<th>User</th>{% endif %}<th>Municipality</th>
+                    <th class="text-end">Loss {{ year }}</th><th class="text-end">Forecast {{ year + 1 }}</th><th class="text-end">Forecast {{ year + 3 }}</th>
+                    <th class="text-end">High alert chance</th><th>Alert</th><th class="text-end">Avoided (scenario)</th>
+                </tr></thead>
+                <tbody>
+                {% for r in rows %}
+                    <tr>
+                        <td>{{ r['created_at'][:16] }}</td>
+                        {% if scope_all %}<td>{{ r['user_name'] }}</td>{% endif %}
+                        <td>{{ r['municipality'] or 'Custom values' }}</td>
+                        <td class="text-end">{{ '{:,}'.format(r['loss_last_year']) }}</td>
+                        <td class="text-end"><strong>{{ '{:,}'.format(r['forecast_year1']) }}</strong> ha</td>
+                        <td class="text-end">{{ '{:,}'.format(r['forecast_year3']) }} ha</td>
+                        <td class="text-end">{{ r['prob_high'] }}%</td>
+                        <td><span class="chip {{ {'Low': 'teal', 'Moderate': 'amber', 'High': 'coral', 'Critical': 'plum'}[r['level']] }}">{{ r['level'] }}</span></td>
+                        <td class="text-end">{% if r['avoided_ha'] is not none %}{{ '{:,}'.format(r['avoided_ha']) }} ha{% else %}-{% endif %}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p class="mb-0">No forecasts yet. <a href="{{ url_for('predict_page') }}">Make your first forecast</a>.</p>
+        {% endif %}
+    </div>
+</div></section>
+{% endblock %}

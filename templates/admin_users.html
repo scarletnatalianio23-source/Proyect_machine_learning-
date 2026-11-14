@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Users | Forest Awareness{% endblock %}
+{% block content %}
+<section class="xhero"><div class="container">
+    <h1>Users and roles</h1>
+    <p>Create accounts, change roles and disable access.</p>
+</div></section>
+<section class="xbody"><div class="container">
+    <div class="card-x mb-4">
+        <h2><i class="bi bi-person-plus me-2"></i>New user</h2>
+        <form method="post" action="{{ url_for('admin_user_new') }}" class="row g-2 align-items-end">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <div class="col-md-3"><label class="form-label small fw-semibold" for="nu-name">Name</label><input class="form-control" id="nu-name" name="name" required></div>
+            <div class="col-md-3"><label class="form-label small fw-semibold" for="nu-email">Email</label><input type="email" class="form-control" id="nu-email" name="email" required></div>
+            <div class="col-md-2"><label class="form-label small fw-semibold" for="nu-pass">Password</label><input type="password" class="form-control" id="nu-pass" name="password" minlength="8" required></div>
+            <div class="col-md-2"><label class="form-label small fw-semibold" for="nu-role">Role</label>
+                <select class="form-select" id="nu-role" name="role">{% for r in roles %}<option value="{{ r }}">{{ ROLE_LABELS[r] }}</option>{% endfor %}</select></div>
+            <div class="col-md-2"><button class="btn btn-predict w-100" type="submit">Create</button></div>
+        </form>
+    </div>
+    <div class="card-x amber">
+        <h2><i class="bi bi-list-ul me-2"></i>All users ({{ users|length }})</h2>
+        <div class="table-responsive">
+            <table class="table-x">
+                <thead><tr><th>Name</th><th>Email</th><th>Forecasts</th><th>Role</th><th>Status</th><th></th></tr></thead>
+                <tbody>
+                {% for u in users %}
+                <tr>
+                        <td>{{ u['name'] }}{% if u['id'] == current_user['id'] %} <span class="chip">you</span>{% endif %}</td>
+                        <td>{{ u['email'] }}</td>
+                        <td>{{ u['n_forecasts'] }}</td>
+                        <td><select class="form-select form-select-sm" name="role" form="uf-{{ u['id'] }}" aria-label="Role of {{ u['name'] }}">
+                            {% for r in roles %}<option value="{{ r }}" {% if r == u['role'] %}selected{% endif %}>{{ ROLE_LABELS[r] }}</option>{% endfor %}
+                        </select></td>
+                        <td><select class="form-select form-select-sm" name="active" form="uf-{{ u['id'] }}" aria-label="Status of {{ u['name'] }}">
+                            <option value="1" {% if u['active'] %}selected{% endif %}>Active</option>
+                            <option value="0" {% if not u['active'] %}selected{% endif %}>Disabled</option>
+                        </select></td>
+                        <td><button class="btn btn-sm btn-outline-dark" type="submit" form="uf-{{ u['id'] }}">Save</button></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% for u in users %}
+        <form id="uf-{{ u['id'] }}" method="post" action="{{ url_for('admin_user_update', user_id=u['id']) }}" hidden>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        </form>
+        {% endfor %}
+    </div>
+</div></section>
+{% endblock %}

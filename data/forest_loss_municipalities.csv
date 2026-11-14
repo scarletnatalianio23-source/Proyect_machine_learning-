@@ -1,0 +1,1693 @@
+municipality,department,region,year,area_km2,population,cattle_heads,planted_area_ha,nbi_pct,coca_ha,armed_groups,forest_loss_ha
+Cartagena del Chairá,Caquetá,Amazon,2015,12900.0,6321,203114,3144.7,87.1,104.3,0,1142
+Cartagena del Chairá,Caquetá,Amazon,2016,12900.0,6387,208600,3113.5,85.6,98.4,1,2828
+Cartagena del Chairá,Caquetá,Amazon,2017,12900.0,6453,209552,3261.6,87.8,94.9,1,1292
+Cartagena del Chairá,Caquetá,Amazon,2018,12900.0,6519,207589,3407.4,86.6,125.3,1,897
+Cartagena del Chairá,Caquetá,Amazon,2019,12900.0,6585,219651,3217.8,85.9,120.5,0,638
+Cartagena del Chairá,Caquetá,Amazon,2020,12900.0,6650,244724,3406.4,85.7,146.6,1,733
+Cartagena del Chairá,Caquetá,Amazon,2021,12900.0,6716,269644,3601.3,85.4,95.6,2,0
+Cartagena del Chairá,Caquetá,Amazon,2022,12900.0,6782,241618,3463.8,85.4,97.2,1,816
+Cartagena del Chairá,Caquetá,Amazon,2023,12900.0,6848,241627,3280.6,83.2,128.3,1,1662
+San Vicente del Caguán,Caquetá,Amazon,2015,17000.0,15977,43408,12680.0,98.6,580.1,1,7380
+San Vicente del Caguán,Caquetá,Amazon,2016,17000.0,16143,43030,11801.2,98.6,506.0,0,6022
+San Vicente del Caguán,Caquetá,Amazon,2017,17000.0,16309,43444,11694.1,98.5,780.2,1,4272
+San Vicente del Caguán,Caquetá,Amazon,2018,17000.0,16476,46182,11986.9,96.4,572.7,2,3040
+San Vicente del Caguán,Caquetá,Amazon,2019,17000.0,16642,50073,12671.4,98.0,618.8,1,5855
+San Vicente del Caguán,Caquetá,Amazon,2020,17000.0,16809,46693,12939.5,96.7,572.8,1,1741
+San Vicente del Caguán,Caquetá,Amazon,2021,17000.0,16975,54689,13313.7,97.7,536.9,1,1379
+San Vicente del Caguán,Caquetá,Amazon,2022,17000.0,17141,55732,14019.3,96.5,733.7,1,981
+San Vicente del Caguán,Caquetá,Amazon,2023,17000.0,17308,53242,13899.0,94.8,537.4,1,8104
+Solano,Caquetá,Amazon,2015,42000.0,83873,211729,6085.7,88.0,161.4,2,10261
+Solano,Caquetá,Amazon,2016,42000.0,84747,207048,6025.4,86.6,180.2,3,12000
+Solano,Caquetá,Amazon,2017,42000.0,85620,254466,6470.8,87.3,249.5,2,12000
+Solano,Caquetá,Amazon,2018,42000.0,86494,225580,6691.7,87.9,182.3,2,12000
+Solano,Caquetá,Amazon,2019,42000.0,87368,232731,5983.5,88.4,156.9,3,12000
+Solano,Caquetá,Amazon,2020,42000.0,88241,254471,6806.3,86.2,187.3,2,12000
+Solano,Caquetá,Amazon,2021,42000.0,89115,253262,5696.4,86.9,170.2,1,12000
+Solano,Caquetá,Amazon,2022,42000.0,89989,264716,6327.1,84.9,176.9,1,12000
+Solano,Caquetá,Amazon,2023,42000.0,90862,263880,6855.7,86.0,168.2,2,12000
+Florencia,Caquetá,Amazon,2015,2300.0,5558,57655,5226.8,68.6,0.0,1,107
+Florencia,Caquetá,Amazon,2016,2300.0,5615,58018,5331.8,68.2,0.0,1,85
+Florencia,Caquetá,Amazon,2017,2300.0,5673,58709,5494.9,68.1,0.0,2,711
+Florencia,Caquetá,Amazon,2018,2300.0,5731,68885,5356.6,68.4,0.0,0,2103
+Florencia,Caquetá,Amazon,2019,2300.0,5789,67959,5860.6,66.6,0.0,2,1565
+Florencia,Caquetá,Amazon,2020,2300.0,5847,63820,5766.4,67.4,0.0,2,632
+Florencia,Caquetá,Amazon,2021,2300.0,5905,69750,5613.4,67.3,0.0,1,832
+Florencia,Caquetá,Amazon,2022,2300.0,5963,71499,5559.6,64.8,0.0,1,337
+Florencia,Caquetá,Amazon,2023,2300.0,6021,69567,6091.4,65.9,0.0,2,1208
+Puerto Rico,Caquetá,Amazon,2015,3300.0,14583,33942,3052.8,65.0,44.8,1,222
+Puerto Rico,Caquetá,Amazon,2016,3300.0,14735,36183,2854.2,63.0,47.0,1,180
+Puerto Rico,Caquetá,Amazon,2017,3300.0,14887,38178,2897.4,65.7,49.3,0,343
+Puerto Rico,Caquetá,Amazon,2018,3300.0,15039,41342,3103.4,63.0,56.2,1,436
+Puerto Rico,Caquetá,Amazon,2019,3300.0,15191,39759,2832.7,62.4,48.0,1,374
+Puerto Rico,Caquetá,Amazon,2020,3300.0,15343,40821,2892.2,62.2,49.8,1,285
+Puerto Rico,Caquetá,Amazon,2021,3300.0,15495,43016,3079.2,61.3,41.5,0,147
+Puerto Rico,Caquetá,Amazon,2022,3300.0,15646,43499,3289.9,61.0,46.8,1,470
+Puerto Rico,Caquetá,Amazon,2023,3300.0,15798,43481,3077.0,61.5,40.1,1,48
+La Montañita,Caquetá,Amazon,2015,1800.0,11086,35410,3593.6,63.7,0.0,3,191
+La Montañita,Caquetá,Amazon,2016,1800.0,11201,34547,3406.9,64.2,0.0,2,210
+La Montañita,Caquetá,Amazon,2017,1800.0,11317,34506,3511.7,62.6,0.0,2,137
+La Montañita,Caquetá,Amazon,2018,1800.0,11432,35846,3631.8,63.3,0.0,4,190
+La Montañita,Caquetá,Amazon,2019,1800.0,11548,38252,3842.7,62.5,0.0,3,26
+La Montañita,Caquetá,Amazon,2020,1800.0,11663,38854,3807.2,60.5,0.0,2,103
+La Montañita,Caquetá,Amazon,2021,1800.0,11779,36550,3575.6,61.8,0.0,3,325
+La Montañita,Caquetá,Amazon,2022,1800.0,11894,40216,3906.1,59.5,0.0,3,365
+La Montañita,Caquetá,Amazon,2023,1800.0,12010,44990,3989.5,60.2,0.0,3,164
+Solita,Caquetá,Amazon,2015,1700.0,5092,19737,14118.1,63.3,76.7,0,801
+Solita,Caquetá,Amazon,2016,1700.0,5145,20267,13450.9,62.4,71.4,0,851
+Solita,Caquetá,Amazon,2017,1700.0,5198,21759,14684.4,61.2,90.1,0,631
+Solita,Caquetá,Amazon,2018,1700.0,5251,19784,13994.7,60.0,113.4,0,656
+Solita,Caquetá,Amazon,2019,1700.0,5304,21649,13868.0,61.3,77.3,0,407
+Solita,Caquetá,Amazon,2020,1700.0,5358,22319,14467.9,59.9,85.1,0,975
+Solita,Caquetá,Amazon,2021,1700.0,5411,22535,15045.5,60.2,77.8,0,847
+Solita,Caquetá,Amazon,2022,1700.0,5464,22065,15258.6,61.1,87.6,0,98
+Solita,Caquetá,Amazon,2023,1700.0,5517,24565,16264.5,59.6,87.0,1,523
+Milán,Caquetá,Amazon,2015,1200.0,11353,5965,608.5,75.7,0.0,0,102
+Milán,Caquetá,Amazon,2016,1200.0,11471,6589,588.4,74.4,0.0,0,8
+Milán,Caquetá,Amazon,2017,1200.0,11590,6382,634.6,76.2,0.0,0,65
+Milán,Caquetá,Amazon,2018,1200.0,11708,6580,604.5,75.0,0.0,0,144
+Milán,Caquetá,Amazon,2019,1200.0,11826,7188,725.7,74.7,0.0,1,227
+Milán,Caquetá,Amazon,2020,1200.0,11944,6996,658.1,74.8,0.0,0,122
+Milán,Caquetá,Amazon,2021,1200.0,12063,7588,670.9,74.0,0.0,1,136
+Milán,Caquetá,Amazon,2022,1200.0,12181,7748,704.7,73.7,0.0,0,61
+Milán,Caquetá,Amazon,2023,1200.0,12299,7818,676.4,72.6,0.0,0,58
+Belén de los Andaquíes,Caquetá,Amazon,2015,1200.0,3084,32891,7234.9,71.3,0.0,4,165
+Belén de los Andaquíes,Caquetá,Amazon,2016,1200.0,3116,35566,7007.6,70.5,0.0,4,258
+Belén de los Andaquíes,Caquetá,Amazon,2017,1200.0,3148,35484,8042.9,71.0,0.0,5,389
+Belén de los Andaquíes,Caquetá,Amazon,2018,1200.0,3181,37351,7947.1,68.6,0.0,3,295
+Belén de los Andaquíes,Caquetá,Amazon,2019,1200.0,3213,37849,8191.5,69.2,0.0,3,140
+Belén de los Andaquíes,Caquetá,Amazon,2020,1200.0,3245,39659,7420.0,69.6,0.0,3,102
+Belén de los Andaquíes,Caquetá,Amazon,2021,1200.0,3277,42555,7940.2,68.2,0.0,3,428
+Belén de los Andaquíes,Caquetá,Amazon,2022,1200.0,3309,43309,8144.2,69.2,0.0,4,479
+Belén de los Andaquíes,Caquetá,Amazon,2023,1200.0,3341,40171,8319.4,67.9,0.0,3,462
+El Doncello,Caquetá,Amazon,2015,1200.0,2316,12812,802.6,99.5,0.0,1,139
+El Doncello,Caquetá,Amazon,2016,1200.0,2341,12626,793.3,98.7,0.0,0,193
+El Doncello,Caquetá,Amazon,2017,1200.0,2365,14087,809.5,99.1,0.0,0,231
+El Doncello,Caquetá,Amazon,2018,1200.0,2389,14181,811.4,98.4,0.0,1,243
+El Doncello,Caquetá,Amazon,2019,1200.0,2413,13566,813.2,96.9,0.0,2,224
+El Doncello,Caquetá,Amazon,2020,1200.0,2437,14160,839.5,95.3,0.0,1,397
+El Doncello,Caquetá,Amazon,2021,1200.0,2461,14211,876.6,96.1,0.0,1,215
+El Doncello,Caquetá,Amazon,2022,1200.0,2485,15652,907.1,96.7,0.0,2,673
+El Doncello,Caquetá,Amazon,2023,1200.0,2510,15723,927.0,95.1,0.0,1,419
+Paujil,Caquetá,Amazon,2015,1300.0,869,22082,1655.3,82.1,0.0,0,1260
+Paujil,Caquetá,Amazon,2016,1300.0,878,22957,1545.5,81.3,0.0,0,911
+Paujil,Caquetá,Amazon,2017,1300.0,887,24531,1706.2,80.9,0.0,0,646
+Paujil,Caquetá,Amazon,2018,1300.0,896,23657,1780.9,80.2,0.0,0,369
+Paujil,Caquetá,Amazon,2019,1300.0,906,27236,1884.6,80.9,0.0,0,149
+Paujil,Caquetá,Amazon,2020,1300.0,915,25873,1906.4,79.2,0.0,0,71
+Paujil,Caquetá,Amazon,2021,1300.0,924,27341,1774.4,78.8,0.0,0,132
+Paujil,Caquetá,Amazon,2022,1300.0,933,27622,1798.7,79.0,0.0,1,190
+Paujil,Caquetá,Amazon,2023,1300.0,942,27193,1935.5,79.4,0.0,0,87
+Albania,Caquetá,Amazon,2015,400.0,7260,8676,42.6,79.9,0.0,4,36
+Albania,Caquetá,Amazon,2016,400.0,7335,9791,39.1,79.6,0.0,4,71
+Albania,Caquetá,Amazon,2017,400.0,7411,9543,42.3,79.1,0.0,3,38
+Albania,Caquetá,Amazon,2018,400.0,7487,10560,41.3,80.0,0.0,4,0
+Albania,Caquetá,Amazon,2019,400.0,7562,10199,43.2,78.0,0.0,5,117
+Albania,Caquetá,Amazon,2020,400.0,7638,10269,42.9,78.0,0.0,3,130
+Albania,Caquetá,Amazon,2021,400.0,7713,10859,45.5,78.5,0.0,4,110
+Albania,Caquetá,Amazon,2022,400.0,7789,11043,44.0,78.1,0.0,5,218
+Albania,Caquetá,Amazon,2023,400.0,7865,11182,44.1,77.5,0.0,4,109
+Curillo,Caquetá,Amazon,2015,600.0,6011,1292,359.2,47.7,0.0,0,4
+Curillo,Caquetá,Amazon,2016,600.0,6073,1289,363.3,46.6,0.0,1,6
+Curillo,Caquetá,Amazon,2017,600.0,6136,1337,402.1,44.2,0.0,2,8
+Curillo,Caquetá,Amazon,2018,600.0,6199,1422,406.8,46.8,0.0,0,14
+Curillo,Caquetá,Amazon,2019,600.0,6261,1583,416.5,44.2,0.0,1,60
+Curillo,Caquetá,Amazon,2020,600.0,6324,1490,398.6,44.4,0.0,1,89
+Curillo,Caquetá,Amazon,2021,600.0,6386,1622,389.1,45.5,0.0,1,39
+Curillo,Caquetá,Amazon,2022,600.0,6449,1634,458.8,42.7,0.0,2,11
+Curillo,Caquetá,Amazon,2023,600.0,6512,1546,479.4,43.8,0.0,1,13
+Morelia,Caquetá,Amazon,2015,300.0,2988,3187,1676.4,86.3,0.0,2,88
+Morelia,Caquetá,Amazon,2016,300.0,3019,3279,1569.9,84.4,0.0,1,106
+Morelia,Caquetá,Amazon,2017,300.0,3050,2975,1636.9,84.9,0.0,0,19
+Morelia,Caquetá,Amazon,2018,300.0,3081,3365,1649.3,85.1,0.0,2,87
+Morelia,Caquetá,Amazon,2019,300.0,3112,3391,1695.5,83.5,0.0,0,0
+Morelia,Caquetá,Amazon,2020,300.0,3143,3242,1818.9,85.3,0.0,0,0
+Morelia,Caquetá,Amazon,2021,300.0,3175,3534,1700.5,81.2,0.0,2,43
+Morelia,Caquetá,Amazon,2022,300.0,3206,3729,1733.0,82.7,0.0,1,45
+Morelia,Caquetá,Amazon,2023,300.0,3237,3651,1766.0,81.7,0.0,0,31
+La Macarena,Meta,Orinoquia,2015,11200.0,11690,21772,38031.9,37.0,58.8,2,2060
+La Macarena,Meta,Orinoquia,2016,11200.0,11811,23205,39484.3,35.7,51.2,2,2311
+La Macarena,Meta,Orinoquia,2017,11200.0,11933,22943,41099.5,36.8,73.9,2,2012
+La Macarena,Meta,Orinoquia,2018,11200.0,12055,23397,40198.7,35.4,58.5,2,398
+La Macarena,Meta,Orinoquia,2019,11200.0,12177,23738,37279.9,35.2,56.4,2,170
+La Macarena,Meta,Orinoquia,2020,11200.0,12298,23799,40086.5,36.6,62.7,1,500
+La Macarena,Meta,Orinoquia,2021,11200.0,12420,25975,37873.4,35.7,59.1,3,1871
+La Macarena,Meta,Orinoquia,2022,11200.0,12542,26833,39977.2,35.4,58.8,1,1291
+La Macarena,Meta,Orinoquia,2023,11200.0,12664,26301,41378.3,33.6,57.2,2,332
+Uribe,Meta,Orinoquia,2015,7500.0,1582,82878,42963.7,42.3,0.0,0,665
+Uribe,Meta,Orinoquia,2016,7500.0,1599,84950,43954.2,42.4,0.0,1,338
+Uribe,Meta,Orinoquia,2017,7500.0,1615,87021,41250.4,40.7,0.0,1,1323
+Uribe,Meta,Orinoquia,2018,7500.0,1632,83110,45575.2,41.3,0.0,0,2426
+Uribe,Meta,Orinoquia,2019,7500.0,1648,87619,45282.1,40.6,0.0,0,317
+Uribe,Meta,Orinoquia,2020,7500.0,1665,92418,45749.1,40.5,0.0,0,727
+Uribe,Meta,Orinoquia,2021,7500.0,1681,91827,46142.2,40.7,0.0,0,960
+Uribe,Meta,Orinoquia,2022,7500.0,1698,90520,46157.3,39.8,0.0,0,1013
+Uribe,Meta,Orinoquia,2023,7500.0,1714,102536,44658.6,39.2,0.0,1,812
+Mesetas,Meta,Orinoquia,2015,2400.0,23713,98098,5804.7,47.7,22.9,1,56
+Mesetas,Meta,Orinoquia,2016,2400.0,23960,100862,6587.3,47.4,27.8,0,43
+Mesetas,Meta,Orinoquia,2017,2400.0,24208,103590,6302.6,46.6,21.6,0,28
+Mesetas,Meta,Orinoquia,2018,2400.0,24455,109906,6220.4,46.9,20.9,0,29
+Mesetas,Meta,Orinoquia,2019,2400.0,24702,114209,6200.9,45.1,28.9,1,125
+Mesetas,Meta,Orinoquia,2020,2400.0,24949,116916,6473.5,45.2,28.7,0,209
+Mesetas,Meta,Orinoquia,2021,2400.0,25196,112592,6408.8,43.8,24.0,0,62
+Mesetas,Meta,Orinoquia,2022,2400.0,25443,122429,7067.5,44.0,28.0,0,35
+Mesetas,Meta,Orinoquia,2023,2400.0,25690,123184,6715.1,43.4,26.8,0,63
+Puerto Rico,Meta,Orinoquia,2015,3200.0,19126,110678,12572.2,41.3,138.0,1,43
+Puerto Rico,Meta,Orinoquia,2016,3200.0,19325,113624,13101.5,39.7,187.5,2,34
+Puerto Rico,Meta,Orinoquia,2017,3200.0,19525,125144,13680.1,41.1,183.0,1,70
+Puerto Rico,Meta,Orinoquia,2018,3200.0,19724,126326,13036.1,40.3,143.5,2,198
+Puerto Rico,Meta,Orinoquia,2019,3200.0,19923,133652,13408.9,40.1,174.4,2,911
+Puerto Rico,Meta,Orinoquia,2020,3200.0,20122,145843,13385.8,39.4,181.1,1,466
+Puerto Rico,Meta,Orinoquia,2021,3200.0,20321,146390,15506.2,39.6,192.8,0,301
+Puerto Rico,Meta,Orinoquia,2022,3200.0,20521,141810,14479.4,38.1,117.1,0,665
+Puerto Rico,Meta,Orinoquia,2023,3200.0,20720,141084,13495.5,38.3,177.0,1,799
+Mapiripán,Meta,Orinoquia,2015,11800.0,50551,311777,57600.8,65.2,0.0,0,1438
+Mapiripán,Meta,Orinoquia,2016,11800.0,51078,301964,56907.2,63.6,0.0,0,365
+Mapiripán,Meta,Orinoquia,2017,11800.0,51604,308072,57548.2,64.4,0.0,0,696
+Mapiripán,Meta,Orinoquia,2018,11800.0,52131,341436,55368.0,63.7,0.0,1,2655
+Mapiripán,Meta,Orinoquia,2019,11800.0,52658,336031,57748.1,62.7,0.0,0,539
+Mapiripán,Meta,Orinoquia,2020,11800.0,53184,347751,57856.7,61.7,0.0,0,1094
+Mapiripán,Meta,Orinoquia,2021,11800.0,53711,346533,63412.5,65.1,0.0,0,530
+Mapiripán,Meta,Orinoquia,2022,11800.0,54237,389821,67072.0,61.8,0.0,1,406
+Mapiripán,Meta,Orinoquia,2023,11800.0,54764,374405,59186.2,61.0,0.0,0,248
+Puerto Gaitán,Meta,Orinoquia,2015,17500.0,44982,119708,52603.3,60.0,0.0,1,652
+Puerto Gaitán,Meta,Orinoquia,2016,17500.0,45450,126761,54883.0,62.1,0.0,0,1426
+Puerto Gaitán,Meta,Orinoquia,2017,17500.0,45919,133325,55950.3,61.3,0.0,0,540
+Puerto Gaitán,Meta,Orinoquia,2018,17500.0,46388,135564,55628.4,60.5,0.0,1,3849
+Puerto Gaitán,Meta,Orinoquia,2019,17500.0,46856,139129,57680.0,61.6,0.0,1,3179
+Puerto Gaitán,Meta,Orinoquia,2020,17500.0,47325,144514,55373.7,59.5,0.0,0,1065
+Puerto Gaitán,Meta,Orinoquia,2021,17500.0,47793,149099,56220.2,59.9,0.0,1,701
+Puerto Gaitán,Meta,Orinoquia,2022,17500.0,48262,138107,61422.9,59.7,0.0,1,1561
+Puerto Gaitán,Meta,Orinoquia,2023,17500.0,48730,151465,60819.9,59.1,0.0,0,3744
+Puerto Concordia,Meta,Orinoquia,2015,1500.0,15954,36843,6214.2,54.5,70.3,1,18
+Puerto Concordia,Meta,Orinoquia,2016,1500.0,16120,37129,7005.3,55.8,85.7,2,55
+Puerto Concordia,Meta,Orinoquia,2017,1500.0,16286,45703,6340.4,55.4,78.7,1,58
+Puerto Concordia,Meta,Orinoquia,2018,1500.0,16453,41724,6317.3,54.2,65.5,1,181
+Puerto Concordia,Meta,Orinoquia,2019,1500.0,16619,44352,6817.9,53.2,74.0,3,75
+Puerto Concordia,Meta,Orinoquia,2020,1500.0,16785,44720,6548.9,52.0,59.4,1,91
+Puerto Concordia,Meta,Orinoquia,2021,1500.0,16951,47020,6595.6,51.9,85.8,1,38
+Puerto Concordia,Meta,Orinoquia,2022,1500.0,17117,46966,6775.5,52.8,85.5,2,14
+Puerto Concordia,Meta,Orinoquia,2023,1500.0,17284,48330,7030.9,51.5,87.5,3,70
+Puerto Lleras,Meta,Orinoquia,2015,2300.0,73690,38160,2818.3,56.0,0.0,1,98
+Puerto Lleras,Meta,Orinoquia,2016,2300.0,74458,40356,3196.7,54.4,0.0,1,103
+Puerto Lleras,Meta,Orinoquia,2017,2300.0,75226,40601,3388.4,53.9,0.0,1,77
+Puerto Lleras,Meta,Orinoquia,2018,2300.0,75993,42657,3320.8,55.0,0.0,1,19
+Puerto Lleras,Meta,Orinoquia,2019,2300.0,76761,42400,3248.5,55.1,0.0,1,24
+Puerto Lleras,Meta,Orinoquia,2020,2300.0,77528,47813,3371.2,53.2,0.0,1,138
+Puerto Lleras,Meta,Orinoquia,2021,2300.0,78296,43988,3699.3,52.4,0.0,0,92
+Puerto Lleras,Meta,Orinoquia,2022,2300.0,79064,50964,3448.9,53.2,0.0,0,233
+Puerto Lleras,Meta,Orinoquia,2023,2300.0,79831,52977,3506.2,52.1,0.0,1,548
+Vista Hermosa,Meta,Orinoquia,2015,4100.0,3887,56884,12588.6,40.9,22.1,1,341
+Vista Hermosa,Meta,Orinoquia,2016,4100.0,3927,60817,13313.4,39.2,19.2,2,564
+Vista Hermosa,Meta,Orinoquia,2017,4100.0,3968,59776,14129.0,39.8,23.1,0,364
+Vista Hermosa,Meta,Orinoquia,2018,4100.0,4008,62245,13908.6,38.0,16.2,1,0
+Vista Hermosa,Meta,Orinoquia,2019,4100.0,4049,62507,14292.4,39.8,15.8,1,91
+Vista Hermosa,Meta,Orinoquia,2020,4100.0,4089,65203,13690.6,38.0,21.0,1,212
+Vista Hermosa,Meta,Orinoquia,2021,4100.0,4130,64218,14400.1,37.4,23.6,2,568
+Vista Hermosa,Meta,Orinoquia,2022,4100.0,4170,72063,15569.5,39.1,17.9,2,371
+Vista Hermosa,Meta,Orinoquia,2023,4100.0,4211,68956,13898.7,37.0,23.2,1,703
+San Martín,Meta,Orinoquia,2015,6500.0,4471,197211,24495.7,41.9,0.0,1,680
+San Martín,Meta,Orinoquia,2016,6500.0,4518,203100,24105.5,41.9,0.0,1,1715
+San Martín,Meta,Orinoquia,2017,6500.0,4564,213662,24947.4,40.2,0.0,2,796
+San Martín,Meta,Orinoquia,2018,6500.0,4611,212001,25336.5,41.0,0.0,2,576
+San Martín,Meta,Orinoquia,2019,6500.0,4657,213491,27451.7,40.1,0.0,3,348
+San Martín,Meta,Orinoquia,2020,6500.0,4704,209764,25733.5,41.5,0.0,3,1833
+San Martín,Meta,Orinoquia,2021,6500.0,4751,231989,24610.5,38.7,0.0,2,346
+San Martín,Meta,Orinoquia,2022,6500.0,4797,233320,26739.2,38.9,0.0,1,1239
+San Martín,Meta,Orinoquia,2023,6500.0,4844,254572,27271.8,38.8,0.0,2,1999
+Villavicencio,Meta,Orinoquia,2015,1300.0,18227,20045,4144.9,54.7,57.0,2,180
+Villavicencio,Meta,Orinoquia,2016,1300.0,18417,19920,4439.4,51.5,75.1,3,185
+Villavicencio,Meta,Orinoquia,2017,1300.0,18607,20426,4376.9,51.3,63.2,3,113
+Villavicencio,Meta,Orinoquia,2018,1300.0,18797,20466,4348.6,52.7,102.1,2,52
+Villavicencio,Meta,Orinoquia,2019,1300.0,18987,22455,4526.8,50.1,47.2,2,167
+Villavicencio,Meta,Orinoquia,2020,1300.0,19177,22817,4761.7,50.6,54.1,3,145
+Villavicencio,Meta,Orinoquia,2021,1300.0,19367,23612,4468.8,50.4,70.2,3,182
+Villavicencio,Meta,Orinoquia,2022,1300.0,19556,25209,4662.5,49.8,70.5,2,248
+Villavicencio,Meta,Orinoquia,2023,1300.0,19746,25986,5034.7,49.6,73.2,3,335
+Granada,Meta,Orinoquia,2015,370.0,9336,11208,666.5,35.3,66.4,3,47
+Granada,Meta,Orinoquia,2016,370.0,9433,12368,736.2,32.9,70.5,1,18
+Granada,Meta,Orinoquia,2017,370.0,9531,11900,674.8,34.3,77.1,1,37
+Granada,Meta,Orinoquia,2018,370.0,9628,12294,634.5,34.2,61.6,1,42
+Granada,Meta,Orinoquia,2019,370.0,9725,12267,723.3,32.8,66.8,1,3
+Granada,Meta,Orinoquia,2020,370.0,9822,15094,687.0,32.6,78.7,3,26
+Granada,Meta,Orinoquia,2021,370.0,9920,14316,786.2,31.6,91.5,3,259
+Granada,Meta,Orinoquia,2022,370.0,10017,15071,741.1,32.4,62.9,3,115
+Granada,Meta,Orinoquia,2023,370.0,10114,14799,797.1,30.6,54.9,2,139
+Acacías,Meta,Orinoquia,2015,1100.0,6133,69413,2642.1,34.8,0.0,1,135
+Acacías,Meta,Orinoquia,2016,1100.0,6197,68796,2423.4,35.2,0.0,0,225
+Acacías,Meta,Orinoquia,2017,1100.0,6261,72538,2486.0,34.7,0.0,0,334
+Acacías,Meta,Orinoquia,2018,1100.0,6325,76801,2732.5,34.3,0.0,0,251
+Acacías,Meta,Orinoquia,2019,1100.0,6388,81954,2873.3,34.0,0.0,1,202
+Acacías,Meta,Orinoquia,2020,1100.0,6452,77701,2713.2,33.7,0.0,0,239
+Acacías,Meta,Orinoquia,2021,1100.0,6516,82217,2639.1,33.8,0.0,0,62
+Acacías,Meta,Orinoquia,2022,1100.0,6580,89246,2963.0,32.0,0.0,0,100
+Acacías,Meta,Orinoquia,2023,1100.0,6644,90145,3020.7,31.0,0.0,0,53
+Puerto López,Meta,Orinoquia,2015,6700.0,14096,98993,201487.2,34.3,322.9,0,1421
+Puerto López,Meta,Orinoquia,2016,6700.0,14243,96816,206008.9,35.1,245.5,1,609
+Puerto López,Meta,Orinoquia,2017,6700.0,14389,109322,215669.8,33.1,241.6,1,1028
+Puerto López,Meta,Orinoquia,2018,6700.0,14536,105827,211436.7,33.2,211.9,1,747
+Puerto López,Meta,Orinoquia,2019,6700.0,14683,117664,214469.6,31.8,291.2,0,2007
+Puerto López,Meta,Orinoquia,2020,6700.0,14830,110600,219383.7,32.2,196.9,1,9065
+Puerto López,Meta,Orinoquia,2021,6700.0,14977,113345,231216.2,31.7,219.0,0,1369
+Puerto López,Meta,Orinoquia,2022,6700.0,15124,120013,237822.7,31.4,294.2,1,1038
+Puerto López,Meta,Orinoquia,2023,6700.0,15270,124026,233229.6,30.7,238.5,2,1013
+Cumaral,Meta,Orinoquia,2015,600.0,26293,21732,3959.1,64.0,0.0,2,137
+Cumaral,Meta,Orinoquia,2016,600.0,26567,23915,4248.3,62.6,0.0,1,15
+Cumaral,Meta,Orinoquia,2017,600.0,26841,23882,4304.3,62.2,0.0,2,17
+Cumaral,Meta,Orinoquia,2018,600.0,27115,23628,4365.0,61.8,0.0,1,41
+Cumaral,Meta,Orinoquia,2019,600.0,27389,26747,4157.8,62.9,0.0,0,67
+Cumaral,Meta,Orinoquia,2020,600.0,27663,24267,4509.4,63.2,0.0,1,36
+Cumaral,Meta,Orinoquia,2021,600.0,27936,28755,4644.5,60.6,0.0,0,64
+Cumaral,Meta,Orinoquia,2022,600.0,28210,27339,4430.6,61.4,0.0,2,47
+Cumaral,Meta,Orinoquia,2023,600.0,28484,29814,4577.6,60.7,0.0,1,30
+Restrepo,Meta,Orinoquia,2015,200.0,7746,2679,334.5,48.1,506.6,1,8
+Restrepo,Meta,Orinoquia,2016,200.0,7826,2564,318.9,47.4,506.1,1,18
+Restrepo,Meta,Orinoquia,2017,200.0,7907,2791,342.2,47.5,618.5,1,0
+Restrepo,Meta,Orinoquia,2018,200.0,7988,2741,366.8,47.4,447.3,1,0
+Restrepo,Meta,Orinoquia,2019,200.0,8069,2936,376.9,44.9,441.1,0,18
+Restrepo,Meta,Orinoquia,2020,200.0,8149,3019,361.1,46.6,527.9,1,9
+Restrepo,Meta,Orinoquia,2021,200.0,8230,3121,384.6,45.3,580.0,0,62
+Restrepo,Meta,Orinoquia,2022,200.0,8311,3249,392.2,45.2,501.2,0,0
+Restrepo,Meta,Orinoquia,2023,200.0,8391,3451,366.1,44.5,624.1,0,22
+Lejanías,Meta,Orinoquia,2015,560.0,18125,19017,1876.9,46.6,50.1,2,111
+Lejanías,Meta,Orinoquia,2016,560.0,18314,19403,1836.6,46.1,48.3,0,38
+Lejanías,Meta,Orinoquia,2017,560.0,18503,20557,1903.4,45.3,43.9,2,57
+Lejanías,Meta,Orinoquia,2018,560.0,18691,20082,1847.7,44.4,46.0,1,177
+Lejanías,Meta,Orinoquia,2019,560.0,18880,21386,1912.4,45.8,48.0,1,676
+Lejanías,Meta,Orinoquia,2020,560.0,19069,20379,2158.9,44.6,48.2,1,79
+Lejanías,Meta,Orinoquia,2021,560.0,19258,23112,2051.7,45.2,46.7,0,157
+Lejanías,Meta,Orinoquia,2022,560.0,19447,21322,1960.7,44.7,52.5,0,68
+Lejanías,Meta,Orinoquia,2023,560.0,19635,24320,2189.4,43.8,50.5,0,77
+El Castillo,Meta,Orinoquia,2015,500.0,6341,10751,1857.3,72.2,318.1,1,23
+El Castillo,Meta,Orinoquia,2016,500.0,6408,10372,1726.4,71.3,575.0,1,55
+El Castillo,Meta,Orinoquia,2017,500.0,6474,11441,1748.7,72.1,349.2,0,57
+El Castillo,Meta,Orinoquia,2018,500.0,6540,12671,1874.7,71.6,377.1,1,12
+El Castillo,Meta,Orinoquia,2019,500.0,6606,12097,1820.3,71.8,466.3,0,6
+El Castillo,Meta,Orinoquia,2020,500.0,6672,12187,1950.4,69.5,451.6,1,8
+El Castillo,Meta,Orinoquia,2021,500.0,6738,12942,1869.4,68.9,488.2,1,14
+El Castillo,Meta,Orinoquia,2022,500.0,6804,12540,1963.5,70.4,600.0,0,15
+El Castillo,Meta,Orinoquia,2023,500.0,6870,13100,1884.7,69.2,410.2,1,90
+San José del Guaviare,Guaviare,Amazon,2015,16800.0,1922,28524,11861.9,73.3,709.4,1,1312
+San José del Guaviare,Guaviare,Amazon,2016,16800.0,1942,31016,12636.8,74.3,1030.3,1,703
+San José del Guaviare,Guaviare,Amazon,2017,16800.0,1962,30843,12588.0,74.1,663.5,0,1144
+San José del Guaviare,Guaviare,Amazon,2018,16800.0,1982,32640,14388.6,74.8,583.9,0,1519
+San José del Guaviare,Guaviare,Amazon,2019,16800.0,2002,34421,13795.9,70.7,691.5,1,3943
+San José del Guaviare,Guaviare,Amazon,2020,16800.0,2022,37365,12582.2,73.4,778.7,1,3538
+San José del Guaviare,Guaviare,Amazon,2021,16800.0,2042,35324,13173.0,72.8,748.8,0,3577
+San José del Guaviare,Guaviare,Amazon,2022,16800.0,2062,36588,14279.2,70.4,734.5,0,1001
+San José del Guaviare,Guaviare,Amazon,2023,16800.0,2082,42371,13169.0,72.3,1005.4,0,442
+Calamar,Guaviare,Amazon,2015,11200.0,5144,176749,51060.4,78.2,206.1,1,10979
+Calamar,Guaviare,Amazon,2016,11200.0,5198,183361,51524.9,76.9,304.8,0,2735
+Calamar,Guaviare,Amazon,2017,11200.0,5251,190620,50598.3,76.9,260.1,1,2330
+Calamar,Guaviare,Amazon,2018,11200.0,5305,198819,52148.0,76.6,376.8,1,7491
+Calamar,Guaviare,Amazon,2019,11200.0,5358,206583,53184.6,77.5,274.0,2,2443
+Calamar,Guaviare,Amazon,2020,11200.0,5412,210766,54561.7,73.5,313.7,1,2587
+Calamar,Guaviare,Amazon,2021,11200.0,5466,224742,55152.0,74.8,233.7,1,2440
+Calamar,Guaviare,Amazon,2022,11200.0,5519,231602,56528.2,74.2,287.0,1,3423
+Calamar,Guaviare,Amazon,2023,11200.0,5573,242647,57614.9,75.0,279.7,1,2300
+El Retorno,Guaviare,Amazon,2015,12000.0,11814,208199,14814.4,66.6,25.9,1,942
+El Retorno,Guaviare,Amazon,2016,12000.0,11937,191545,15090.6,65.5,24.8,3,3098
+El Retorno,Guaviare,Amazon,2017,12000.0,12060,201771,14539.4,67.1,30.5,2,3813
+El Retorno,Guaviare,Amazon,2018,12000.0,12183,208775,14526.2,66.8,38.5,1,6123
+El Retorno,Guaviare,Amazon,2019,12000.0,12306,218906,15396.9,66.4,35.8,3,6468
+El Retorno,Guaviare,Amazon,2020,12000.0,12429,230461,16531.2,65.0,31.7,2,8810
+El Retorno,Guaviare,Amazon,2021,12000.0,12552,239407,15472.6,63.0,24.9,2,9808
+El Retorno,Guaviare,Amazon,2022,12000.0,12675,256688,15291.0,62.9,32.4,2,12000
+El Retorno,Guaviare,Amazon,2023,12000.0,12798,246519,16871.1,65.0,24.7,1,12000
+Miraflores,Guaviare,Amazon,2015,13000.0,6156,117548,7449.5,45.5,0.0,1,753
+Miraflores,Guaviare,Amazon,2016,13000.0,6220,125303,7923.7,47.7,0.0,1,375
+Miraflores,Guaviare,Amazon,2017,13000.0,6284,133327,7626.7,47.4,0.0,1,626
+Miraflores,Guaviare,Amazon,2018,13000.0,6348,128007,7795.8,45.4,0.0,1,1726
+Miraflores,Guaviare,Amazon,2019,13000.0,6412,139686,8143.1,44.4,0.0,1,292
+Miraflores,Guaviare,Amazon,2020,13000.0,6476,131702,8362.2,44.2,0.0,2,132
+Miraflores,Guaviare,Amazon,2021,13000.0,6540,145898,8419.3,45.0,0.0,0,264
+Miraflores,Guaviare,Amazon,2022,13000.0,6605,149083,8660.4,43.8,0.0,1,951
+Miraflores,Guaviare,Amazon,2023,13000.0,6669,146600,8263.6,41.9,0.0,1,1788
+Puerto Asís,Putumayo,Amazon,2015,2700.0,6153,26022,15341.1,80.7,0.0,2,146
+Puerto Asís,Putumayo,Amazon,2016,2700.0,6217,27900,14649.7,80.7,0.0,2,191
+Puerto Asís,Putumayo,Amazon,2017,2700.0,6281,30160,15143.4,79.9,0.0,2,84
+Puerto Asís,Putumayo,Amazon,2018,2700.0,6345,31370,15384.0,80.3,0.0,2,145
+Puerto Asís,Putumayo,Amazon,2019,2700.0,6409,30204,14336.6,78.3,0.0,3,86
+Puerto Asís,Putumayo,Amazon,2020,2700.0,6473,31590,16129.5,77.5,0.0,2,0
+Puerto Asís,Putumayo,Amazon,2021,2700.0,6538,31974,15659.3,78.5,0.0,2,571
+Puerto Asís,Putumayo,Amazon,2022,2700.0,6602,33194,16683.2,76.0,0.0,2,104
+Puerto Asís,Putumayo,Amazon,2023,2700.0,6666,34266,17965.2,76.5,0.0,2,503
+Puerto Guzmán,Putumayo,Amazon,2015,4000.0,18895,243002,1099.4,58.1,108.2,1,338
+Puerto Guzmán,Putumayo,Amazon,2016,4000.0,19092,254575,1170.8,58.7,120.9,2,178
+Puerto Guzmán,Putumayo,Amazon,2017,4000.0,19289,265097,1094.7,59.2,95.1,0,157
+Puerto Guzmán,Putumayo,Amazon,2018,4000.0,19486,255403,1169.2,58.8,112.9,0,145
+Puerto Guzmán,Putumayo,Amazon,2019,4000.0,19682,264051,1141.3,57.6,128.5,0,461
+Puerto Guzmán,Putumayo,Amazon,2020,4000.0,19879,262142,1300.9,57.4,158.5,2,1119
+Puerto Guzmán,Putumayo,Amazon,2021,4000.0,20076,302978,1210.0,56.1,126.3,1,2387
+Puerto Guzmán,Putumayo,Amazon,2022,4000.0,20273,282491,1285.7,56.2,126.9,1,6551
+Puerto Guzmán,Putumayo,Amazon,2023,4000.0,20470,298223,1245.7,56.2,137.1,0,4742
+Puerto Leguízamo,Putumayo,Amazon,2015,10900.0,15367,232774,60775.8,86.2,0.0,0,821
+Puerto Leguízamo,Putumayo,Amazon,2016,10900.0,15527,241269,61636.4,83.2,0.0,1,1531
+Puerto Leguízamo,Putumayo,Amazon,2017,10900.0,15687,250967,67445.1,84.9,0.0,0,1843
+Puerto Leguízamo,Putumayo,Amazon,2018,10900.0,15847,263090,67773.8,84.8,0.0,0,482
+Puerto Leguízamo,Putumayo,Amazon,2019,10900.0,16007,245075,66958.1,83.9,0.0,0,600
+Puerto Leguízamo,Putumayo,Amazon,2020,10900.0,16167,264824,68623.9,84.0,0.0,0,2163
+Puerto Leguízamo,Putumayo,Amazon,2021,10900.0,16327,261852,70080.7,83.5,0.0,0,1159
+Puerto Leguízamo,Putumayo,Amazon,2022,10900.0,16487,263952,69602.9,82.4,0.0,0,238
+Puerto Leguízamo,Putumayo,Amazon,2023,10900.0,16648,305018,70134.7,82.9,0.0,0,1530
+Orito,Putumayo,Amazon,2015,2300.0,19261,232035,3064.0,67.6,911.9,1,269
+Orito,Putumayo,Amazon,2016,2300.0,19461,242551,2943.2,65.8,870.1,1,105
+Orito,Putumayo,Amazon,2017,2300.0,19662,248324,3276.1,66.4,849.3,0,73
+Orito,Putumayo,Amazon,2018,2300.0,19862,258253,3260.7,65.9,832.0,0,91
+Orito,Putumayo,Amazon,2019,2300.0,20063,281301,3237.4,65.1,677.4,0,60
+Orito,Putumayo,Amazon,2020,2300.0,20264,257369,3103.1,65.1,884.5,0,77
+Orito,Putumayo,Amazon,2021,2300.0,20464,279269,3224.7,65.5,781.0,0,62
+Orito,Putumayo,Amazon,2022,2300.0,20665,265878,3265.4,64.8,843.9,0,143
+Orito,Putumayo,Amazon,2023,2300.0,20866,281986,3331.0,64.2,1223.1,0,137
+Valle del Guamuez,Putumayo,Amazon,2015,800.0,2427,3928,186.1,56.1,114.8,1,45
+Valle del Guamuez,Putumayo,Amazon,2016,800.0,2452,3872,183.7,56.4,155.1,1,56
+Valle del Guamuez,Putumayo,Amazon,2017,800.0,2477,4185,192.3,54.5,169.7,1,178
+Valle del Guamuez,Putumayo,Amazon,2018,800.0,2503,4198,185.6,54.6,168.3,1,110
+Valle del Guamuez,Putumayo,Amazon,2019,800.0,2528,4062,175.7,53.2,157.0,1,51
+Valle del Guamuez,Putumayo,Amazon,2020,800.0,2553,4762,182.8,55.4,153.0,1,85
+Valle del Guamuez,Putumayo,Amazon,2021,800.0,2578,4320,191.6,54.0,127.1,1,38
+Valle del Guamuez,Putumayo,Amazon,2022,800.0,2604,4829,199.6,54.0,129.9,1,297
+Valle del Guamuez,Putumayo,Amazon,2023,800.0,2629,4941,193.6,52.2,127.9,0,0
+Mocoa,Putumayo,Amazon,2015,1300.0,550,30323,251.5,94.5,0.0,0,9
+Mocoa,Putumayo,Amazon,2016,1300.0,556,29868,283.5,94.7,0.0,1,70
+Mocoa,Putumayo,Amazon,2017,1300.0,562,33945,267.2,93.8,0.0,0,292
+Mocoa,Putumayo,Amazon,2018,1300.0,568,35477,250.7,93.9,0.0,0,615
+Mocoa,Putumayo,Amazon,2019,1300.0,573,35874,275.4,92.0,0.0,2,922
+Mocoa,Putumayo,Amazon,2020,1300.0,579,37336,260.4,92.6,0.0,1,1116
+Mocoa,Putumayo,Amazon,2021,1300.0,585,37889,279.2,91.3,0.0,0,306
+Mocoa,Putumayo,Amazon,2022,1300.0,591,34385,291.1,91.5,0.0,2,80
+Mocoa,Putumayo,Amazon,2023,1300.0,596,40902,260.5,91.5,0.0,0,42
+Villagarzón,Putumayo,Amazon,2015,1400.0,15286,47860,731.4,54.7,3290.7,2,161
+Villagarzón,Putumayo,Amazon,2016,1400.0,15446,53643,713.3,54.2,2819.0,2,190
+Villagarzón,Putumayo,Amazon,2017,1400.0,15605,50438,691.1,53.5,2142.2,3,227
+Villagarzón,Putumayo,Amazon,2018,1400.0,15764,49940,651.7,53.2,2795.3,3,254
+Villagarzón,Putumayo,Amazon,2019,1400.0,15923,57938,757.2,52.8,3321.6,2,990
+Villagarzón,Putumayo,Amazon,2020,1400.0,16083,55570,722.8,53.4,3594.5,2,573
+Villagarzón,Putumayo,Amazon,2021,1400.0,16242,64196,737.0,52.4,3249.3,3,231
+Villagarzón,Putumayo,Amazon,2022,1400.0,16401,60320,710.2,51.3,2883.1,2,301
+Villagarzón,Putumayo,Amazon,2023,1400.0,16560,64830,808.4,50.8,2831.8,2,113
+San Miguel,Putumayo,Amazon,2015,1100.0,3924,12259,3370.1,44.3,0.0,2,175
+San Miguel,Putumayo,Amazon,2016,1100.0,3965,12982,3036.4,43.9,0.0,2,72
+San Miguel,Putumayo,Amazon,2017,1100.0,4005,13065,3554.4,43.7,0.0,1,113
+San Miguel,Putumayo,Amazon,2018,1100.0,4046,13896,3902.6,42.0,0.0,0,294
+San Miguel,Putumayo,Amazon,2019,1100.0,4087,13900,3597.6,42.5,0.0,2,1207
+San Miguel,Putumayo,Amazon,2020,1100.0,4128,14105,3396.0,42.4,0.0,2,561
+San Miguel,Putumayo,Amazon,2021,1100.0,4169,14674,3595.2,40.9,0.0,0,144
+San Miguel,Putumayo,Amazon,2022,1100.0,4210,15608,3928.5,42.0,0.0,1,192
+San Miguel,Putumayo,Amazon,2023,1100.0,4251,15716,3986.2,41.9,0.0,2,171
+Leticia,Amazonas,Amazon,2015,5900.0,24484,27082,2278.6,42.3,71.7,1,222
+Leticia,Amazonas,Amazon,2016,5900.0,24739,28996,2263.7,41.5,85.5,1,592
+Leticia,Amazonas,Amazon,2017,5900.0,24994,30823,2408.0,41.2,60.5,2,387
+Leticia,Amazonas,Amazon,2018,5900.0,25249,30525,2485.2,39.8,68.3,0,166
+Leticia,Amazonas,Amazon,2019,5900.0,25504,34970,2338.7,40.6,62.9,1,1054
+Leticia,Amazonas,Amazon,2020,5900.0,25759,34645,2485.3,39.3,67.3,1,2154
+Leticia,Amazonas,Amazon,2021,5900.0,26014,34146,2517.9,39.0,79.0,0,980
+Leticia,Amazonas,Amazon,2022,5900.0,26269,35787,2629.6,40.0,59.5,2,1507
+Leticia,Amazonas,Amazon,2023,5900.0,26524,38300,2691.8,38.6,59.4,1,812
+Puerto Nariño,Amazonas,Amazon,2015,1700.0,1426,23239,4488.1,36.0,0.0,0,131
+Puerto Nariño,Amazonas,Amazon,2016,1700.0,1441,23347,4563.7,36.4,0.0,1,161
+Puerto Nariño,Amazonas,Amazon,2017,1700.0,1456,24041,4764.8,34.4,0.0,2,89
+Puerto Nariño,Amazonas,Amazon,2018,1700.0,1470,26420,4863.7,36.6,0.0,1,212
+Puerto Nariño,Amazonas,Amazon,2019,1700.0,1485,28980,4490.2,35.7,0.0,1,111
+Puerto Nariño,Amazonas,Amazon,2020,1700.0,1500,26262,4989.9,35.2,0.0,1,260
+Puerto Nariño,Amazonas,Amazon,2021,1700.0,1515,29698,5135.0,34.4,0.0,2,383
+Puerto Nariño,Amazonas,Amazon,2022,1700.0,1530,28759,5161.1,34.8,0.0,2,380
+Puerto Nariño,Amazonas,Amazon,2023,1700.0,1545,31744,5489.9,34.9,0.0,0,135
+Mitú,Vaupés,Amazon,2015,16400.0,9350,281559,73597.1,33.3,0.0,0,2231
+Mitú,Vaupés,Amazon,2016,16400.0,9447,308523,68438.2,32.3,0.0,0,2089
+Mitú,Vaupés,Amazon,2017,16400.0,9545,290282,74512.9,33.2,0.0,0,1586
+Mitú,Vaupés,Amazon,2018,16400.0,9642,318588,77588.7,31.4,0.0,0,1093
+Mitú,Vaupés,Amazon,2019,16400.0,9740,332692,70679.0,30.7,0.0,1,513
+Mitú,Vaupés,Amazon,2020,16400.0,9837,342252,74854.6,31.0,0.0,0,514
+Mitú,Vaupés,Amazon,2021,16400.0,9934,361601,80393.2,31.1,0.0,1,3323
+Mitú,Vaupés,Amazon,2022,16400.0,10032,364693,80064.6,29.9,0.0,1,1845
+Mitú,Vaupés,Amazon,2023,16400.0,10129,368676,80705.8,31.3,0.0,0,2035
+Carurú,Vaupés,Amazon,2015,6200.0,1583,180781,3053.9,53.2,0.0,0,5196
+Carurú,Vaupés,Amazon,2016,6200.0,1600,184174,2785.7,53.2,0.0,1,9836
+Carurú,Vaupés,Amazon,2017,6200.0,1616,199983,2794.4,53.2,0.0,0,5221
+Carurú,Vaupés,Amazon,2018,6200.0,1633,194855,3041.0,52.9,0.0,0,809
+Carurú,Vaupés,Amazon,2019,6200.0,1649,197778,2761.7,52.9,0.0,0,310
+Carurú,Vaupés,Amazon,2020,6200.0,1666,223380,2980.9,51.8,0.0,0,642
+Carurú,Vaupés,Amazon,2021,6200.0,1682,204356,3151.4,51.4,0.0,1,1171
+Carurú,Vaupés,Amazon,2022,6200.0,1699,220370,3219.8,50.8,0.0,1,486
+Carurú,Vaupés,Amazon,2023,6200.0,1715,242833,2916.4,50.9,0.0,0,627
+Inírida,Guainía,Amazon,2015,16400.0,16406,93180,98931.9,71.0,0.0,1,360
+Inírida,Guainía,Amazon,2016,16400.0,16577,97091,94027.1,69.0,0.0,2,698
+Inírida,Guainía,Amazon,2017,16400.0,16748,95287,97277.3,68.9,0.0,2,1767
+Inírida,Guainía,Amazon,2018,16400.0,16918,95275,95271.4,68.6,0.0,0,1018
+Inírida,Guainía,Amazon,2019,16400.0,17089,106499,102175.5,69.2,0.0,0,677
+Inírida,Guainía,Amazon,2020,16400.0,17260,97451,98888.1,68.4,0.0,0,1227
+Inírida,Guainía,Amazon,2021,16400.0,17431,110393,98211.4,68.3,0.0,1,2905
+Inírida,Guainía,Amazon,2022,16400.0,17602,105974,99817.3,67.4,0.0,1,4131
+Inírida,Guainía,Amazon,2023,16400.0,17773,103719,110113.6,67.6,0.0,2,10920
+Puerto Carreño,Vichada,Orinoquia,2015,12400.0,32924,1154908,60570.6,32.1,0.0,1,1298
+Puerto Carreño,Vichada,Orinoquia,2016,12400.0,33267,1173142,63869.0,31.2,0.0,1,604
+Puerto Carreño,Vichada,Orinoquia,2017,12400.0,33610,1229712,65267.2,29.6,0.0,0,957
+Puerto Carreño,Vichada,Orinoquia,2018,12400.0,33953,1283426,68663.6,31.0,0.0,2,3317
+Puerto Carreño,Vichada,Orinoquia,2019,12400.0,34296,1193408,66541.4,30.3,0.0,0,2843
+Puerto Carreño,Vichada,Orinoquia,2020,12400.0,34639,1248828,72472.7,30.3,0.0,1,2741
+Puerto Carreño,Vichada,Orinoquia,2021,12400.0,34982,1361779,67252.5,28.8,0.0,0,3401
+Puerto Carreño,Vichada,Orinoquia,2022,12400.0,35325,1457087,67375.8,30.0,0.0,1,8178
+Puerto Carreño,Vichada,Orinoquia,2023,12400.0,35668,1584601,72281.8,29.5,0.0,0,999
+Cumaribo,Vichada,Orinoquia,2015,65600.0,24966,2893120,115342.4,6.7,0.0,3,3371
+Cumaribo,Vichada,Orinoquia,2016,65600.0,25226,3000797,126471.4,6.7,0.0,2,4589
+Cumaribo,Vichada,Orinoquia,2017,65600.0,25486,3139044,122831.1,7.0,0.0,1,2032
+Cumaribo,Vichada,Orinoquia,2018,65600.0,25746,3155122,126310.6,7.1,0.0,1,6295
+Cumaribo,Vichada,Orinoquia,2019,65600.0,26006,3307829,131686.5,5.4,0.0,2,12000
+Cumaribo,Vichada,Orinoquia,2020,65600.0,26266,3335742,131918.5,5.6,0.0,2,5594
+Cumaribo,Vichada,Orinoquia,2021,65600.0,26526,3390872,129246.1,5.0,0.0,3,12000
+Cumaribo,Vichada,Orinoquia,2022,65600.0,26786,3489020,133919.6,4.4,0.0,2,12000
+Cumaribo,Vichada,Orinoquia,2023,65600.0,27046,3888050,132528.9,5.1,0.0,2,12000
+La Primavera,Vichada,Orinoquia,2015,19000.0,9889,532358,17921.1,21.9,0.0,1,631
+La Primavera,Vichada,Orinoquia,2016,19000.0,9992,535004,17931.2,23.3,0.0,2,435
+La Primavera,Vichada,Orinoquia,2017,19000.0,10095,560337,19106.0,21.4,0.0,1,1055
+La Primavera,Vichada,Orinoquia,2018,19000.0,10198,594639,18634.6,20.5,0.0,0,1458
+La Primavera,Vichada,Orinoquia,2019,19000.0,10301,605882,19117.1,21.1,0.0,1,1349
+La Primavera,Vichada,Orinoquia,2020,19000.0,10404,646549,18970.7,20.8,0.0,1,1848
+La Primavera,Vichada,Orinoquia,2021,19000.0,10507,620391,20214.5,20.3,0.0,1,946
+La Primavera,Vichada,Orinoquia,2022,19000.0,10610,690133,19154.2,19.4,0.0,1,605
+La Primavera,Vichada,Orinoquia,2023,19000.0,10713,682401,20445.9,20.0,0.0,1,344
+Santa Rosalía,Vichada,Orinoquia,2015,2800.0,7351,134828,7384.0,41.6,0.0,3,0
+Santa Rosalía,Vichada,Orinoquia,2016,2800.0,7428,135319,6942.5,41.8,0.0,5,164
+Santa Rosalía,Vichada,Orinoquia,2017,2800.0,7504,134213,7591.6,41.4,0.0,5,601
+Santa Rosalía,Vichada,Orinoquia,2018,2800.0,7581,136912,7559.6,40.0,0.0,4,459
+Santa Rosalía,Vichada,Orinoquia,2019,2800.0,7657,152846,7516.2,40.4,0.0,4,600
+Santa Rosalía,Vichada,Orinoquia,2020,2800.0,7734,153686,7859.3,41.0,0.0,5,865
+Santa Rosalía,Vichada,Orinoquia,2021,2800.0,7810,148874,8143.7,39.7,0.0,4,562
+Santa Rosalía,Vichada,Orinoquia,2022,2800.0,7887,158744,7078.8,40.6,0.0,4,413
+Santa Rosalía,Vichada,Orinoquia,2023,2800.0,7964,162991,7452.0,37.3,0.0,4,202
+Tibú,Norte de Santander,Andean,2015,2700.0,33351,64602,60497.7,29.0,0.0,0,256
+Tibú,Norte de Santander,Andean,2016,2700.0,33699,65358,61864.6,30.4,0.0,1,454
+Tibú,Norte de Santander,Andean,2017,2700.0,34046,73685,60839.9,29.8,0.0,0,751
+Tibú,Norte de Santander,Andean,2018,2700.0,34394,68821,60195.0,29.7,0.0,1,594
+Tibú,Norte de Santander,Andean,2019,2700.0,34741,72947,67826.9,27.8,0.0,1,124
+Tibú,Norte de Santander,Andean,2020,2700.0,35088,78608,64803.5,28.6,0.0,0,315
+Tibú,Norte de Santander,Andean,2021,2700.0,35436,74357,61374.4,27.6,0.0,0,204
+Tibú,Norte de Santander,Andean,2022,2700.0,35783,77111,67162.7,25.9,0.0,1,69
+Tibú,Norte de Santander,Andean,2023,2700.0,36131,88365,75479.4,27.1,0.0,1,94
+Sardinata,Norte de Santander,Andean,2015,1400.0,13458,138547,10054.6,12.6,0.0,2,130
+Sardinata,Norte de Santander,Andean,2016,1400.0,13598,142835,10166.9,14.1,0.0,3,181
+Sardinata,Norte de Santander,Andean,2017,1400.0,13738,156370,10574.0,11.6,0.0,3,468
+Sardinata,Norte de Santander,Andean,2018,1400.0,13879,148847,11020.9,11.2,0.0,2,233
+Sardinata,Norte de Santander,Andean,2019,1400.0,14019,167072,10661.5,10.9,0.0,2,92
+Sardinata,Norte de Santander,Andean,2020,1400.0,14159,167279,10617.4,10.6,0.0,3,46
+Sardinata,Norte de Santander,Andean,2021,1400.0,14299,167243,10674.1,11.4,0.0,2,38
+Sardinata,Norte de Santander,Andean,2022,1400.0,14439,180428,10101.4,10.1,0.0,3,75
+Sardinata,Norte de Santander,Andean,2023,1400.0,14579,186990,11060.3,10.4,0.0,3,177
+El Tarra,Norte de Santander,Andean,2015,700.0,47488,9854,10937.7,54.6,0.0,0,25
+El Tarra,Norte de Santander,Andean,2016,700.0,47982,10224,11993.0,54.4,0.0,1,89
+El Tarra,Norte de Santander,Andean,2017,700.0,48477,10307,11712.0,53.6,0.0,0,170
+El Tarra,Norte de Santander,Andean,2018,700.0,48972,10324,12030.1,54.5,0.0,1,24
+El Tarra,Norte de Santander,Andean,2019,700.0,49466,11176,11797.2,53.7,0.0,2,60
+El Tarra,Norte de Santander,Andean,2020,700.0,49961,11941,11907.4,52.7,0.0,0,45
+El Tarra,Norte de Santander,Andean,2021,700.0,50456,12619,12307.0,52.2,0.0,0,23
+El Tarra,Norte de Santander,Andean,2022,700.0,50950,11761,13133.1,51.0,0.0,1,62
+El Tarra,Norte de Santander,Andean,2023,700.0,51445,12105,12756.1,50.9,0.0,2,58
+Teorama,Norte de Santander,Andean,2015,1000.0,24867,25892,12360.7,32.7,115.5,1,61
+Teorama,Norte de Santander,Andean,2016,1000.0,25126,26824,12843.0,31.0,124.5,0,51
+Teorama,Norte de Santander,Andean,2017,1000.0,25385,28255,11572.6,30.3,132.8,1,52
+Teorama,Norte de Santander,Andean,2018,1000.0,25644,29168,12201.7,31.2,128.1,1,29
+Teorama,Norte de Santander,Andean,2019,1000.0,25903,29102,12794.4,30.8,91.6,0,36
+Teorama,Norte de Santander,Andean,2020,1000.0,26162,28346,12283.5,30.8,123.1,1,57
+Teorama,Norte de Santander,Andean,2021,1000.0,26421,30909,12813.7,30.2,138.4,0,0
+Teorama,Norte de Santander,Andean,2022,1000.0,26680,34487,13642.4,30.2,99.4,2,17
+Teorama,Norte de Santander,Andean,2023,1000.0,26939,33148,11587.2,29.3,144.3,0,27
+Cúcuta,Norte de Santander,Andean,2015,1100.0,552522,81678,150087.7,16.4,0.0,0,6
+Cúcuta,Norte de Santander,Andean,2016,1100.0,558278,81436,151302.0,15.8,0.0,0,2
+Cúcuta,Norte de Santander,Andean,2017,1100.0,564033,88748,152374.2,15.9,0.0,0,14
+Cúcuta,Norte de Santander,Andean,2018,1100.0,569788,89186,168913.2,15.6,0.0,1,71
+Cúcuta,Norte de Santander,Andean,2019,1100.0,575544,101115,170893.0,16.2,0.0,0,28
+Cúcuta,Norte de Santander,Andean,2020,1100.0,581299,92436,158100.0,16.4,0.0,0,9
+Cúcuta,Norte de Santander,Andean,2021,1100.0,587055,90524,166759.4,13.0,0.0,0,12
+Cúcuta,Norte de Santander,Andean,2022,1100.0,592810,104029,176813.4,12.0,0.0,0,190
+Cúcuta,Norte de Santander,Andean,2023,1100.0,598566,97036,174052.6,12.2,0.0,1,137
+Ocaña,Norte de Santander,Andean,2015,460.0,19104,32800,37238.7,48.3,0.0,1,55
+Ocaña,Norte de Santander,Andean,2016,460.0,19303,33602,41571.8,45.6,0.0,0,97
+Ocaña,Norte de Santander,Andean,2017,460.0,19502,33583,41004.0,45.2,0.0,1,192
+Ocaña,Norte de Santander,Andean,2018,460.0,19701,34107,36899.9,46.2,0.0,0,171
+Ocaña,Norte de Santander,Andean,2019,460.0,19900,36675,39613.1,45.5,0.0,1,154
+Ocaña,Norte de Santander,Andean,2020,460.0,20099,38058,40233.5,44.3,0.0,0,33
+Ocaña,Norte de Santander,Andean,2021,460.0,20298,41719,41130.6,42.6,0.0,0,27
+Ocaña,Norte de Santander,Andean,2022,460.0,20497,41166,41204.0,45.0,0.0,0,10
+Ocaña,Norte de Santander,Andean,2023,460.0,20696,40792,45839.4,42.3,0.0,0,0
+Convención,Norte de Santander,Andean,2015,1000.0,40069,42583,45774.4,33.2,0.0,2,61
+Convención,Norte de Santander,Andean,2016,1000.0,40486,46417,44224.6,32.2,0.0,0,60
+Convención,Norte de Santander,Andean,2017,1000.0,40903,42293,45501.2,34.2,0.0,2,175
+Convención,Norte de Santander,Andean,2018,1000.0,41321,47753,49082.2,34.5,0.0,2,0
+Convención,Norte de Santander,Andean,2019,1000.0,41738,50918,46044.7,32.6,0.0,1,101
+Convención,Norte de Santander,Andean,2020,1000.0,42155,52301,48545.4,32.9,0.0,1,99
+Convención,Norte de Santander,Andean,2021,1000.0,42573,54386,51478.4,30.8,0.0,1,217
+Convención,Norte de Santander,Andean,2022,1000.0,42990,56468,53694.0,31.7,0.0,0,101
+Convención,Norte de Santander,Andean,2023,1000.0,43408,55668,47744.6,30.9,0.0,2,38
+Pamplona,Norte de Santander,Andean,2015,1100.0,3226,11738,19253.0,44.1,0.0,2,42
+Pamplona,Norte de Santander,Andean,2016,1100.0,3259,11692,18440.8,43.8,0.0,1,30
+Pamplona,Norte de Santander,Andean,2017,1100.0,3293,12857,18508.1,42.7,0.0,1,531
+Pamplona,Norte de Santander,Andean,2018,1100.0,3327,12735,19063.5,42.4,0.0,1,134
+Pamplona,Norte de Santander,Andean,2019,1100.0,3360,14156,19476.8,42.8,0.0,1,317
+Pamplona,Norte de Santander,Andean,2020,1100.0,3394,13583,19959.0,43.6,0.0,1,521
+Pamplona,Norte de Santander,Andean,2021,1100.0,3427,14444,21017.4,42.1,0.0,2,249
+Pamplona,Norte de Santander,Andean,2022,1100.0,3461,14808,19776.1,41.6,0.0,1,133
+Pamplona,Norte de Santander,Andean,2023,1100.0,3495,14846,20924.2,41.6,0.0,1,19
+Tierralta,Córdoba,Caribbean,2015,5000.0,72903,364579,54563.0,78.2,0.0,3,189
+Tierralta,Córdoba,Caribbean,2016,5000.0,73663,351180,55024.2,77.3,0.0,3,141
+Tierralta,Córdoba,Caribbean,2017,5000.0,74422,391619,51805.1,76.5,0.0,3,360
+Tierralta,Córdoba,Caribbean,2018,5000.0,75182,428716,57271.2,76.8,0.0,3,1507
+Tierralta,Córdoba,Caribbean,2019,5000.0,75941,441669,53356.2,77.3,0.0,2,301
+Tierralta,Córdoba,Caribbean,2020,5000.0,76701,426021,56425.3,77.0,0.0,4,740
+Tierralta,Córdoba,Caribbean,2021,5000.0,77460,429314,57379.7,76.9,0.0,3,404
+Tierralta,Córdoba,Caribbean,2022,5000.0,78219,456562,57848.4,76.2,0.0,4,922
+Tierralta,Córdoba,Caribbean,2023,5000.0,78979,464158,61030.4,76.0,0.0,4,1588
+Puerto Libertador,Córdoba,Caribbean,2015,1500.0,10739,99212,20378.7,30.1,0.0,1,162
+Puerto Libertador,Córdoba,Caribbean,2016,1500.0,10851,87047,21026.7,30.1,0.0,2,72
+Puerto Libertador,Córdoba,Caribbean,2017,1500.0,10963,95959,20146.7,29.2,0.0,1,85
+Puerto Libertador,Córdoba,Caribbean,2018,1500.0,11075,93118,21661.1,30.0,0.0,1,168
+Puerto Libertador,Córdoba,Caribbean,2019,1500.0,11187,105030,21751.1,30.4,0.0,1,73
+Puerto Libertador,Córdoba,Caribbean,2020,1500.0,11299,105130,23272.1,28.3,0.0,0,129
+Puerto Libertador,Córdoba,Caribbean,2021,1500.0,11410,107607,23797.5,29.1,0.0,0,110
+Puerto Libertador,Córdoba,Caribbean,2022,1500.0,11522,100612,22998.5,27.4,0.0,2,108
+Puerto Libertador,Córdoba,Caribbean,2023,1500.0,11634,115858,24703.5,28.4,0.0,1,82
+Montelíbano,Córdoba,Caribbean,2015,1500.0,41021,264123,37698.8,49.9,0.0,0,22
+Montelíbano,Córdoba,Caribbean,2016,1500.0,41448,268202,36916.4,49.6,0.0,0,5
+Montelíbano,Córdoba,Caribbean,2017,1500.0,41875,286215,43578.1,49.2,0.0,0,19
+Montelíbano,Córdoba,Caribbean,2018,1500.0,42302,267997,42283.8,49.0,0.0,0,54
+Montelíbano,Córdoba,Caribbean,2019,1500.0,42730,279182,41330.0,48.3,0.0,1,17
+Montelíbano,Córdoba,Caribbean,2020,1500.0,43157,298822,43432.9,48.7,0.0,0,11
+Montelíbano,Córdoba,Caribbean,2021,1500.0,43584,319160,45053.3,46.6,0.0,0,27
+Montelíbano,Córdoba,Caribbean,2022,1500.0,44012,341147,43239.1,46.8,0.0,0,21
+Montelíbano,Córdoba,Caribbean,2023,1500.0,44439,333043,46046.2,47.7,0.0,1,162
+Valencia,Córdoba,Caribbean,2015,1100.0,4563,59143,11002.3,48.1,57.3,5,124
+Valencia,Córdoba,Caribbean,2016,1100.0,4611,66971,11701.5,48.0,51.3,5,343
+Valencia,Córdoba,Caribbean,2017,1100.0,4659,69303,11994.3,47.7,49.8,4,568
+Valencia,Córdoba,Caribbean,2018,1100.0,4706,69019,10945.8,47.7,53.2,3,265
+Valencia,Córdoba,Caribbean,2019,1100.0,4754,71124,11400.4,46.5,54.8,3,165
+Valencia,Córdoba,Caribbean,2020,1100.0,4801,73197,11527.7,45.7,69.2,4,418
+Valencia,Córdoba,Caribbean,2021,1100.0,4849,73086,12189.9,46.5,59.4,5,176
+Valencia,Córdoba,Caribbean,2022,1100.0,4896,78280,11838.6,44.0,49.5,4,94
+Valencia,Córdoba,Caribbean,2023,1100.0,4944,86934,12936.4,44.2,50.5,4,53
+Montería,Córdoba,Caribbean,2015,3100.0,10631,272805,63574.4,60.0,0.0,2,2129
+Montería,Córdoba,Caribbean,2016,3100.0,10742,306897,63752.6,58.4,0.0,3,3281
+Montería,Córdoba,Caribbean,2017,3100.0,10852,316237,61463.0,58.5,0.0,2,1089
+Montería,Córdoba,Caribbean,2018,3100.0,10963,320674,68090.9,59.1,0.0,1,2666
+Montería,Córdoba,Caribbean,2019,3100.0,11074,367611,70653.3,58.4,0.0,1,999
+Montería,Córdoba,Caribbean,2020,3100.0,11185,325360,66390.5,56.6,0.0,1,374
+Montería,Córdoba,Caribbean,2021,3100.0,11295,339073,67854.1,56.3,0.0,1,81
+Montería,Córdoba,Caribbean,2022,3100.0,11406,362396,70326.5,57.5,0.0,2,322
+Montería,Córdoba,Caribbean,2023,3100.0,11517,367233,69640.6,55.5,0.0,3,1989
+Lorica,Córdoba,Caribbean,2015,900.0,37088,20280,20896.7,47.2,0.0,0,7
+Lorica,Córdoba,Caribbean,2016,900.0,37474,21116,23355.5,49.4,0.0,0,23
+Lorica,Córdoba,Caribbean,2017,900.0,37861,22139,22893.7,48.0,0.0,1,38
+Lorica,Córdoba,Caribbean,2018,900.0,38247,22508,23919.9,47.3,0.0,0,26
+Lorica,Córdoba,Caribbean,2019,900.0,38633,22773,22995.1,48.4,0.0,1,27
+Lorica,Córdoba,Caribbean,2020,900.0,39020,22650,23945.3,48.0,0.0,0,73
+Lorica,Córdoba,Caribbean,2021,900.0,39406,24980,24342.4,48.4,0.0,1,322
+Lorica,Córdoba,Caribbean,2022,900.0,39792,27532,24395.8,46.0,0.0,0,281
+Lorica,Córdoba,Caribbean,2023,900.0,40179,26516,24295.5,45.7,0.0,1,77
+Sahagún,Córdoba,Caribbean,2015,1000.0,142068,74716,3354.6,70.9,0.0,1,1029
+Sahagún,Córdoba,Caribbean,2016,1000.0,143548,68606,3340.6,70.2,0.0,1,425
+Sahagún,Córdoba,Caribbean,2017,1000.0,145028,76745,3340.7,70.5,0.0,1,464
+Sahagún,Córdoba,Caribbean,2018,1000.0,146508,80434,3048.2,69.8,0.0,0,505
+Sahagún,Córdoba,Caribbean,2019,1000.0,147987,80476,3388.0,70.2,0.0,1,404
+Sahagún,Córdoba,Caribbean,2020,1000.0,149467,84092,3431.8,68.6,0.0,0,429
+Sahagún,Córdoba,Caribbean,2021,1000.0,150947,83961,3645.3,68.5,0.0,2,247
+Sahagún,Córdoba,Caribbean,2022,1000.0,152427,84246,3385.4,68.8,0.0,2,33
+Sahagún,Córdoba,Caribbean,2023,1000.0,153907,90318,4012.9,69.1,0.0,1,63
+Cereté,Córdoba,Caribbean,2015,1000.0,13394,163769,20874.7,49.8,0.0,1,122
+Cereté,Córdoba,Caribbean,2016,1000.0,13534,173240,21656.3,49.4,0.0,0,141
+Cereté,Córdoba,Caribbean,2017,1000.0,13673,175836,21163.0,47.9,0.0,2,505
+Cereté,Córdoba,Caribbean,2018,1000.0,13813,199890,20781.6,49.0,0.0,2,58
+Cereté,Córdoba,Caribbean,2019,1000.0,13952,193238,23010.9,47.4,0.0,1,21
+Cereté,Córdoba,Caribbean,2020,1000.0,14092,202405,22166.5,48.2,0.0,1,78
+Cereté,Córdoba,Caribbean,2021,1000.0,14231,211288,23792.9,47.7,0.0,1,43
+Cereté,Córdoba,Caribbean,2022,1000.0,14371,208446,21938.8,47.2,0.0,2,39
+Cereté,Córdoba,Caribbean,2023,1000.0,14510,239887,23371.0,47.1,0.0,1,102
+Zaragoza,Antioquia,Andean,2015,1000.0,29291,10389,16570.1,45.4,0.0,0,93
+Zaragoza,Antioquia,Andean,2016,1000.0,29596,10062,18777.0,44.4,0.0,0,160
+Zaragoza,Antioquia,Andean,2017,1000.0,29901,11515,17062.0,43.6,0.0,0,862
+Zaragoza,Antioquia,Andean,2018,1000.0,30206,11324,17582.2,43.1,0.0,0,111
+Zaragoza,Antioquia,Andean,2019,1000.0,30511,11736,18008.9,43.0,0.0,0,62
+Zaragoza,Antioquia,Andean,2020,1000.0,30816,12288,17998.2,43.1,0.0,1,43
+Zaragoza,Antioquia,Andean,2021,1000.0,31121,11914,19456.2,43.1,0.0,0,0
+Zaragoza,Antioquia,Andean,2022,1000.0,31426,12579,19908.8,44.0,0.0,0,536
+Zaragoza,Antioquia,Andean,2023,1000.0,31731,12161,19615.1,41.7,0.0,1,596
+El Bagre,Antioquia,Andean,2015,1500.0,27968,25097,11198.2,33.6,0.0,0,62
+El Bagre,Antioquia,Andean,2016,1500.0,28259,25021,13338.4,31.5,0.0,1,64
+El Bagre,Antioquia,Andean,2017,1500.0,28550,25873,13343.2,30.0,0.0,0,24
+El Bagre,Antioquia,Andean,2018,1500.0,28842,26126,12738.0,30.4,0.0,0,16
+El Bagre,Antioquia,Andean,2019,1500.0,29133,28330,13436.6,29.5,0.0,0,25
+El Bagre,Antioquia,Andean,2020,1500.0,29424,27615,13516.7,29.4,0.0,0,133
+El Bagre,Antioquia,Andean,2021,1500.0,29716,29665,13481.1,29.2,0.0,0,39
+El Bagre,Antioquia,Andean,2022,1500.0,30007,30059,14327.9,30.3,0.0,0,49
+El Bagre,Antioquia,Andean,2023,1500.0,30298,30343,13974.7,29.6,0.0,0,47
+Segovia,Antioquia,Andean,2015,1200.0,21672,23063,22768.5,43.8,0.0,2,216
+Segovia,Antioquia,Andean,2016,1200.0,21898,23088,22195.7,45.7,0.0,1,80
+Segovia,Antioquia,Andean,2017,1200.0,22124,22357,23992.8,44.6,0.0,1,17
+Segovia,Antioquia,Andean,2018,1200.0,22349,23488,24540.4,45.2,0.0,0,19
+Segovia,Antioquia,Andean,2019,1200.0,22575,24194,22295.8,43.6,0.0,2,8
+Segovia,Antioquia,Andean,2020,1200.0,22801,26778,25077.1,42.8,0.0,1,17
+Segovia,Antioquia,Andean,2021,1200.0,23027,26496,24912.6,42.9,0.0,1,56
+Segovia,Antioquia,Andean,2022,1200.0,23252,28612,25209.8,41.8,0.0,1,34
+Segovia,Antioquia,Andean,2023,1200.0,23478,29722,26370.0,42.5,0.0,0,43
+Remedios,Antioquia,Andean,2015,2000.0,30414,23860,32767.1,20.8,0.0,0,1068
+Remedios,Antioquia,Andean,2016,2000.0,30731,24437,33859.8,21.1,0.0,0,420
+Remedios,Antioquia,Andean,2017,2000.0,31048,25220,31876.0,21.0,0.0,0,1301
+Remedios,Antioquia,Andean,2018,2000.0,31364,25169,31106.8,20.3,0.0,0,981
+Remedios,Antioquia,Andean,2019,2000.0,31681,28286,32410.2,20.8,0.0,1,343
+Remedios,Antioquia,Andean,2020,2000.0,31998,26781,36610.1,18.6,0.0,0,300
+Remedios,Antioquia,Andean,2021,2000.0,32315,30751,32699.2,20.4,0.0,0,238
+Remedios,Antioquia,Andean,2022,2000.0,32632,29788,33366.8,19.1,0.0,1,150
+Remedios,Antioquia,Andean,2023,2000.0,32948,30153,33958.9,19.5,0.0,0,352
+Cáceres,Antioquia,Andean,2015,2000.0,25538,21354,90259.0,44.3,93.3,0,86
+Cáceres,Antioquia,Andean,2016,2000.0,25804,20708,86753.8,43.0,79.4,0,126
+Cáceres,Antioquia,Andean,2017,2000.0,26070,21981,91360.3,45.0,79.7,1,243
+Cáceres,Antioquia,Andean,2018,2000.0,26336,22433,86051.3,42.4,79.2,0,654
+Cáceres,Antioquia,Andean,2019,2000.0,26602,24207,95524.8,41.6,84.1,0,0
+Cáceres,Antioquia,Andean,2020,2000.0,26868,22952,89097.5,42.8,85.6,1,293
+Cáceres,Antioquia,Andean,2021,2000.0,27134,25292,95221.1,42.3,56.2,1,3048
+Cáceres,Antioquia,Andean,2022,2000.0,27400,27892,91813.2,40.1,80.7,0,541
+Cáceres,Antioquia,Andean,2023,2000.0,27667,25212,96104.4,40.9,71.3,1,237
+Tarazá,Antioquia,Andean,2015,1300.0,22600,37753,25931.6,31.6,0.0,0,211
+Tarazá,Antioquia,Andean,2016,1300.0,22835,40153,26698.8,32.6,0.0,0,366
+Tarazá,Antioquia,Andean,2017,1300.0,23070,41704,26111.8,32.0,0.0,0,398
+Tarazá,Antioquia,Andean,2018,1300.0,23306,43377,25571.9,31.3,0.0,1,434
+Tarazá,Antioquia,Andean,2019,1300.0,23541,46376,28665.4,29.7,0.0,0,126
+Tarazá,Antioquia,Andean,2020,1300.0,23777,47921,27418.4,30.2,0.0,1,430
+Tarazá,Antioquia,Andean,2021,1300.0,24012,51521,29119.4,29.8,0.0,1,131
+Tarazá,Antioquia,Andean,2022,1300.0,24247,45752,28198.0,29.7,0.0,0,139
+Tarazá,Antioquia,Andean,2023,1300.0,24483,48885,30632.3,29.6,0.0,0,167
+Briceño,Antioquia,Andean,2015,400.0,9302,7130,11286.8,33.6,0.0,0,0
+Briceño,Antioquia,Andean,2016,400.0,9399,7493,12332.6,34.1,0.0,0,8
+Briceño,Antioquia,Andean,2017,400.0,9496,7886,11635.6,32.8,0.0,0,40
+Briceño,Antioquia,Andean,2018,400.0,9593,8060,12162.0,32.5,0.0,0,104
+Briceño,Antioquia,Andean,2019,400.0,9690,9218,13403.3,32.2,0.0,1,42
+Briceño,Antioquia,Andean,2020,400.0,9787,8797,13984.5,31.2,0.0,0,12
+Briceño,Antioquia,Andean,2021,400.0,9884,8904,12431.9,31.0,0.0,0,39
+Briceño,Antioquia,Andean,2022,400.0,9981,9163,13017.3,32.4,0.0,0,92
+Briceño,Antioquia,Andean,2023,400.0,10077,9639,13997.2,30.8,0.0,0,25
+Ituango,Antioquia,Andean,2015,2600.0,52781,57718,111660.9,57.0,0.0,0,440
+Ituango,Antioquia,Andean,2016,2600.0,53331,60725,103161.1,56.5,0.0,1,204
+Ituango,Antioquia,Andean,2017,2600.0,53880,64733,111001.3,56.7,0.0,1,43
+Ituango,Antioquia,Andean,2018,2600.0,54430,65356,97303.1,55.9,0.0,1,110
+Ituango,Antioquia,Andean,2019,2600.0,54980,65145,106959.5,55.6,0.0,1,814
+Ituango,Antioquia,Andean,2020,2600.0,55530,67427,107720.1,55.6,0.0,0,554
+Ituango,Antioquia,Andean,2021,2600.0,56080,64493,117707.8,54.8,0.0,1,302
+Ituango,Antioquia,Andean,2022,2600.0,56629,67033,112835.1,54.1,0.0,2,241
+Ituango,Antioquia,Andean,2023,2600.0,57179,66805,119895.1,52.4,0.0,2,138
+Anorí,Antioquia,Andean,2015,1500.0,18304,81760,13501.5,47.2,0.0,1,138
+Anorí,Antioquia,Andean,2016,1500.0,18495,79183,13231.8,46.8,0.0,2,299
+Anorí,Antioquia,Andean,2017,1500.0,18685,80459,13305.8,46.6,0.0,1,152
+Anorí,Antioquia,Andean,2018,1500.0,18876,87256,13150.6,46.0,0.0,2,67
+Anorí,Antioquia,Andean,2019,1500.0,19067,89774,14883.1,44.6,0.0,1,103
+Anorí,Antioquia,Andean,2020,1500.0,19257,94372,15465.0,46.0,0.0,1,51
+Anorí,Antioquia,Andean,2021,1500.0,19448,94337,14922.5,44.8,0.0,1,46
+Anorí,Antioquia,Andean,2022,1500.0,19639,98765,14574.4,45.7,0.0,2,67
+Anorí,Antioquia,Andean,2023,1500.0,19829,111423,14895.6,43.1,0.0,1,75
+Medellín,Antioquia,Andean,2015,380.0,94158,2055,3877.0,20.8,0.0,0,2
+Medellín,Antioquia,Andean,2016,380.0,95139,2107,3712.3,18.1,0.0,0,3
+Medellín,Antioquia,Andean,2017,380.0,96120,2287,3626.3,18.7,0.0,0,2
+Medellín,Antioquia,Andean,2018,380.0,97101,2280,3725.4,18.3,0.0,0,2
+Medellín,Antioquia,Andean,2019,380.0,98082,2206,3920.3,17.1,0.0,1,2
+Medellín,Antioquia,Andean,2020,380.0,99062,2374,3700.7,17.5,0.0,0,2
+Medellín,Antioquia,Andean,2021,380.0,100043,2476,4136.0,16.3,0.0,0,2
+Medellín,Antioquia,Andean,2022,380.0,101024,2487,3909.3,17.0,0.0,1,1
+Medellín,Antioquia,Andean,2023,380.0,102005,2580,4167.6,16.4,0.0,0,1
+Rionegro,Antioquia,Andean,2015,200.0,4267,3538,2027.8,55.7,0.0,0,23
+Rionegro,Antioquia,Andean,2016,200.0,4311,3888,2169.6,57.8,0.0,0,16
+Rionegro,Antioquia,Andean,2017,200.0,4356,3967,2063.5,56.9,0.0,1,43
+Rionegro,Antioquia,Andean,2018,200.0,4400,4221,2238.0,55.7,0.0,0,11
+Rionegro,Antioquia,Andean,2019,200.0,4444,4055,2330.2,55.9,0.0,0,15
+Rionegro,Antioquia,Andean,2020,200.0,4489,4316,2348.7,55.3,0.0,0,32
+Rionegro,Antioquia,Andean,2021,200.0,4533,4413,2338.1,54.8,0.0,1,95
+Rionegro,Antioquia,Andean,2022,200.0,4578,4798,2443.6,53.5,0.0,0,69
+Rionegro,Antioquia,Andean,2023,200.0,4622,4535,2285.0,54.0,0.0,0,27
+Santa Fe de Antioquia,Antioquia,Andean,2015,490.0,33163,42846,18519.2,24.3,0.0,2,34
+Santa Fe de Antioquia,Antioquia,Andean,2016,490.0,33509,51059,17113.3,26.7,0.0,2,6
+Santa Fe de Antioquia,Antioquia,Andean,2017,490.0,33854,48733,16346.4,22.8,0.0,1,19
+Santa Fe de Antioquia,Antioquia,Andean,2018,490.0,34200,52605,18235.1,23.3,0.0,0,89
+Santa Fe de Antioquia,Antioquia,Andean,2019,490.0,34545,47676,17843.4,23.4,0.0,2,53
+Santa Fe de Antioquia,Antioquia,Andean,2020,490.0,34890,54385,17244.4,22.3,0.0,0,14
+Santa Fe de Antioquia,Antioquia,Andean,2021,490.0,35236,51363,17731.9,21.4,0.0,1,51
+Santa Fe de Antioquia,Antioquia,Andean,2022,490.0,35581,53776,17581.9,19.8,0.0,2,52
+Santa Fe de Antioquia,Antioquia,Andean,2023,490.0,35927,58674,18674.6,21.5,0.0,0,63
+Jardín,Antioquia,Andean,2015,220.0,13518,5691,1270.3,25.1,0.0,1,22
+Jardín,Antioquia,Andean,2016,220.0,13659,5948,1157.0,25.6,0.0,0,18
+Jardín,Antioquia,Andean,2017,220.0,13800,6221,1281.9,24.4,0.0,0,93
+Jardín,Antioquia,Andean,2018,220.0,13940,5920,1278.3,25.1,0.0,0,27
+Jardín,Antioquia,Andean,2019,220.0,14081,6326,1311.4,25.3,0.0,1,9
+Jardín,Antioquia,Andean,2020,220.0,14222,7091,1295.8,24.4,0.0,2,52
+Jardín,Antioquia,Andean,2021,220.0,14363,6747,1422.2,24.1,0.0,1,78
+Jardín,Antioquia,Andean,2022,220.0,14504,7356,1472.8,22.9,0.0,0,126
+Jardín,Antioquia,Andean,2023,220.0,14645,6899,1400.4,22.3,0.0,1,45
+Yarumal,Antioquia,Andean,2015,600.0,32790,10135,696.2,34.2,0.0,0,26
+Yarumal,Antioquia,Andean,2016,600.0,33132,10389,712.9,34.7,0.0,2,10
+Yarumal,Antioquia,Andean,2017,600.0,33473,10432,764.6,35.1,0.0,2,11
+Yarumal,Antioquia,Andean,2018,600.0,33815,11123,716.1,33.1,0.0,1,87
+Yarumal,Antioquia,Andean,2019,600.0,34157,12567,727.3,31.0,0.0,1,89
+Yarumal,Antioquia,Andean,2020,600.0,34498,11328,755.1,33.2,0.0,2,85
+Yarumal,Antioquia,Andean,2021,600.0,34840,11480,779.4,31.6,0.0,1,67
+Yarumal,Antioquia,Andean,2022,600.0,35181,13154,759.0,32.3,0.0,2,124
+Yarumal,Antioquia,Andean,2023,600.0,35523,13194,840.4,30.1,0.0,1,104
+Apartadó,Antioquia,Andean,2015,600.0,11343,8707,9538.7,32.6,28.6,0,64
+Apartadó,Antioquia,Andean,2016,600.0,11461,9613,9688.9,32.4,24.2,0,25
+Apartadó,Antioquia,Andean,2017,600.0,11579,9401,9630.8,33.3,20.8,1,29
+Apartadó,Antioquia,Andean,2018,600.0,11697,10606,9950.1,32.3,25.6,0,56
+Apartadó,Antioquia,Andean,2019,600.0,11815,10989,10094.1,32.3,29.1,0,56
+Apartadó,Antioquia,Andean,2020,600.0,11933,11438,10953.7,30.4,24.5,0,69
+Apartadó,Antioquia,Andean,2021,600.0,12052,10995,11374.2,32.3,29.0,0,84
+Apartadó,Antioquia,Andean,2022,600.0,12170,11340,10440.4,30.2,26.2,1,171
+Apartadó,Antioquia,Andean,2023,600.0,12288,12034,11554.7,31.2,21.9,0,444
+Turbo,Antioquia,Caribbean,2015,3000.0,71970,269478,11737.5,55.7,66.7,1,545
+Turbo,Antioquia,Caribbean,2016,3000.0,72720,265278,11958.0,54.1,68.5,1,987
+Turbo,Antioquia,Caribbean,2017,3000.0,73470,308614,12434.4,54.2,50.2,1,774
+Turbo,Antioquia,Caribbean,2018,3000.0,74219,307175,12054.1,55.2,63.7,1,140
+Turbo,Antioquia,Caribbean,2019,3000.0,74969,328141,12522.3,52.9,73.9,2,498
+Turbo,Antioquia,Caribbean,2020,3000.0,75719,336932,12844.0,53.3,56.7,1,1089
+Turbo,Antioquia,Caribbean,2021,3000.0,76469,316808,12146.9,52.8,59.2,0,2113
+Turbo,Antioquia,Caribbean,2022,3000.0,77218,326287,11895.7,52.7,57.9,2,2251
+Turbo,Antioquia,Caribbean,2023,3000.0,77968,348824,12909.9,52.4,57.1,1,941
+Necoclí,Antioquia,Caribbean,2015,1400.0,233713,20079,6574.5,57.2,181.3,3,19
+Necoclí,Antioquia,Caribbean,2016,1400.0,236148,20947,7179.2,56.4,212.7,2,50
+Necoclí,Antioquia,Caribbean,2017,1400.0,238582,21538,7328.0,58.5,182.4,2,21
+Necoclí,Antioquia,Caribbean,2018,1400.0,241017,24360,7312.3,56.0,181.7,3,373
+Necoclí,Antioquia,Caribbean,2019,1400.0,243451,24360,7521.0,56.0,205.6,1,125
+Necoclí,Antioquia,Caribbean,2020,1400.0,245886,22212,7631.5,55.6,181.6,1,121
+Necoclí,Antioquia,Caribbean,2021,1400.0,248320,23971,7824.8,54.5,204.6,1,112
+Necoclí,Antioquia,Caribbean,2022,1400.0,250755,25583,7677.6,54.8,167.8,2,222
+Necoclí,Antioquia,Caribbean,2023,1400.0,253189,28128,7082.6,55.3,200.5,2,63
+Carepa,Antioquia,Caribbean,2015,400.0,56504,17468,2989.1,46.4,0.0,0,7
+Carepa,Antioquia,Caribbean,2016,400.0,57093,19583,3135.2,48.5,0.0,0,10
+Carepa,Antioquia,Caribbean,2017,400.0,57681,19643,3017.4,47.4,0.0,0,68
+Carepa,Antioquia,Caribbean,2018,400.0,58270,19886,3041.4,47.2,0.0,0,45
+Carepa,Antioquia,Caribbean,2019,400.0,58859,19732,3064.5,45.8,0.0,1,35
+Carepa,Antioquia,Caribbean,2020,400.0,59447,20278,3329.9,46.7,0.0,0,10
+Carepa,Antioquia,Caribbean,2021,400.0,60036,22888,3020.6,46.1,0.0,0,11
+Carepa,Antioquia,Caribbean,2022,400.0,60624,23086,3436.6,45.6,0.0,0,2
+Carepa,Antioquia,Caribbean,2023,400.0,61213,23549,3354.9,44.7,0.0,0,6
+Chigorodó,Antioquia,Caribbean,2015,610.0,122582,17490,3186.7,77.3,0.0,0,211
+Chigorodó,Antioquia,Caribbean,2016,610.0,123859,19414,3538.6,74.5,0.0,0,405
+Chigorodó,Antioquia,Caribbean,2017,610.0,125136,19210,3421.4,76.8,0.0,1,218
+Chigorodó,Antioquia,Caribbean,2018,610.0,126413,20057,3722.1,77.5,0.0,1,92
+Chigorodó,Antioquia,Caribbean,2019,610.0,127690,20909,3431.0,73.6,0.0,0,58
+Chigorodó,Antioquia,Caribbean,2020,610.0,128966,21432,3679.5,75.6,0.0,0,25
+Chigorodó,Antioquia,Caribbean,2021,610.0,130243,21075,3566.7,74.5,0.0,1,278
+Chigorodó,Antioquia,Caribbean,2022,610.0,131520,20901,3621.4,72.0,0.0,0,158
+Chigorodó,Antioquia,Caribbean,2023,610.0,132797,21718,4039.2,72.2,0.0,0,68
+Mutatá,Antioquia,Caribbean,2015,1100.0,45609,175246,94715.6,56.7,0.0,1,634
+Mutatá,Antioquia,Caribbean,2016,1100.0,46084,164271,107248.7,56.9,0.0,2,357
+Mutatá,Antioquia,Caribbean,2017,1100.0,46559,178783,102519.5,57.3,0.0,2,929
+Mutatá,Antioquia,Caribbean,2018,1100.0,47034,171131,99554.2,55.0,0.0,0,857
+Mutatá,Antioquia,Caribbean,2019,1100.0,47509,172394,114897.7,55.3,0.0,0,333
+Mutatá,Antioquia,Caribbean,2020,1100.0,47984,179726,115852.5,56.5,0.0,2,252
+Mutatá,Antioquia,Caribbean,2021,1100.0,48459,198211,116467.9,55.2,0.0,1,552
+Mutatá,Antioquia,Caribbean,2022,1100.0,48934,206537,110302.1,54.9,0.0,0,575
+Mutatá,Antioquia,Caribbean,2023,1100.0,49409,203693,120636.6,53.7,0.0,0,204
+Dabeiba,Antioquia,Andean,2015,1900.0,47333,52687,193911.4,47.0,0.0,0,94
+Dabeiba,Antioquia,Andean,2016,1900.0,47826,59882,198325.0,47.1,0.0,0,73
+Dabeiba,Antioquia,Andean,2017,1900.0,48319,58638,210233.8,44.9,0.0,0,239
+Dabeiba,Antioquia,Andean,2018,1900.0,48812,63232,195829.0,43.9,0.0,1,154
+Dabeiba,Antioquia,Andean,2019,1900.0,49305,57741,195351.6,45.0,0.0,0,78
+Dabeiba,Antioquia,Andean,2020,1900.0,49798,61442,217858.3,44.5,0.0,1,28
+Dabeiba,Antioquia,Andean,2021,1900.0,50291,64973,205975.8,43.3,0.0,1,175
+Dabeiba,Antioquia,Andean,2022,1900.0,50784,67878,207729.6,43.4,0.0,0,235
+Dabeiba,Antioquia,Andean,2023,1900.0,51277,71264,247301.7,43.4,0.0,0,136
+Frontino,Antioquia,Andean,2015,1300.0,10346,35075,3008.0,65.4,0.0,1,82
+Frontino,Antioquia,Andean,2016,1300.0,10454,35210,3144.4,65.2,0.0,0,23
+Frontino,Antioquia,Andean,2017,1300.0,10562,37151,2978.5,65.4,0.0,0,138
+Frontino,Antioquia,Andean,2018,1300.0,10669,36270,2950.6,64.8,0.0,0,38
+Frontino,Antioquia,Andean,2019,1300.0,10777,40297,3443.6,64.0,0.0,1,204
+Frontino,Antioquia,Andean,2020,1300.0,10885,39674,3336.1,61.9,0.0,0,246
+Frontino,Antioquia,Andean,2021,1300.0,10993,42605,3383.0,62.1,0.0,1,679
+Frontino,Antioquia,Andean,2022,1300.0,11100,44328,3365.5,63.7,0.0,0,1133
+Frontino,Antioquia,Andean,2023,1300.0,11208,41580,3380.3,62.7,0.0,0,988
+Murindó,Antioquia,Pacific,2015,1500.0,24776,3722,12558.5,77.9,44.0,1,436
+Murindó,Antioquia,Pacific,2016,1500.0,25034,3927,14136.2,77.8,41.6,2,80
+Murindó,Antioquia,Pacific,2017,1500.0,25292,3990,14192.2,75.6,38.7,1,87
+Murindó,Antioquia,Pacific,2018,1500.0,25550,4023,13470.0,77.7,48.1,1,102
+Murindó,Antioquia,Pacific,2019,1500.0,25809,4364,13973.0,75.1,49.0,1,1078
+Murindó,Antioquia,Pacific,2020,1500.0,26067,4424,13983.9,75.8,37.3,0,409
+Murindó,Antioquia,Pacific,2021,1500.0,26325,4779,14862.3,74.3,44.0,2,2694
+Murindó,Antioquia,Pacific,2022,1500.0,26583,4714,14139.7,75.8,35.9,0,681
+Murindó,Antioquia,Pacific,2023,1500.0,26841,4804,14535.0,73.9,37.7,1,159
+Vigía del Fuerte,Antioquia,Pacific,2015,1800.0,42268,7939,3003.7,86.7,0.0,0,50
+Vigía del Fuerte,Antioquia,Pacific,2016,1800.0,42709,8167,2946.5,86.6,0.0,0,83
+Vigía del Fuerte,Antioquia,Pacific,2017,1800.0,43149,9129,2961.2,86.9,0.0,0,94
+Vigía del Fuerte,Antioquia,Pacific,2018,1800.0,43589,8482,3007.3,87.9,0.0,0,306
+Vigía del Fuerte,Antioquia,Pacific,2019,1800.0,44029,9714,3213.7,85.7,0.0,0,39
+Vigía del Fuerte,Antioquia,Pacific,2020,1800.0,44470,9437,3364.3,86.7,0.0,0,124
+Vigía del Fuerte,Antioquia,Pacific,2021,1800.0,44910,10130,3243.1,85.7,0.0,1,70
+Vigía del Fuerte,Antioquia,Pacific,2022,1800.0,45350,10204,3177.7,84.9,0.0,0,63
+Vigía del Fuerte,Antioquia,Pacific,2023,1800.0,45791,9999,3374.5,84.5,0.0,1,12
+Quibdó,Chocó,Pacific,2015,3300.0,30784,11295,10522.8,59.2,0.0,2,42
+Quibdó,Chocó,Pacific,2016,3300.0,31105,10822,11337.0,59.9,0.0,2,59
+Quibdó,Chocó,Pacific,2017,3300.0,31425,11227,11186.4,58.7,0.0,0,18
+Quibdó,Chocó,Pacific,2018,3300.0,31746,12549,11390.5,59.0,0.0,0,5
+Quibdó,Chocó,Pacific,2019,3300.0,32067,12622,10943.4,58.6,0.0,0,5
+Quibdó,Chocó,Pacific,2020,3300.0,32387,13051,11197.6,58.7,0.0,0,15
+Quibdó,Chocó,Pacific,2021,3300.0,32708,13276,10902.2,57.7,0.0,2,240
+Quibdó,Chocó,Pacific,2022,3300.0,33029,14103,11528.4,56.6,0.0,1,81
+Quibdó,Chocó,Pacific,2023,3300.0,33349,14449,12522.1,56.7,0.0,2,93
+Istmina,Chocó,Pacific,2015,1300.0,6577,4788,4374.8,59.9,0.0,0,73
+Istmina,Chocó,Pacific,2016,1300.0,6645,5239,4212.7,59.3,0.0,0,89
+Istmina,Chocó,Pacific,2017,1300.0,6714,5297,4168.7,59.6,0.0,0,89
+Istmina,Chocó,Pacific,2018,1300.0,6782,5913,4517.0,60.8,0.0,0,92
+Istmina,Chocó,Pacific,2019,1300.0,6851,5784,4645.7,60.4,0.0,1,6
+Istmina,Chocó,Pacific,2020,1300.0,6919,5976,4582.0,59.1,0.0,0,4
+Istmina,Chocó,Pacific,2021,1300.0,6988,6087,4508.4,57.7,0.0,0,16
+Istmina,Chocó,Pacific,2022,1300.0,7057,6425,4467.9,58.8,0.0,0,80
+Istmina,Chocó,Pacific,2023,1300.0,7125,6495,4729.5,57.4,0.0,0,24
+Condoto,Chocó,Pacific,2015,700.0,28800,4372,761.6,91.7,0.0,1,133
+Condoto,Chocó,Pacific,2016,700.0,29100,4393,809.4,92.8,0.0,1,65
+Condoto,Chocó,Pacific,2017,700.0,29400,4785,769.9,92.2,0.0,1,313
+Condoto,Chocó,Pacific,2018,700.0,29700,5199,841.7,90.9,0.0,1,64
+Condoto,Chocó,Pacific,2019,700.0,30000,5104,810.6,91.1,0.0,0,68
+Condoto,Chocó,Pacific,2020,700.0,30300,5040,834.8,89.2,0.0,0,72
+Condoto,Chocó,Pacific,2021,700.0,30600,5175,858.4,90.2,0.0,1,97
+Condoto,Chocó,Pacific,2022,700.0,30900,5277,904.6,87.8,0.0,1,25
+Condoto,Chocó,Pacific,2023,700.0,31200,5923,850.5,88.9,0.0,0,6
+Tadó,Chocó,Pacific,2015,800.0,3499,4920,9901.4,76.8,116.4,0,0
+Tadó,Chocó,Pacific,2016,800.0,3536,5219,9736.8,78.1,169.2,0,75
+Tadó,Chocó,Pacific,2017,800.0,3572,5206,9458.0,76.6,133.8,1,403
+Tadó,Chocó,Pacific,2018,800.0,3608,5578,10130.5,76.8,150.9,0,1110
+Tadó,Chocó,Pacific,2019,800.0,3645,5580,11226.4,77.2,96.2,0,435
+Tadó,Chocó,Pacific,2020,800.0,3681,5777,10527.2,76.2,113.5,0,505
+Tadó,Chocó,Pacific,2021,800.0,3718,5774,11390.2,76.1,147.6,0,232
+Tadó,Chocó,Pacific,2022,800.0,3754,6030,10997.7,75.4,142.0,1,661
+Tadó,Chocó,Pacific,2023,800.0,3791,5910,9892.3,75.0,109.3,0,267
+Nóvita,Chocó,Pacific,2015,1500.0,39579,17031,9492.3,67.9,0.0,2,206
+Nóvita,Chocó,Pacific,2016,1500.0,39991,17303,9365.2,66.9,0.0,2,477
+Nóvita,Chocó,Pacific,2017,1500.0,40403,17963,8693.8,67.3,0.0,2,551
+Nóvita,Chocó,Pacific,2018,1500.0,40815,18119,9472.8,65.8,0.0,1,214
+Nóvita,Chocó,Pacific,2019,1500.0,41228,19252,9906.1,66.5,0.0,2,134
+Nóvita,Chocó,Pacific,2020,1500.0,41640,18887,9319.7,63.9,0.0,2,238
+Nóvita,Chocó,Pacific,2021,1500.0,42052,19499,8789.1,64.4,0.0,3,413
+Nóvita,Chocó,Pacific,2022,1500.0,42464,21358,9533.5,64.8,0.0,2,145
+Nóvita,Chocó,Pacific,2023,1500.0,42877,20229,10249.0,65.7,0.0,2,562
+Medio San Juan,Chocó,Pacific,2015,1100.0,22179,7029,961.2,88.2,0.0,2,222
+Medio San Juan,Chocó,Pacific,2016,1100.0,22410,6945,1062.1,87.8,0.0,3,210
+Medio San Juan,Chocó,Pacific,2017,1100.0,22641,6946,1110.6,85.8,0.0,2,36
+Medio San Juan,Chocó,Pacific,2018,1100.0,22872,6914,1169.5,85.5,0.0,1,38
+Medio San Juan,Chocó,Pacific,2019,1100.0,23103,7584,1039.8,85.7,0.0,1,256
+Medio San Juan,Chocó,Pacific,2020,1100.0,23334,7223,1215.3,86.9,0.0,2,139
+Medio San Juan,Chocó,Pacific,2021,1100.0,23565,7873,1130.7,84.4,0.0,1,474
+Medio San Juan,Chocó,Pacific,2022,1100.0,23796,8172,1227.4,85.2,0.0,1,493
+Medio San Juan,Chocó,Pacific,2023,1100.0,24027,7800,1230.7,83.2,0.0,2,413
+Bajo Baudó,Chocó,Pacific,2015,3900.0,10356,13688,8066.9,58.4,0.0,1,31
+Bajo Baudó,Chocó,Pacific,2016,3900.0,10464,16144,8356.8,58.3,0.0,0,20
+Bajo Baudó,Chocó,Pacific,2017,3900.0,10572,17234,7765.6,57.7,0.0,0,93
+Bajo Baudó,Chocó,Pacific,2018,3900.0,10680,18400,8091.2,58.0,0.0,0,564
+Bajo Baudó,Chocó,Pacific,2019,3900.0,10787,18362,8479.6,58.3,0.0,0,136
+Bajo Baudó,Chocó,Pacific,2020,3900.0,10895,18260,8066.5,56.5,0.0,1,342
+Bajo Baudó,Chocó,Pacific,2021,3900.0,11003,18648,7746.8,57.3,0.0,0,183
+Bajo Baudó,Chocó,Pacific,2022,3900.0,11111,19782,8582.1,55.4,0.0,1,147
+Bajo Baudó,Chocó,Pacific,2023,3900.0,11219,19255,8917.2,55.6,0.0,0,0
+Riosucio,Chocó,Pacific,2015,6100.0,32219,27100,11039.4,83.7,0.0,4,2269
+Riosucio,Chocó,Pacific,2016,6100.0,32555,29847,11168.4,84.7,0.0,3,2675
+Riosucio,Chocó,Pacific,2017,6100.0,32891,33394,11400.8,83.7,0.0,4,2527
+Riosucio,Chocó,Pacific,2018,6100.0,33226,31816,11488.1,82.7,0.0,4,675
+Riosucio,Chocó,Pacific,2019,6100.0,33562,31587,10641.0,81.1,0.0,4,441
+Riosucio,Chocó,Pacific,2020,6100.0,33897,34140,11568.7,82.4,0.0,3,1472
+Riosucio,Chocó,Pacific,2021,6100.0,34233,33033,12868.0,82.5,0.0,5,1088
+Riosucio,Chocó,Pacific,2022,6100.0,34569,34004,11976.5,81.6,0.0,3,526
+Riosucio,Chocó,Pacific,2023,6100.0,34904,36100,12627.6,80.5,0.0,4,3483
+Carmen del Darién,Chocó,Pacific,2015,3000.0,9879,7375,32931.3,59.2,455.2,3,960
+Carmen del Darién,Chocó,Pacific,2016,3000.0,9982,8028,34161.9,58.3,464.8,3,630
+Carmen del Darién,Chocó,Pacific,2017,3000.0,10085,8382,31558.6,57.7,496.8,4,105
+Carmen del Darién,Chocó,Pacific,2018,3000.0,10188,8111,34239.6,56.3,440.7,2,41
+Carmen del Darién,Chocó,Pacific,2019,3000.0,10291,8845,35742.5,56.8,484.5,3,115
+Carmen del Darién,Chocó,Pacific,2020,3000.0,10394,9214,34510.5,57.3,509.6,4,528
+Carmen del Darién,Chocó,Pacific,2021,3000.0,10496,9326,35038.3,56.2,345.3,4,126
+Carmen del Darién,Chocó,Pacific,2022,3000.0,10599,9535,35237.9,56.1,477.5,3,224
+Carmen del Darién,Chocó,Pacific,2023,3000.0,10702,9718,35616.1,55.6,387.6,2,344
+Acandí,Chocó,Pacific,2015,1300.0,90677,769,2691.5,84.4,1832.3,2,68
+Acandí,Chocó,Pacific,2016,1300.0,91621,909,2515.7,84.2,1669.3,0,19
+Acandí,Chocó,Pacific,2017,1300.0,92566,828,2840.8,82.8,1451.1,2,11
+Acandí,Chocó,Pacific,2018,1300.0,93511,955,2669.0,82.3,1377.3,1,10
+Acandí,Chocó,Pacific,2019,1300.0,94455,915,2860.0,82.9,1577.5,1,25
+Acandí,Chocó,Pacific,2020,1300.0,95400,939,2899.7,80.9,1564.4,0,44
+Acandí,Chocó,Pacific,2021,1300.0,96344,983,2782.7,81.3,1764.1,1,66
+Acandí,Chocó,Pacific,2022,1300.0,97289,990,2813.9,80.9,1405.5,2,65
+Acandí,Chocó,Pacific,2023,1300.0,98233,1042,3020.3,80.6,1421.7,0,90
+Bahía Solano,Chocó,Pacific,2015,1700.0,49589,9272,9784.5,66.2,329.5,3,0
+Bahía Solano,Chocó,Pacific,2016,1700.0,50105,10223,10811.0,67.0,231.4,3,10
+Bahía Solano,Chocó,Pacific,2017,1700.0,50622,10364,10935.8,66.7,278.2,2,56
+Bahía Solano,Chocó,Pacific,2018,1700.0,51138,9946,10839.2,66.6,350.0,1,19
+Bahía Solano,Chocó,Pacific,2019,1700.0,51655,10700,10617.8,65.3,240.0,1,23
+Bahía Solano,Chocó,Pacific,2020,1700.0,52171,10560,11445.2,64.4,281.3,2,29
+Bahía Solano,Chocó,Pacific,2021,1700.0,52688,11815,11493.8,66.3,307.7,1,49
+Bahía Solano,Chocó,Pacific,2022,1700.0,53205,11870,12448.9,64.3,226.5,2,50
+Bahía Solano,Chocó,Pacific,2023,1700.0,53721,11942,11280.5,62.7,261.0,1,80
+Nuquí,Chocó,Pacific,2015,950.0,9217,9010,520.2,93.1,0.0,1,63
+Nuquí,Chocó,Pacific,2016,950.0,9313,9391,477.4,95.3,0.0,0,49
+Nuquí,Chocó,Pacific,2017,950.0,9409,10181,496.0,94.3,0.0,1,127
+Nuquí,Chocó,Pacific,2018,950.0,9505,10568,475.9,95.1,0.0,0,135
+Nuquí,Chocó,Pacific,2019,950.0,9601,10417,500.5,95.3,0.0,1,99
+Nuquí,Chocó,Pacific,2020,950.0,9697,10499,536.3,94.6,0.0,0,25
+Nuquí,Chocó,Pacific,2021,950.0,9793,12038,524.9,93.8,0.0,1,15
+Nuquí,Chocó,Pacific,2022,950.0,9889,11355,563.6,93.7,0.0,1,20
+Nuquí,Chocó,Pacific,2023,950.0,9985,11576,563.7,94.3,0.0,2,9
+Lloró,Chocó,Pacific,2015,1200.0,95410,13139,1339.1,72.2,0.0,1,10
+Lloró,Chocó,Pacific,2016,1200.0,96403,13314,1282.2,73.9,0.0,1,0
+Lloró,Chocó,Pacific,2017,1200.0,97397,13522,1302.3,71.7,0.0,1,26
+Lloró,Chocó,Pacific,2018,1200.0,98391,15062,1314.4,71.2,0.0,1,6
+Lloró,Chocó,Pacific,2019,1200.0,99385,16623,1325.2,70.7,0.0,2,12
+Lloró,Chocó,Pacific,2020,1200.0,100379,14824,1423.3,69.8,0.0,2,113
+Lloró,Chocó,Pacific,2021,1200.0,101373,15686,1329.5,69.4,0.0,1,94
+Lloró,Chocó,Pacific,2022,1200.0,102367,15378,1504.6,70.0,0.0,2,172
+Lloró,Chocó,Pacific,2023,1200.0,103360,17215,1470.7,68.4,0.0,1,63
+Tumaco,Nariño,Pacific,2015,3700.0,36425,12134,13288.9,79.3,655.2,0,543
+Tumaco,Nariño,Pacific,2016,3700.0,36804,12430,12675.6,80.3,768.4,1,820
+Tumaco,Nariño,Pacific,2017,3700.0,37184,13545,13295.4,78.4,654.8,1,1454
+Tumaco,Nariño,Pacific,2018,3700.0,37563,13015,12321.4,78.4,758.2,1,1332
+Tumaco,Nariño,Pacific,2019,3700.0,37943,13552,14690.2,78.3,662.5,1,1879
+Tumaco,Nariño,Pacific,2020,3700.0,38322,13779,14255.5,78.6,646.2,1,3643
+Tumaco,Nariño,Pacific,2021,3700.0,38701,15234,13670.9,77.1,737.8,1,350
+Tumaco,Nariño,Pacific,2022,3700.0,39081,15656,13220.6,76.5,787.5,1,103
+Tumaco,Nariño,Pacific,2023,3700.0,39460,16441,15691.3,75.4,712.2,0,130
+Barbacoas,Nariño,Pacific,2015,2300.0,10997,11206,8152.1,68.1,0.0,0,141
+Barbacoas,Nariño,Pacific,2016,2300.0,11112,12631,7824.9,68.7,0.0,0,140
+Barbacoas,Nariño,Pacific,2017,2300.0,11226,10972,8569.8,66.1,0.0,1,113
+Barbacoas,Nariño,Pacific,2018,2300.0,11341,13065,8014.3,66.9,0.0,1,558
+Barbacoas,Nariño,Pacific,2019,2300.0,11455,14127,8470.3,64.5,0.0,0,257
+Barbacoas,Nariño,Pacific,2020,2300.0,11570,13535,8409.2,64.0,0.0,0,133
+Barbacoas,Nariño,Pacific,2021,2300.0,11685,13010,8737.3,65.2,0.0,0,183
+Barbacoas,Nariño,Pacific,2022,2300.0,11799,14418,7894.7,65.5,0.0,1,305
+Barbacoas,Nariño,Pacific,2023,2300.0,11914,13850,9042.2,64.8,0.0,1,174
+Roberto Payán,Nariño,Pacific,2015,1400.0,11372,1930,460.2,88.1,0.0,1,155
+Roberto Payán,Nariño,Pacific,2016,1400.0,11490,2016,446.7,86.6,0.0,0,143
+Roberto Payán,Nariño,Pacific,2017,1400.0,11609,2127,452.4,85.6,0.0,0,48
+Roberto Payán,Nariño,Pacific,2018,1400.0,11727,2126,445.9,86.6,0.0,0,191
+Roberto Payán,Nariño,Pacific,2019,1400.0,11846,2250,457.5,86.5,0.0,0,22
+Roberto Payán,Nariño,Pacific,2020,1400.0,11964,2316,488.8,85.6,0.0,0,21
+Roberto Payán,Nariño,Pacific,2021,1400.0,12083,2461,461.6,84.8,0.0,0,7
+Roberto Payán,Nariño,Pacific,2022,1400.0,12201,2625,453.9,85.4,0.0,0,52
+Roberto Payán,Nariño,Pacific,2023,1400.0,12320,2538,483.9,86.1,0.0,0,76
+Magüí Payán,Nariño,Pacific,2015,1400.0,6281,13557,637.7,95.4,385.1,2,126
+Magüí Payán,Nariño,Pacific,2016,1400.0,6347,15287,658.5,94.9,429.5,2,343
+Magüí Payán,Nariño,Pacific,2017,1400.0,6412,15181,676.1,92.9,426.3,3,850
+Magüí Payán,Nariño,Pacific,2018,1400.0,6478,15862,657.6,93.8,418.3,2,257
+Magüí Payán,Nariño,Pacific,2019,1400.0,6543,15539,706.4,92.0,379.0,2,298
+Magüí Payán,Nariño,Pacific,2020,1400.0,6608,16938,700.7,93.1,481.3,1,768
+Magüí Payán,Nariño,Pacific,2021,1400.0,6674,16989,732.4,93.5,302.3,3,705
+Magüí Payán,Nariño,Pacific,2022,1400.0,6739,17810,753.5,90.7,383.4,1,280
+Magüí Payán,Nariño,Pacific,2023,1400.0,6805,17007,730.1,92.3,415.0,2,172
+El Charco,Nariño,Pacific,2015,2500.0,6635,31046,4733.5,85.4,4347.9,1,135
+El Charco,Nariño,Pacific,2016,2500.0,6704,33046,5121.6,84.3,2997.1,0,83
+El Charco,Nariño,Pacific,2017,2500.0,6773,33692,4923.5,84.6,3242.4,2,363
+El Charco,Nariño,Pacific,2018,2500.0,6842,35061,5304.1,83.5,2815.7,2,228
+El Charco,Nariño,Pacific,2019,2500.0,6911,36327,5526.9,81.9,3476.0,0,473
+El Charco,Nariño,Pacific,2020,2500.0,6980,34476,5424.3,82.3,2975.3,1,477
+El Charco,Nariño,Pacific,2021,2500.0,7049,35688,5411.3,82.8,2869.8,1,163
+El Charco,Nariño,Pacific,2022,2500.0,7118,38323,5778.4,82.3,3107.2,2,224
+El Charco,Nariño,Pacific,2023,2500.0,7188,40645,5067.4,82.1,2843.7,0,205
+Olaya Herrera,Nariño,Pacific,2015,1500.0,5748,3927,16368.7,65.1,0.0,1,24
+Olaya Herrera,Nariño,Pacific,2016,1500.0,5808,3912,15495.1,64.7,0.0,0,29
+Olaya Herrera,Nariño,Pacific,2017,1500.0,5868,3835,17222.5,63.4,0.0,0,38
+Olaya Herrera,Nariño,Pacific,2018,1500.0,5928,4271,16706.8,63.5,0.0,1,23
+Olaya Herrera,Nariño,Pacific,2019,1500.0,5988,4435,16998.3,63.1,0.0,0,34
+Olaya Herrera,Nariño,Pacific,2020,1500.0,6048,4127,16861.2,63.4,0.0,1,234
+Olaya Herrera,Nariño,Pacific,2021,1500.0,6108,4772,17264.9,62.0,0.0,0,338
+Olaya Herrera,Nariño,Pacific,2022,1500.0,6167,4718,18970.7,61.0,0.0,0,199
+Olaya Herrera,Nariño,Pacific,2023,1500.0,6227,4654,18501.3,62.5,0.0,0,44
+Francisco Pizarro,Nariño,Pacific,2015,1500.0,4448,12995,13623.9,58.7,0.0,0,104
+Francisco Pizarro,Nariño,Pacific,2016,1500.0,4494,15016,13762.9,58.0,0.0,0,134
+Francisco Pizarro,Nariño,Pacific,2017,1500.0,4541,13159,14086.4,58.7,0.0,1,173
+Francisco Pizarro,Nariño,Pacific,2018,1500.0,4587,14339,15389.4,56.8,0.0,1,67
+Francisco Pizarro,Nariño,Pacific,2019,1500.0,4633,16117,15441.1,57.4,0.0,0,100
+Francisco Pizarro,Nariño,Pacific,2020,1500.0,4680,14952,14499.0,57.0,0.0,0,120
+Francisco Pizarro,Nariño,Pacific,2021,1500.0,4726,15618,15485.2,56.9,0.0,0,113
+Francisco Pizarro,Nariño,Pacific,2022,1500.0,4772,16500,16857.9,57.8,0.0,0,123
+Francisco Pizarro,Nariño,Pacific,2023,1500.0,4819,17731,15855.6,55.0,0.0,0,26
+Pasto,Nariño,Andean,2015,1100.0,43569,26335,5888.2,44.7,0.0,1,86
+Pasto,Nariño,Andean,2016,1100.0,44022,27274,5700.6,43.5,0.0,0,16
+Pasto,Nariño,Andean,2017,1100.0,44476,26037,5615.3,43.9,0.0,0,7
+Pasto,Nariño,Andean,2018,1100.0,44930,29849,5933.0,43.2,0.0,0,40
+Pasto,Nariño,Andean,2019,1100.0,45384,27940,6011.4,43.4,0.0,1,178
+Pasto,Nariño,Andean,2020,1100.0,45838,33038,5648.7,42.1,0.0,0,275
+Pasto,Nariño,Andean,2021,1100.0,46292,29145,6354.8,42.1,0.0,0,115
+Pasto,Nariño,Andean,2022,1100.0,46745,33562,5484.0,42.2,0.0,0,85
+Pasto,Nariño,Andean,2023,1100.0,47199,31031,6185.0,43.0,0.0,0,22
+Ipiales,Nariño,Andean,2015,1700.0,6488,32192,60260.7,54.2,62.0,3,100
+Ipiales,Nariño,Andean,2016,1700.0,6555,31705,61157.6,55.0,43.4,3,133
+Ipiales,Nariño,Andean,2017,1700.0,6623,33332,59455.9,53.5,48.9,4,997
+Ipiales,Nariño,Andean,2018,1700.0,6690,31747,61846.7,55.3,42.9,4,797
+Ipiales,Nariño,Andean,2019,1700.0,6758,36904,65921.7,53.5,58.3,4,717
+Ipiales,Nariño,Andean,2020,1700.0,6826,38186,62015.0,53.5,68.5,3,1037
+Ipiales,Nariño,Andean,2021,1700.0,6893,38947,67948.0,53.2,61.0,2,761
+Ipiales,Nariño,Andean,2022,1700.0,6961,38346,65383.2,52.7,45.6,2,346
+Ipiales,Nariño,Andean,2023,1700.0,7028,42165,65810.2,52.9,61.2,3,602
+Túquerres,Nariño,Andean,2015,300.0,16425,6757,2115.0,59.6,0.0,2,4
+Túquerres,Nariño,Andean,2016,300.0,16596,7487,2081.4,59.6,0.0,2,9
+Túquerres,Nariño,Andean,2017,300.0,16768,7462,2217.1,60.8,0.0,1,0
+Túquerres,Nariño,Andean,2018,300.0,16939,7203,2200.9,59.4,0.0,3,0
+Túquerres,Nariño,Andean,2019,300.0,17110,7895,2319.3,57.7,0.0,1,8
+Túquerres,Nariño,Andean,2020,300.0,17281,7984,2138.4,57.0,0.0,2,18
+Túquerres,Nariño,Andean,2021,300.0,17452,7894,2239.0,57.1,0.0,3,31
+Túquerres,Nariño,Andean,2022,300.0,17623,8892,2314.9,57.9,0.0,2,52
+Túquerres,Nariño,Andean,2023,300.0,17794,9204,2229.2,57.1,0.0,2,63
+Guapi,Cauca,Pacific,2015,2700.0,34048,12758,22708.8,62.4,209.7,3,1338
+Guapi,Cauca,Pacific,2016,2700.0,34403,14300,23151.7,61.4,188.4,3,617
+Guapi,Cauca,Pacific,2017,2700.0,34758,13533,21255.9,61.0,158.0,4,770
+Guapi,Cauca,Pacific,2018,2700.0,35112,15399,21980.5,59.4,216.2,4,185
+Guapi,Cauca,Pacific,2019,2700.0,35467,13982,22426.6,60.8,155.5,2,71
+Guapi,Cauca,Pacific,2020,2700.0,35822,14638,24003.6,60.7,189.7,4,149
+Guapi,Cauca,Pacific,2021,2700.0,36176,15036,24667.9,59.4,210.6,3,80
+Guapi,Cauca,Pacific,2022,2700.0,36531,16563,23824.8,57.8,200.9,3,212
+Guapi,Cauca,Pacific,2023,2700.0,36886,16007,22544.7,58.9,199.5,4,459
+Timbiquí,Cauca,Pacific,2015,1800.0,9880,2583,16858.6,47.0,387.2,0,11
+Timbiquí,Cauca,Pacific,2016,1800.0,9983,2794,16833.4,45.8,284.2,1,29
+Timbiquí,Cauca,Pacific,2017,1800.0,10086,2775,17844.0,45.5,610.2,0,35
+Timbiquí,Cauca,Pacific,2018,1800.0,10189,2895,19152.7,45.2,382.7,0,67
+Timbiquí,Cauca,Pacific,2019,1800.0,10291,2856,18268.0,43.8,528.3,0,144
+Timbiquí,Cauca,Pacific,2020,1800.0,10394,3018,17918.2,45.1,376.1,0,161
+Timbiquí,Cauca,Pacific,2021,1800.0,10497,3302,18062.1,45.0,382.0,0,124
+Timbiquí,Cauca,Pacific,2022,1800.0,10600,3226,18340.0,44.6,355.6,0,23
+Timbiquí,Cauca,Pacific,2023,1800.0,10703,3207,18831.0,42.1,408.9,0,44
+López de Micay,Cauca,Pacific,2015,1200.0,40295,3686,4081.7,79.6,856.5,5,1006
+López de Micay,Cauca,Pacific,2016,1200.0,40714,3798,4095.5,77.5,874.5,5,543
+López de Micay,Cauca,Pacific,2017,1200.0,41134,3903,4323.1,78.3,628.1,5,87
+López de Micay,Cauca,Pacific,2018,1200.0,41554,4568,4510.9,78.9,755.2,5,77
+López de Micay,Cauca,Pacific,2019,1200.0,41974,4298,4196.9,79.3,725.5,5,285
+López de Micay,Cauca,Pacific,2020,1200.0,42393,4452,4071.2,76.7,771.6,5,272
+López de Micay,Cauca,Pacific,2021,1200.0,42813,4312,4561.1,78.0,568.4,4,173
+López de Micay,Cauca,Pacific,2022,1200.0,43233,4337,4620.5,77.3,647.4,5,642
+López de Micay,Cauca,Pacific,2023,1200.0,43653,4571,4837.2,76.3,786.1,4,332
+Argelia,Cauca,Andean,2015,600.0,54005,25738,1550.1,55.1,0.0,0,447
+Argelia,Cauca,Andean,2016,600.0,54568,26054,1483.2,55.3,0.0,0,524
+Argelia,Cauca,Andean,2017,600.0,55131,26422,1576.0,54.7,0.0,1,563
+Argelia,Cauca,Andean,2018,600.0,55693,26720,1586.6,55.3,0.0,1,605
+Argelia,Cauca,Andean,2019,600.0,56256,26890,1632.7,54.6,0.0,1,349
+Argelia,Cauca,Andean,2020,600.0,56818,28557,1740.8,53.7,0.0,1,486
+Argelia,Cauca,Andean,2021,600.0,57381,28699,1766.9,51.6,0.0,0,439
+Argelia,Cauca,Andean,2022,600.0,57943,29084,1583.5,52.8,0.0,1,391
+Argelia,Cauca,Andean,2023,600.0,58506,32276,1626.8,53.2,0.0,1,193
+El Tambo,Cauca,Andean,2015,3200.0,124450,220703,87136.1,63.1,0.0,2,1990
+El Tambo,Cauca,Andean,2016,3200.0,125746,231869,85670.7,62.5,0.0,2,5120
+El Tambo,Cauca,Andean,2017,3200.0,127043,239585,82111.1,62.2,0.0,1,1867
+El Tambo,Cauca,Andean,2018,3200.0,128339,242592,85422.7,62.5,0.0,1,1376
+El Tambo,Cauca,Andean,2019,3200.0,129635,225575,86078.2,61.6,0.0,1,395
+El Tambo,Cauca,Andean,2020,3200.0,130932,269500,91502.3,60.1,0.0,0,0
+El Tambo,Cauca,Andean,2021,3200.0,132228,263677,84917.6,60.9,0.0,1,462
+El Tambo,Cauca,Andean,2022,3200.0,133524,265062,96839.7,60.7,0.0,0,365
+El Tambo,Cauca,Andean,2023,3200.0,134821,274784,90428.3,60.6,0.0,2,0
+Popayán,Cauca,Andean,2015,510.0,13202,2744,17082.7,39.4,0.0,0,3
+Popayán,Cauca,Andean,2016,510.0,13339,2748,18188.7,39.7,0.0,0,5
+Popayán,Cauca,Andean,2017,510.0,13477,2804,17837.3,38.6,0.0,0,11
+Popayán,Cauca,Andean,2018,510.0,13614,2987,16713.1,39.6,0.0,1,59
+Popayán,Cauca,Andean,2019,510.0,13752,2925,17128.0,38.9,0.0,1,43
+Popayán,Cauca,Andean,2020,510.0,13889,3282,18893.2,38.9,0.0,0,30
+Popayán,Cauca,Andean,2021,510.0,14027,3179,18621.2,37.7,0.0,0,34
+Popayán,Cauca,Andean,2022,510.0,14164,3407,17600.4,37.9,0.0,1,16
+Popayán,Cauca,Andean,2023,510.0,14302,3366,18670.4,36.8,0.0,0,43
+Santander de Quilichao,Cauca,Andean,2015,540.0,5336,12520,1796.1,65.9,0.0,1,83
+Santander de Quilichao,Cauca,Andean,2016,540.0,5392,12865,2013.4,66.0,0.0,1,0
+Santander de Quilichao,Cauca,Andean,2017,540.0,5447,14700,1912.8,64.5,0.0,2,37
+Santander de Quilichao,Cauca,Andean,2018,540.0,5503,14255,1994.2,65.5,0.0,0,15
+Santander de Quilichao,Cauca,Andean,2019,540.0,5559,15140,1791.9,64.9,0.0,2,6
+Santander de Quilichao,Cauca,Andean,2020,540.0,5614,16317,2020.3,64.1,0.0,2,20
+Santander de Quilichao,Cauca,Andean,2021,540.0,5670,15280,2002.4,63.4,0.0,1,20
+Santander de Quilichao,Cauca,Andean,2022,540.0,5725,17070,1960.1,63.6,0.0,1,15
+Santander de Quilichao,Cauca,Andean,2023,540.0,5781,16604,1966.2,64.1,0.0,1,43
+Buenaventura,Valle del Cauca,Pacific,2015,6100.0,32604,24587,6918.3,53.5,0.0,0,100
+Buenaventura,Valle del Cauca,Pacific,2016,6100.0,32943,26255,7185.2,52.9,0.0,1,203
+Buenaventura,Valle del Cauca,Pacific,2017,6100.0,33283,26429,7261.1,51.6,0.0,0,67
+Buenaventura,Valle del Cauca,Pacific,2018,6100.0,33623,27167,7359.3,53.9,0.0,0,55
+Buenaventura,Valle del Cauca,Pacific,2019,6100.0,33962,28405,7648.9,53.6,0.0,0,634
+Buenaventura,Valle del Cauca,Pacific,2020,6100.0,34302,29290,7698.9,54.6,0.0,1,1222
+Buenaventura,Valle del Cauca,Pacific,2021,6100.0,34642,30810,7312.1,51.0,0.0,1,1351
+Buenaventura,Valle del Cauca,Pacific,2022,6100.0,34981,31016,7206.7,50.2,0.0,0,365
+Buenaventura,Valle del Cauca,Pacific,2023,6100.0,35321,33496,8221.5,49.1,0.0,0,506
+Cali,Valle del Cauca,Andean,2015,560.0,270368,7606,20878.3,11.2,0.0,0,5
+Cali,Valle del Cauca,Andean,2016,560.0,273184,7598,20529.6,12.8,0.0,1,0
+Cali,Valle del Cauca,Andean,2017,560.0,276000,7514,20711.8,12.6,0.0,2,1
+Cali,Valle del Cauca,Andean,2018,560.0,278817,7404,20565.4,11.8,0.0,1,0
+Cali,Valle del Cauca,Andean,2019,560.0,281633,8076,20184.5,11.5,0.0,1,1
+Cali,Valle del Cauca,Andean,2020,560.0,284449,8302,20350.5,9.0,0.0,2,1
+Cali,Valle del Cauca,Andean,2021,560.0,287266,8473,22588.8,9.4,0.0,1,0
+Cali,Valle del Cauca,Andean,2022,560.0,290082,8393,22334.7,12.0,0.0,2,0
+Cali,Valle del Cauca,Andean,2023,560.0,292898,8573,23259.8,8.7,0.0,0,6
+Jamundí,Valle del Cauca,Andean,2015,1000.0,27613,12073,17289.3,36.1,0.0,0,41
+Jamundí,Valle del Cauca,Andean,2016,1000.0,27901,12778,16858.8,33.2,0.0,0,35
+Jamundí,Valle del Cauca,Andean,2017,1000.0,28189,13115,16716.1,32.9,0.0,0,37
+Jamundí,Valle del Cauca,Andean,2018,1000.0,28476,13698,17114.8,35.0,0.0,0,72
+Jamundí,Valle del Cauca,Andean,2019,1000.0,28764,13104,17498.4,34.4,0.0,0,116
+Jamundí,Valle del Cauca,Andean,2020,1000.0,29052,13822,16695.3,31.4,0.0,1,456
+Jamundí,Valle del Cauca,Andean,2021,1000.0,29339,13571,17285.0,32.8,0.0,0,194
+Jamundí,Valle del Cauca,Andean,2022,1000.0,29627,15283,18097.4,32.4,0.0,0,125
+Jamundí,Valle del Cauca,Andean,2023,1000.0,29914,15753,17007.8,31.0,0.0,0,38
+Dagua,Valle del Cauca,Andean,2015,870.0,13981,6399,12278.7,63.0,366.5,1,120
+Dagua,Valle del Cauca,Andean,2016,870.0,14127,7147,12880.5,59.9,373.6,3,42
+Dagua,Valle del Cauca,Andean,2017,870.0,14272,6915,12885.1,60.9,345.2,2,72
+Dagua,Valle del Cauca,Andean,2018,870.0,14418,7301,11817.0,58.3,452.9,1,168
+Dagua,Valle del Cauca,Andean,2019,870.0,14564,7387,13127.6,59.2,341.8,1,38
+Dagua,Valle del Cauca,Andean,2020,870.0,14709,7487,12515.7,58.5,355.5,1,19
+Dagua,Valle del Cauca,Andean,2021,870.0,14855,7588,13777.5,59.0,447.5,2,70
+Dagua,Valle del Cauca,Andean,2022,870.0,15001,8351,12735.6,57.5,437.2,2,56
+Dagua,Valle del Cauca,Andean,2023,870.0,15146,8283,13369.2,57.5,407.7,1,375
+Tuluá,Valle del Cauca,Andean,2015,910.0,31207,11874,30724.8,35.7,0.0,0,813
+Tuluá,Valle del Cauca,Andean,2016,910.0,31532,11775,29203.4,34.2,0.0,1,272
+Tuluá,Valle del Cauca,Andean,2017,910.0,31857,13269,30123.8,34.6,0.0,0,92
+Tuluá,Valle del Cauca,Andean,2018,910.0,32182,13861,31826.7,33.5,0.0,0,131
+Tuluá,Valle del Cauca,Andean,2019,910.0,32507,13644,32851.2,34.2,0.0,0,159
+Tuluá,Valle del Cauca,Andean,2020,910.0,32832,14053,29110.0,33.4,0.0,0,16
+Tuluá,Valle del Cauca,Andean,2021,910.0,33158,14916,32971.9,33.4,0.0,1,11
+Tuluá,Valle del Cauca,Andean,2022,910.0,33483,14582,32304.4,32.7,0.0,0,41
+Tuluá,Valle del Cauca,Andean,2023,910.0,33808,15102,32946.4,33.1,0.0,0,13
+Santa Rosa del Sur,Bolívar,Caribbean,2015,2200.0,30269,19663,11895.9,46.8,0.0,1,52
+Santa Rosa del Sur,Bolívar,Caribbean,2016,2200.0,30584,21408,12271.7,47.8,0.0,0,16
+Santa Rosa del Sur,Bolívar,Caribbean,2017,2200.0,30900,21075,12271.1,47.7,0.0,1,61
+Santa Rosa del Sur,Bolívar,Caribbean,2018,2200.0,31215,20493,12412.5,46.0,0.0,1,29
+Santa Rosa del Sur,Bolívar,Caribbean,2019,2200.0,31530,22447,12178.4,46.7,0.0,2,13
+Santa Rosa del Sur,Bolívar,Caribbean,2020,2200.0,31845,22685,12405.9,45.6,0.0,1,48
+Santa Rosa del Sur,Bolívar,Caribbean,2021,2200.0,32161,23240,12145.6,45.5,0.0,0,84
+Santa Rosa del Sur,Bolívar,Caribbean,2022,2200.0,32476,24908,12713.5,44.0,0.0,1,41
+Santa Rosa del Sur,Bolívar,Caribbean,2023,2200.0,32791,26748,14341.2,44.5,0.0,0,100
+Simití,Bolívar,Caribbean,2015,1500.0,38048,76052,45892.1,94.5,0.0,1,173
+Simití,Bolívar,Caribbean,2016,1500.0,38445,86372,47506.2,95.4,0.0,1,143
+Simití,Bolívar,Caribbean,2017,1500.0,38841,83346,47864.3,94.6,0.0,2,179
+Simití,Bolívar,Caribbean,2018,1500.0,39237,81076,49517.9,94.0,0.0,0,100
+Simití,Bolívar,Caribbean,2019,1500.0,39634,88131,50708.8,91.8,0.0,0,148
+Simití,Bolívar,Caribbean,2020,1500.0,40030,92364,47833.7,93.2,0.0,0,253
+Simití,Bolívar,Caribbean,2021,1500.0,40426,88247,50093.9,90.9,0.0,2,92
+Simití,Bolívar,Caribbean,2022,1500.0,40823,92347,51656.2,92.4,0.0,2,439
+Simití,Bolívar,Caribbean,2023,1500.0,41219,102995,48631.2,92.8,0.0,2,835
+San Pablo,Bolívar,Caribbean,2015,2000.0,17199,81385,38199.9,85.1,0.0,0,764
+San Pablo,Bolívar,Caribbean,2016,2000.0,17378,73914,39137.7,83.9,0.0,0,297
+San Pablo,Bolívar,Caribbean,2017,2000.0,17557,77862,41168.1,84.0,0.0,0,101
+San Pablo,Bolívar,Caribbean,2018,2000.0,17736,83877,41462.4,84.3,0.0,0,0
+San Pablo,Bolívar,Caribbean,2019,2000.0,17915,84540,39403.7,82.7,0.0,0,216
+San Pablo,Bolívar,Caribbean,2020,2000.0,18095,91393,40900.5,84.1,0.0,0,171
+San Pablo,Bolívar,Caribbean,2021,2000.0,18274,91621,41446.3,83.5,0.0,1,247
+San Pablo,Bolívar,Caribbean,2022,2000.0,18453,94714,40378.3,83.1,0.0,0,423
+San Pablo,Bolívar,Caribbean,2023,2000.0,18632,94953,42780.1,82.2,0.0,0,1230
+Cantagallo,Bolívar,Caribbean,2015,1000.0,9309,16904,66134.6,78.3,822.6,3,59
+Cantagallo,Bolívar,Caribbean,2016,1000.0,9405,16554,63398.1,77.6,1092.5,3,192
+Cantagallo,Bolívar,Caribbean,2017,1000.0,9502,17931,63570.3,77.7,856.0,3,602
+Cantagallo,Bolívar,Caribbean,2018,1000.0,9599,19277,58185.3,77.5,732.2,4,134
+Cantagallo,Bolívar,Caribbean,2019,1000.0,9696,18217,63232.1,75.3,934.5,3,87
+Cantagallo,Bolívar,Caribbean,2020,1000.0,9793,19709,62942.9,76.6,936.8,3,255
+Cantagallo,Bolívar,Caribbean,2021,1000.0,9890,20386,67437.6,76.3,674.9,2,91
+Cantagallo,Bolívar,Caribbean,2022,1000.0,9987,20108,66045.0,75.2,806.2,3,503
+Cantagallo,Bolívar,Caribbean,2023,1000.0,10084,22159,65504.2,76.9,995.6,4,158
+Montecristo,Bolívar,Caribbean,2015,1100.0,51961,26052,4796.4,42.7,0.0,2,25
+Montecristo,Bolívar,Caribbean,2016,1100.0,52502,28591,5377.0,41.5,0.0,4,26
+Montecristo,Bolívar,Caribbean,2017,1100.0,53044,28824,5582.6,41.4,0.0,3,29
+Montecristo,Bolívar,Caribbean,2018,1100.0,53585,28075,5183.3,41.3,0.0,4,38
+Montecristo,Bolívar,Caribbean,2019,1100.0,54126,30968,5374.0,40.0,0.0,4,106
+Montecristo,Bolívar,Caribbean,2020,1100.0,54667,30136,5393.3,40.5,0.0,4,273
+Montecristo,Bolívar,Caribbean,2021,1100.0,55209,32438,5382.1,40.4,0.0,3,147
+Montecristo,Bolívar,Caribbean,2022,1100.0,55750,33139,5749.0,40.6,0.0,3,382
+Montecristo,Bolívar,Caribbean,2023,1100.0,56291,33521,5645.0,38.9,0.0,3,196
+Arenal,Bolívar,Caribbean,2015,400.0,19443,21859,15230.1,56.3,0.0,0,83
+Arenal,Bolívar,Caribbean,2016,400.0,19645,21799,15906.9,57.3,0.0,0,37
+Arenal,Bolívar,Caribbean,2017,400.0,19848,20931,16225.9,57.2,0.0,1,151
+Arenal,Bolívar,Caribbean,2018,400.0,20050,21790,17431.7,56.7,0.0,0,133
+Arenal,Bolívar,Caribbean,2019,400.0,20253,23794,15703.2,56.1,0.0,1,30
+Arenal,Bolívar,Caribbean,2020,400.0,20455,23702,17999.4,55.2,0.0,0,59
+Arenal,Bolívar,Caribbean,2021,400.0,20658,24862,15958.5,55.1,0.0,1,105
+Arenal,Bolívar,Caribbean,2022,400.0,20860,23725,18213.2,55.2,0.0,1,34
+Arenal,Bolívar,Caribbean,2023,400.0,21063,26378,18336.2,54.3,0.0,0,15
+Cartagena,Bolívar,Caribbean,2015,610.0,142374,1445,14207.2,15.1,138.9,0,16
+Cartagena,Bolívar,Caribbean,2016,610.0,143857,1470,15930.7,13.6,128.3,0,6
+Cartagena,Bolívar,Caribbean,2017,610.0,145340,1476,17057.6,13.6,123.0,0,13
+Cartagena,Bolívar,Caribbean,2018,610.0,146823,1617,16580.4,13.3,140.4,0,10
+Cartagena,Bolívar,Caribbean,2019,610.0,148306,1626,18234.5,12.0,132.3,0,5
+Cartagena,Bolívar,Caribbean,2020,610.0,149789,1630,17673.8,12.4,88.8,0,1
+Cartagena,Bolívar,Caribbean,2021,610.0,151272,1734,16820.5,12.4,136.2,1,2
+Cartagena,Bolívar,Caribbean,2022,610.0,152755,1719,17475.9,11.8,117.3,1,4
+Cartagena,Bolívar,Caribbean,2023,610.0,154238,1873,18714.0,12.3,123.0,0,8
+Magangué,Bolívar,Caribbean,2015,1100.0,10787,57297,18806.1,64.9,0.0,0,37
+Magangué,Bolívar,Caribbean,2016,1100.0,10900,63834,18302.5,63.9,0.0,0,40
+Magangué,Bolívar,Caribbean,2017,1100.0,11012,67984,19986.6,64.8,0.0,0,16
+Magangué,Bolívar,Caribbean,2018,1100.0,11124,69186,19435.1,62.2,0.0,0,41
+Magangué,Bolívar,Caribbean,2019,1100.0,11237,67565,19364.8,63.4,0.0,0,17
+Magangué,Bolívar,Caribbean,2020,1100.0,11349,71527,18779.4,63.1,0.0,0,44
+Magangué,Bolívar,Caribbean,2021,1100.0,11462,76952,19124.9,62.8,0.0,1,58
+Magangué,Bolívar,Caribbean,2022,1100.0,11574,77032,20651.9,62.9,0.0,0,20
+Magangué,Bolívar,Caribbean,2023,1100.0,11686,71746,21218.6,61.7,0.0,0,43
+Barrancabermeja,Santander,Andean,2015,1300.0,38847,13312,8257.7,40.4,0.0,0,4
+Barrancabermeja,Santander,Andean,2016,1300.0,39251,13423,7707.7,40.3,0.0,0,13
+Barrancabermeja,Santander,Andean,2017,1300.0,39656,13054,7890.9,38.4,0.0,0,73
+Barrancabermeja,Santander,Andean,2018,1300.0,40061,14976,7921.3,37.7,0.0,0,13
+Barrancabermeja,Santander,Andean,2019,1300.0,40465,14613,7601.6,37.1,0.0,1,0
+Barrancabermeja,Santander,Andean,2020,1300.0,40870,16103,8196.8,37.1,0.0,0,8
+Barrancabermeja,Santander,Andean,2021,1300.0,41274,16217,7757.3,36.0,0.0,0,19
+Barrancabermeja,Santander,Andean,2022,1300.0,41679,16243,7764.4,37.8,0.0,0,60
+Barrancabermeja,Santander,Andean,2023,1300.0,42084,16854,8417.4,36.6,0.0,0,23
+Puerto Wilches,Santander,Andean,2015,1900.0,12985,6869,41987.7,61.3,0.0,0,41
+Puerto Wilches,Santander,Andean,2016,1900.0,13120,7268,42487.7,60.9,0.0,0,70
+Puerto Wilches,Santander,Andean,2017,1900.0,13255,7288,42743.0,59.1,0.0,0,293
+Puerto Wilches,Santander,Andean,2018,1900.0,13390,7804,41371.5,61.2,0.0,0,181
+Puerto Wilches,Santander,Andean,2019,1900.0,13526,8158,42349.7,59.4,0.0,1,34
+Puerto Wilches,Santander,Andean,2020,1900.0,13661,8126,42370.4,60.9,0.0,0,99
+Puerto Wilches,Santander,Andean,2021,1900.0,13796,8621,46963.2,59.8,0.0,0,192
+Puerto Wilches,Santander,Andean,2022,1900.0,13931,8179,46961.2,59.1,0.0,1,204
+Puerto Wilches,Santander,Andean,2023,1900.0,14067,9013,44814.7,58.5,0.0,1,200
+Sabana de Torres,Santander,Andean,2015,1200.0,23368,27829,20714.2,38.5,812.1,0,3
+Sabana de Torres,Santander,Andean,2016,1200.0,23611,29098,19737.2,37.9,672.9,1,6
+Sabana de Torres,Santander,Andean,2017,1200.0,23855,30295,21370.0,37.6,591.3,0,70
+Sabana de Torres,Santander,Andean,2018,1200.0,24098,30189,21254.2,37.4,691.2,1,126
+Sabana de Torres,Santander,Andean,2019,1200.0,24342,30861,22916.5,37.2,634.3,0,287
+Sabana de Torres,Santander,Andean,2020,1200.0,24585,31046,21978.9,37.5,758.4,0,543
+Sabana de Torres,Santander,Andean,2021,1200.0,24829,31388,23822.1,37.4,895.0,0,132
+Sabana de Torres,Santander,Andean,2022,1200.0,25072,36226,22425.4,36.1,844.9,0,68
+Sabana de Torres,Santander,Andean,2023,1200.0,25315,36522,23776.8,36.0,675.6,0,34
+Landázuri,Santander,Andean,2015,600.0,30940,17240,4165.3,28.8,0.0,0,27
+Landázuri,Santander,Andean,2016,600.0,31263,17157,4591.6,27.3,0.0,0,33
+Landázuri,Santander,Andean,2017,600.0,31585,19591,4427.3,26.5,0.0,1,126
+Landázuri,Santander,Andean,2018,600.0,31907,19248,4326.2,26.5,0.0,0,117
+Landázuri,Santander,Andean,2019,600.0,32229,18970,4550.0,27.2,0.0,0,102
+Landázuri,Santander,Andean,2020,600.0,32552,21065,5090.7,24.2,0.0,0,76
+Landázuri,Santander,Andean,2021,600.0,32874,20232,4901.8,23.4,0.0,0,66
+Landázuri,Santander,Andean,2022,600.0,33196,21064,4669.2,26.3,0.0,1,333
+Landázuri,Santander,Andean,2023,600.0,33519,21035,5117.7,24.6,0.0,0,194
+Bucaramanga,Santander,Andean,2015,165.0,104591,1100,780.7,10.1,344.8,2,0
+Bucaramanga,Santander,Andean,2016,165.0,105680,1156,809.2,8.7,244.0,2,0
+Bucaramanga,Santander,Andean,2017,165.0,106770,1227,833.1,9.8,302.1,3,0
+Bucaramanga,Santander,Andean,2018,165.0,107859,1321,774.7,9.2,282.2,3,0
+Bucaramanga,Santander,Andean,2019,165.0,108949,1293,880.0,8.7,291.7,3,0
+Bucaramanga,Santander,Andean,2020,165.0,110038,1384,921.8,7.3,298.3,1,0
+Bucaramanga,Santander,Andean,2021,165.0,111128,1397,838.6,6.9,291.3,3,0
+Bucaramanga,Santander,Andean,2022,165.0,112217,1488,883.1,7.0,261.9,2,0
+Bucaramanga,Santander,Andean,2023,165.0,113307,1516,878.8,5.4,350.8,3,0
+San Gil,Santander,Andean,2015,150.0,7445,2936,4100.3,62.8,0.0,1,35
+San Gil,Santander,Andean,2016,150.0,7523,3000,4170.2,62.1,0.0,0,0
+San Gil,Santander,Andean,2017,150.0,7600,3319,3814.4,61.8,0.0,0,40
+San Gil,Santander,Andean,2018,150.0,7678,3358,4347.4,62.4,0.0,1,0
+San Gil,Santander,Andean,2019,150.0,7755,3169,4334.9,59.7,0.0,1,33
+San Gil,Santander,Andean,2020,150.0,7833,3668,4221.4,59.8,0.0,1,38
+San Gil,Santander,Andean,2021,150.0,7910,3658,4841.9,60.0,0.0,1,0
+San Gil,Santander,Andean,2022,150.0,7988,3650,4065.0,59.6,0.0,0,61
+San Gil,Santander,Andean,2023,150.0,8066,3771,4443.2,60.0,0.0,0,19
+Socorro,Santander,Andean,2015,120.0,18623,4374,153.8,41.0,0.0,0,0
+Socorro,Santander,Andean,2016,120.0,18817,4543,146.0,40.8,0.0,1,4
+Socorro,Santander,Andean,2017,120.0,19011,4749,146.5,40.9,0.0,0,1
+Socorro,Santander,Andean,2018,120.0,19205,4767,153.0,40.9,0.0,0,2
+Socorro,Santander,Andean,2019,120.0,19399,5071,167.2,40.0,0.0,0,2
+Socorro,Santander,Andean,2020,120.0,19593,5123,163.4,39.0,0.0,1,2
+Socorro,Santander,Andean,2021,120.0,19787,5755,151.5,39.7,0.0,0,0
+Socorro,Santander,Andean,2022,120.0,19981,5129,165.2,39.1,0.0,1,0
+Socorro,Santander,Andean,2023,120.0,20175,5357,171.3,37.8,0.0,0,1
+Aguachica,Cesar,Caribbean,2015,900.0,21335,53655,32908.8,76.4,0.0,0,149
+Aguachica,Cesar,Caribbean,2016,900.0,21557,52857,32381.7,76.7,0.0,0,256
+Aguachica,Cesar,Caribbean,2017,900.0,21780,55770,33076.6,75.9,0.0,0,438
+Aguachica,Cesar,Caribbean,2018,900.0,22002,58273,32806.8,76.0,0.0,0,544
+Aguachica,Cesar,Caribbean,2019,900.0,22224,58177,34418.0,75.9,0.0,0,1082
+Aguachica,Cesar,Caribbean,2020,900.0,22446,62118,33471.8,75.7,0.0,0,269
+Aguachica,Cesar,Caribbean,2021,900.0,22669,58923,31283.5,74.3,0.0,0,302
+Aguachica,Cesar,Caribbean,2022,900.0,22891,63770,34824.2,73.8,0.0,1,317
+Aguachica,Cesar,Caribbean,2023,900.0,23113,71217,37025.9,74.1,0.0,0,154
+Pelaya,Cesar,Caribbean,2015,400.0,19032,11395,4927.0,62.1,0.0,1,25
+Pelaya,Cesar,Caribbean,2016,400.0,19230,11876,5246.6,62.1,0.0,1,24
+Pelaya,Cesar,Caribbean,2017,400.0,19429,11080,5100.6,62.3,0.0,1,45
+Pelaya,Cesar,Caribbean,2018,400.0,19627,12796,5387.4,61.3,0.0,2,96
+Pelaya,Cesar,Caribbean,2019,400.0,19825,12465,5510.0,61.2,0.0,2,25
+Pelaya,Cesar,Caribbean,2020,400.0,20023,12511,5563.3,60.2,0.0,2,133
+Pelaya,Cesar,Caribbean,2021,400.0,20222,13088,5223.2,60.1,0.0,1,136
+Pelaya,Cesar,Caribbean,2022,400.0,20420,13175,5673.6,58.4,0.0,2,143
+Pelaya,Cesar,Caribbean,2023,400.0,20618,14477,5663.7,59.6,0.0,1,223
+Valledupar,Cesar,Caribbean,2015,4500.0,53981,205954,40649.9,63.0,75.4,2,695
+Valledupar,Cesar,Caribbean,2016,4500.0,54544,206011,41537.8,62.8,83.7,2,256
+Valledupar,Cesar,Caribbean,2017,4500.0,55106,229946,39776.3,61.8,81.7,2,812
+Valledupar,Cesar,Caribbean,2018,4500.0,55668,238058,42515.1,62.0,68.5,0,149
+Valledupar,Cesar,Caribbean,2019,4500.0,56231,243901,40577.2,62.4,81.8,1,268
+Valledupar,Cesar,Caribbean,2020,4500.0,56793,261291,41871.4,61.8,96.7,2,241
+Valledupar,Cesar,Caribbean,2021,4500.0,57355,243184,45059.9,60.4,70.4,2,579
+Valledupar,Cesar,Caribbean,2022,4500.0,57917,287099,45493.0,61.3,70.6,1,7329
+Valledupar,Cesar,Caribbean,2023,4500.0,58480,279214,47753.8,61.2,98.7,1,2422
+Codazzi,Cesar,Caribbean,2015,1500.0,9453,232225,55688.2,53.3,0.0,0,94
+Codazzi,Cesar,Caribbean,2016,1500.0,9552,217298,59772.9,53.0,0.0,0,142
+Codazzi,Cesar,Caribbean,2017,1500.0,9650,251192,63068.8,50.3,0.0,0,322
+Codazzi,Cesar,Caribbean,2018,1500.0,9749,248115,60972.8,51.1,0.0,0,345
+Codazzi,Cesar,Caribbean,2019,1500.0,9847,246820,63557.3,52.4,0.0,0,252
+Codazzi,Cesar,Caribbean,2020,1500.0,9945,263428,62659.9,50.6,0.0,0,185
+Codazzi,Cesar,Caribbean,2021,1500.0,10044,265636,59634.2,49.9,0.0,0,70
+Codazzi,Cesar,Caribbean,2022,1500.0,10142,252199,65195.1,51.7,0.0,1,313
+Codazzi,Cesar,Caribbean,2023,1500.0,10241,266530,67314.1,50.2,0.0,0,83
+Santa Marta,Magdalena,Caribbean,2015,2400.0,28693,60493,16063.2,58.2,0.0,1,0
+Santa Marta,Magdalena,Caribbean,2016,2400.0,28992,60834,17322.5,55.7,0.0,2,46
+Santa Marta,Magdalena,Caribbean,2017,2400.0,29291,66173,15786.0,54.6,0.0,1,92
+Santa Marta,Magdalena,Caribbean,2018,2400.0,29589,65114,16121.7,54.1,0.0,1,64
+Santa Marta,Magdalena,Caribbean,2019,2400.0,29888,69953,19054.8,55.5,0.0,1,34
+Santa Marta,Magdalena,Caribbean,2020,2400.0,30187,71131,17079.1,53.3,0.0,1,87
+Santa Marta,Magdalena,Caribbean,2021,2400.0,30486,69018,18592.9,53.3,0.0,1,44
+Santa Marta,Magdalena,Caribbean,2022,2400.0,30785,70366,17788.0,53.1,0.0,1,239
+Santa Marta,Magdalena,Caribbean,2023,2400.0,31084,72512,18814.4,52.2,0.0,1,98
+Ciénaga,Magdalena,Caribbean,2015,1200.0,43538,38726,4476.4,49.6,0.0,1,103
+Ciénaga,Magdalena,Caribbean,2016,1200.0,43992,40604,4205.9,50.3,0.0,2,33
+Ciénaga,Magdalena,Caribbean,2017,1200.0,44445,44656,4597.4,50.6,0.0,2,81
+Ciénaga,Magdalena,Caribbean,2018,1200.0,44899,45823,4800.2,49.9,0.0,1,68
+Ciénaga,Magdalena,Caribbean,2019,1200.0,45352,47547,4728.1,48.6,0.0,2,76
+Ciénaga,Magdalena,Caribbean,2020,1200.0,45806,47507,4887.4,49.2,0.0,2,68
+Ciénaga,Magdalena,Caribbean,2021,1200.0,46259,51146,4944.5,50.4,0.0,1,94
+Ciénaga,Magdalena,Caribbean,2022,1200.0,46713,52803,4832.7,48.3,0.0,1,95
+Ciénaga,Magdalena,Caribbean,2023,1200.0,47167,56656,4979.0,46.6,0.0,2,105
+Aracataca,Magdalena,Caribbean,2015,1500.0,16461,57371,6652.4,57.7,0.0,2,0
+Aracataca,Magdalena,Caribbean,2016,1500.0,16633,68196,7008.2,56.5,0.0,2,95
+Aracataca,Magdalena,Caribbean,2017,1500.0,16804,66953,7053.3,56.4,0.0,1,313
+Aracataca,Magdalena,Caribbean,2018,1500.0,16976,65257,7552.7,55.8,0.0,1,186
+Aracataca,Magdalena,Caribbean,2019,1500.0,17147,67971,7096.1,55.7,0.0,2,1046
+Aracataca,Magdalena,Caribbean,2020,1500.0,17318,72417,7921.3,54.7,0.0,3,253
+Aracataca,Magdalena,Caribbean,2021,1500.0,17490,73938,7265.9,55.6,0.0,1,407
+Aracataca,Magdalena,Caribbean,2022,1500.0,17661,73102,7399.1,53.8,0.0,1,544
+Aracataca,Magdalena,Caribbean,2023,1500.0,17833,82557,7242.1,55.0,0.0,3,312
+Fundación,Magdalena,Caribbean,2015,900.0,46451,53080,17481.9,86.6,0.0,0,18
+Fundación,Magdalena,Caribbean,2016,900.0,46935,53027,18834.7,84.8,0.0,0,34
+Fundación,Magdalena,Caribbean,2017,900.0,47419,65385,19299.9,83.4,0.0,1,18
+Fundación,Magdalena,Caribbean,2018,900.0,47903,61929,21379.8,84.2,0.0,0,5
+Fundación,Magdalena,Caribbean,2019,900.0,48387,60737,20442.5,83.2,0.0,0,4
+Fundación,Magdalena,Caribbean,2020,900.0,48870,68539,21164.9,82.8,0.0,0,11
+Fundación,Magdalena,Caribbean,2021,900.0,49354,63629,20935.5,82.9,0.0,0,27
+Fundación,Magdalena,Caribbean,2022,900.0,49838,65216,21945.9,82.9,0.0,0,80
+Fundación,Magdalena,Caribbean,2023,900.0,50322,68801,21807.7,82.1,0.0,0,22
+Riohacha,La Guajira,Caribbean,2015,3100.0,31100,112970,21854.4,39.6,0.0,0,71
+Riohacha,La Guajira,Caribbean,2016,3100.0,31424,107307,23285.6,40.0,0.0,1,108
+Riohacha,La Guajira,Caribbean,2017,3100.0,31748,114003,22644.8,39.7,0.0,1,492
+Riohacha,La Guajira,Caribbean,2018,3100.0,32072,118573,23043.6,40.2,0.0,0,132
+Riohacha,La Guajira,Caribbean,2019,3100.0,32396,121222,23270.7,38.6,0.0,0,64
+Riohacha,La Guajira,Caribbean,2020,3100.0,32720,119477,23526.3,38.4,0.0,0,73
+Riohacha,La Guajira,Caribbean,2021,3100.0,33044,131027,23953.8,37.1,0.0,0,116
+Riohacha,La Guajira,Caribbean,2022,3100.0,33368,128905,24870.6,37.2,0.0,0,113
+Riohacha,La Guajira,Caribbean,2023,3100.0,33692,128668,25730.9,37.2,0.0,1,166
+Dibulla,La Guajira,Caribbean,2015,1900.0,104268,22746,184916.8,67.9,0.0,2,937
+Dibulla,La Guajira,Caribbean,2016,1900.0,105354,25159,185254.7,68.6,0.0,0,488
+Dibulla,La Guajira,Caribbean,2017,1900.0,106440,23445,181814.5,66.9,0.0,1,217
+Dibulla,La Guajira,Caribbean,2018,1900.0,107527,26826,182717.0,66.9,0.0,1,212
+Dibulla,La Guajira,Caribbean,2019,1900.0,108613,26879,180591.2,65.5,0.0,1,209
+Dibulla,La Guajira,Caribbean,2020,1900.0,109699,25757,193731.0,66.5,0.0,1,494
+Dibulla,La Guajira,Caribbean,2021,1900.0,110785,26188,201032.0,64.0,0.0,1,86
+Dibulla,La Guajira,Caribbean,2022,1900.0,111871,28416,185016.8,66.2,0.0,1,143
+Dibulla,La Guajira,Caribbean,2023,1900.0,112957,27993,200624.7,64.1,0.0,1,128
+Uribia,La Guajira,Caribbean,2015,7900.0,30367,168673,60141.3,58.3,101.0,0,2247
+Uribia,La Guajira,Caribbean,2016,7900.0,30683,168799,58768.0,57.8,123.0,1,1011
+Uribia,La Guajira,Caribbean,2017,7900.0,30999,189615,59640.3,57.1,101.8,0,816
+Uribia,La Guajira,Caribbean,2018,7900.0,31316,178443,60185.4,55.5,96.0,1,1626
+Uribia,La Guajira,Caribbean,2019,7900.0,31632,194863,62083.3,57.3,94.6,1,205
+Uribia,La Guajira,Caribbean,2020,7900.0,31948,214422,59289.0,55.7,93.0,0,199
+Uribia,La Guajira,Caribbean,2021,7900.0,32265,199343,68998.6,53.9,107.3,0,645
+Uribia,La Guajira,Caribbean,2022,7900.0,32581,203253,67813.3,54.7,84.9,0,446
+Uribia,La Guajira,Caribbean,2023,7900.0,32897,210728,69675.1,53.6,135.2,0,577
+Maicao,La Guajira,Caribbean,2015,4100.0,7270,243949,66303.1,69.6,0.0,1,114
+Maicao,La Guajira,Caribbean,2016,4100.0,7346,253289,64704.3,68.8,0.0,0,223
+Maicao,La Guajira,Caribbean,2017,4100.0,7421,246685,63152.2,68.1,0.0,0,278
+Maicao,La Guajira,Caribbean,2018,4100.0,7497,271102,71209.0,65.9,0.0,0,150
+Maicao,La Guajira,Caribbean,2019,4100.0,7573,260630,66700.7,67.7,0.0,0,62
+Maicao,La Guajira,Caribbean,2020,4100.0,7648,267855,67446.1,65.2,0.0,1,99
+Maicao,La Guajira,Caribbean,2021,4100.0,7724,297126,67713.0,66.6,0.0,0,400
+Maicao,La Guajira,Caribbean,2022,4100.0,7800,276397,68395.8,66.5,0.0,1,1039
+Maicao,La Guajira,Caribbean,2023,4100.0,7876,307275,69910.2,65.2,0.0,1,964
+Fonseca,La Guajira,Caribbean,2015,500.0,5751,30423,3014.7,39.1,0.0,2,44
+Fonseca,La Guajira,Caribbean,2016,500.0,5810,29055,2995.2,38.6,0.0,2,103
+Fonseca,La Guajira,Caribbean,2017,500.0,5870,31375,3257.7,37.2,0.0,1,87
+Fonseca,La Guajira,Caribbean,2018,500.0,5930,35691,3012.9,37.7,0.0,1,39
+Fonseca,La Guajira,Caribbean,2019,500.0,5990,36259,3199.5,38.3,0.0,0,64
+Fonseca,La Guajira,Caribbean,2020,500.0,6050,35841,3422.6,37.9,0.0,0,164
+Fonseca,La Guajira,Caribbean,2021,500.0,6110,37941,3217.9,37.6,0.0,1,96
+Fonseca,La Guajira,Caribbean,2022,500.0,6170,38984,3568.7,38.2,0.0,1,78
+Fonseca,La Guajira,Caribbean,2023,500.0,6230,38469,3243.1,36.8,0.0,0,36
+Tame,Arauca,Orinoquia,2015,5200.0,16298,68013,3280.7,50.1,78.1,1,224
+Tame,Arauca,Orinoquia,2016,5200.0,16467,65599,3444.4,49.4,69.2,0,14
+Tame,Arauca,Orinoquia,2017,5200.0,16637,79165,3696.8,48.8,69.1,1,98
+Tame,Arauca,Orinoquia,2018,5200.0,16807,70878,3715.4,47.8,82.9,0,39
+Tame,Arauca,Orinoquia,2019,5200.0,16977,72454,3847.1,48.2,80.6,0,68
+Tame,Arauca,Orinoquia,2020,5200.0,17147,76946,3861.7,46.9,69.1,1,230
+Tame,Arauca,Orinoquia,2021,5200.0,17316,74519,3683.0,46.6,63.3,0,159
+Tame,Arauca,Orinoquia,2022,5200.0,17486,87338,3663.2,46.7,80.4,0,47
+Tame,Arauca,Orinoquia,2023,5200.0,17656,81403,3883.5,44.9,57.2,0,60
+Saravena,Arauca,Orinoquia,2015,1000.0,25325,4700,2949.6,63.4,657.4,1,87
+Saravena,Arauca,Orinoquia,2016,1000.0,25588,4575,3029.9,60.4,682.2,0,43
+Saravena,Arauca,Orinoquia,2017,1000.0,25852,4876,2878.9,61.9,799.1,1,433
+Saravena,Arauca,Orinoquia,2018,1000.0,26116,5193,3066.1,61.0,837.3,0,548
+Saravena,Arauca,Orinoquia,2019,1000.0,26380,5204,2969.5,62.0,647.4,1,84
+Saravena,Arauca,Orinoquia,2020,1000.0,26644,5275,2972.5,59.8,742.1,0,91
+Saravena,Arauca,Orinoquia,2021,1000.0,26907,5563,3022.3,60.3,695.4,0,209
+Saravena,Arauca,Orinoquia,2022,1000.0,27171,5858,3109.7,60.3,778.7,0,178
+Saravena,Arauca,Orinoquia,2023,1000.0,27435,5820,2991.3,59.4,748.5,0,0
+Arauca,Arauca,Orinoquia,2015,5800.0,17090,46076,108784.8,36.9,0.0,0,482
+Arauca,Arauca,Orinoquia,2016,5800.0,17268,49974,116715.5,34.3,0.0,0,384
+Arauca,Arauca,Orinoquia,2017,5800.0,17446,48410,116188.4,34.3,0.0,0,151
+Arauca,Arauca,Orinoquia,2018,5800.0,17624,51444,107580.5,34.9,0.0,0,158
+Arauca,Arauca,Orinoquia,2019,5800.0,17802,56536,121446.8,33.9,0.0,0,100
+Arauca,Arauca,Orinoquia,2020,5800.0,17980,58455,119278.8,33.1,0.0,0,431
+Arauca,Arauca,Orinoquia,2021,5800.0,18158,62521,119786.2,32.6,0.0,0,593
+Arauca,Arauca,Orinoquia,2022,5800.0,18336,61359,127766.0,34.2,0.0,0,261
+Arauca,Arauca,Orinoquia,2023,5800.0,18514,59726,121721.2,32.7,0.0,0,320
+Arauquita,Arauca,Orinoquia,2015,3000.0,2799,24272,17325.5,41.5,0.0,1,174
+Arauquita,Arauca,Orinoquia,2016,3000.0,2828,24444,17546.5,41.2,0.0,0,137
+Arauquita,Arauca,Orinoquia,2017,3000.0,2858,23848,17427.3,41.0,0.0,0,84
+Arauquita,Arauca,Orinoquia,2018,3000.0,2887,26896,17453.4,41.2,0.0,1,97
+Arauquita,Arauca,Orinoquia,2019,3000.0,2916,26118,17528.7,39.3,0.0,1,81
+Arauquita,Arauca,Orinoquia,2020,3000.0,2945,28534,17970.2,40.9,0.0,1,49
+Arauquita,Arauca,Orinoquia,2021,3000.0,2974,30189,18477.9,39.2,0.0,0,57
+Arauquita,Arauca,Orinoquia,2022,3000.0,3003,30691,17892.5,39.5,0.0,0,115
+Arauquita,Arauca,Orinoquia,2023,3000.0,3032,28752,18122.8,39.4,0.0,0,94
+Yopal,Casanare,Orinoquia,2015,2700.0,5942,126485,13995.8,73.1,213.0,1,315
+Yopal,Casanare,Orinoquia,2016,2700.0,6004,128175,14679.4,73.9,260.8,1,130
+Yopal,Casanare,Orinoquia,2017,2700.0,6066,134811,14569.9,72.4,177.8,1,549
+Yopal,Casanare,Orinoquia,2018,2700.0,6128,138082,16011.1,72.2,252.1,1,156
+Yopal,Casanare,Orinoquia,2019,2700.0,6190,138735,13868.9,73.5,214.8,0,185
+Yopal,Casanare,Orinoquia,2020,2700.0,6252,154631,16280.8,71.4,206.0,2,314
+Yopal,Casanare,Orinoquia,2021,2700.0,6314,149006,15769.9,71.9,234.7,1,267
+Yopal,Casanare,Orinoquia,2022,2700.0,6375,153991,16193.8,71.0,244.6,1,313
+Yopal,Casanare,Orinoquia,2023,2700.0,6437,162727,15042.5,71.1,200.3,1,195
+Paz de Ariporo,Casanare,Orinoquia,2015,7500.0,2959,98610,42670.1,38.8,0.0,0,115
+Paz de Ariporo,Casanare,Orinoquia,2016,7500.0,2990,100060,44716.5,38.6,0.0,1,204
+Paz de Ariporo,Casanare,Orinoquia,2017,7500.0,3021,111364,47868.6,36.2,0.0,1,1088
+Paz de Ariporo,Casanare,Orinoquia,2018,7500.0,3052,112237,46003.2,36.3,0.0,0,449
+Paz de Ariporo,Casanare,Orinoquia,2019,7500.0,3083,117583,46761.5,36.4,0.0,0,0
+Paz de Ariporo,Casanare,Orinoquia,2020,7500.0,3114,115874,43301.6,36.4,0.0,0,370
+Paz de Ariporo,Casanare,Orinoquia,2021,7500.0,3144,126253,49228.8,33.7,0.0,1,268
+Paz de Ariporo,Casanare,Orinoquia,2022,7500.0,3175,136100,47785.5,34.0,0.0,0,232
+Paz de Ariporo,Casanare,Orinoquia,2023,7500.0,3206,129615,54363.1,34.9,0.0,0,653
+Hato Corozal,Casanare,Orinoquia,2015,5800.0,14522,84298,72859.8,60.5,0.0,0,18
+Hato Corozal,Casanare,Orinoquia,2016,5800.0,14673,88433,72971.2,60.8,0.0,0,73
+Hato Corozal,Casanare,Orinoquia,2017,5800.0,14824,100284,72354.0,59.2,0.0,1,105
+Hato Corozal,Casanare,Orinoquia,2018,5800.0,14976,96001,73725.6,59.6,0.0,0,107
+Hato Corozal,Casanare,Orinoquia,2019,5800.0,15127,94209,75104.5,60.2,0.0,1,360
+Hato Corozal,Casanare,Orinoquia,2020,5800.0,15278,105188,77858.0,58.2,0.0,0,408
+Hato Corozal,Casanare,Orinoquia,2021,5800.0,15430,115069,82832.7,58.3,0.0,0,1082
+Hato Corozal,Casanare,Orinoquia,2022,5800.0,15581,103833,83117.3,56.9,0.0,1,2411
+Hato Corozal,Casanare,Orinoquia,2023,5800.0,15732,105329,79448.4,56.5,0.0,0,1403
+Aguazul,Casanare,Orinoquia,2015,1700.0,3291,50964,51157.2,44.2,0.0,0,75
+Aguazul,Casanare,Orinoquia,2016,1700.0,3326,52902,55932.0,42.8,0.0,0,110
+Aguazul,Casanare,Orinoquia,2017,1700.0,3360,57759,54246.1,43.0,0.0,0,128
+Aguazul,Casanare,Orinoquia,2018,1700.0,3394,58312,58181.2,42.5,0.0,0,73
+Aguazul,Casanare,Orinoquia,2019,1700.0,3428,58644,56901.8,43.2,0.0,0,154
+Aguazul,Casanare,Orinoquia,2020,1700.0,3463,62041,61897.3,42.0,0.0,0,588
+Aguazul,Casanare,Orinoquia,2021,1700.0,3497,61757,60294.5,41.6,0.0,0,558
+Aguazul,Casanare,Orinoquia,2022,1700.0,3531,62807,61270.0,40.3,0.0,0,212
+Aguazul,Casanare,Orinoquia,2023,1700.0,3565,69415,61142.5,41.4,0.0,0,318
+Maní,Casanare,Orinoquia,2015,3500.0,8946,102343,5854.5,63.7,0.0,0,95
+Maní,Casanare,Orinoquia,2016,3500.0,9040,105735,5836.2,63.5,0.0,0,199
+Maní,Casanare,Orinoquia,2017,3500.0,9133,101542,5738.9,61.8,0.0,0,133
+Maní,Casanare,Orinoquia,2018,3500.0,9226,104532,6560.9,61.2,0.0,0,54
+Maní,Casanare,Orinoquia,2019,3500.0,9319,100969,6489.1,61.9,0.0,0,78
+Maní,Casanare,Orinoquia,2020,3500.0,9412,110453,6409.0,59.4,0.0,0,141
+Maní,Casanare,Orinoquia,2021,3500.0,9506,112948,6405.8,60.6,0.0,0,274
+Maní,Casanare,Orinoquia,2022,3500.0,9599,118989,6704.8,61.4,0.0,1,281
+Maní,Casanare,Orinoquia,2023,3500.0,9692,122400,7222.8,60.5,0.0,0,1468
+San Luis de Palenque,Casanare,Orinoquia,2015,2400.0,11759,43378,16467.2,55.7,0.0,1,1838
+San Luis de Palenque,Casanare,Orinoquia,2016,2400.0,11881,43654,17136.1,54.6,0.0,3,187
+San Luis de Palenque,Casanare,Orinoquia,2017,2400.0,12004,42477,15885.5,52.4,0.0,2,308
+San Luis de Palenque,Casanare,Orinoquia,2018,2400.0,12126,47257,17038.8,53.0,0.0,1,239
+San Luis de Palenque,Casanare,Orinoquia,2019,2400.0,12249,45565,16575.4,53.4,0.0,2,160
+San Luis de Palenque,Casanare,Orinoquia,2020,2400.0,12371,44292,16937.2,53.0,0.0,1,652
+San Luis de Palenque,Casanare,Orinoquia,2021,2400.0,12494,48220,17680.2,52.4,0.0,1,759
+San Luis de Palenque,Casanare,Orinoquia,2022,2400.0,12616,49391,19034.1,52.8,0.0,2,466
+San Luis de Palenque,Casanare,Orinoquia,2023,2400.0,12738,51853,18196.3,53.6,0.0,2,470
+Chaparral,Tolima,Andean,2015,2200.0,60886,129263,11402.1,50.3,0.0,2,141
+Chaparral,Tolima,Andean,2016,2200.0,61520,134268,11757.2,49.1,0.0,1,119
+Chaparral,Tolima,Andean,2017,2200.0,62154,144269,11843.4,47.7,0.0,3,103
+Chaparral,Tolima,Andean,2018,2200.0,62788,169861,12528.7,48.4,0.0,2,205
+Chaparral,Tolima,Andean,2019,2200.0,63423,152766,11638.8,47.4,0.0,2,386
+Chaparral,Tolima,Andean,2020,2200.0,64057,147177,12588.2,46.5,0.0,2,62
+Chaparral,Tolima,Andean,2021,2200.0,64691,164308,13527.2,45.3,0.0,2,0
+Chaparral,Tolima,Andean,2022,2200.0,65325,169196,12397.1,46.3,0.0,1,484
+Chaparral,Tolima,Andean,2023,2200.0,65960,171843,12832.2,45.6,0.0,1,361
+Planadas,Tolima,Andean,2015,1000.0,57655,18581,19121.1,45.5,1260.3,1,24
+Planadas,Tolima,Andean,2016,1000.0,58256,19397,18541.1,44.8,1203.6,0,18
+Planadas,Tolima,Andean,2017,1000.0,58857,20962,18897.8,45.8,915.3,0,121
+Planadas,Tolima,Andean,2018,1000.0,59457,22154,19322.9,44.3,1089.8,0,169
+Planadas,Tolima,Andean,2019,1000.0,60058,23535,19777.1,42.5,1320.1,1,110
+Planadas,Tolima,Andean,2020,1000.0,60658,23976,20921.1,42.9,1264.4,0,32
+Planadas,Tolima,Andean,2021,1000.0,61259,22626,22304.6,44.6,1275.1,1,84
+Planadas,Tolima,Andean,2022,1000.0,61859,23189,21676.5,43.8,1244.9,0,79
+Planadas,Tolima,Andean,2023,1000.0,62460,25151,24236.4,41.6,985.3,0,28
+Ibagué,Tolima,Andean,2015,1400.0,85594,40774,71643.9,39.4,0.0,1,83
+Ibagué,Tolima,Andean,2016,1400.0,86485,42290,72569.1,40.2,0.0,1,110
+Ibagué,Tolima,Andean,2017,1400.0,87377,46278,70109.3,40.2,0.0,3,38
+Ibagué,Tolima,Andean,2018,1400.0,88268,49156,70938.2,40.8,0.0,2,264
+Ibagué,Tolima,Andean,2019,1400.0,89160,51137,75002.1,40.2,0.0,1,357
+Ibagué,Tolima,Andean,2020,1400.0,90052,50658,74745.2,39.4,0.0,1,365
+Ibagué,Tolima,Andean,2021,1400.0,90943,53650,76344.1,38.1,0.0,1,264
+Ibagué,Tolima,Andean,2022,1400.0,91835,54979,75700.3,35.9,0.0,3,428
+Ibagué,Tolima,Andean,2023,1400.0,92726,55788,72798.5,36.7,0.0,1,81
+Rioblanco,Tolima,Andean,2015,1800.0,21940,46297,70571.6,49.4,0.0,1,170
+Rioblanco,Tolima,Andean,2016,1800.0,22168,43943,72906.7,48.6,0.0,2,121
+Rioblanco,Tolima,Andean,2017,1800.0,22397,47773,72401.6,48.7,0.0,2,365
+Rioblanco,Tolima,Andean,2018,1800.0,22625,45685,69313.4,49.4,0.0,1,1511
+Rioblanco,Tolima,Andean,2019,1800.0,22854,46375,74944.5,47.1,0.0,0,627
+Rioblanco,Tolima,Andean,2020,1800.0,23082,49811,74048.2,47.6,0.0,0,220
+Rioblanco,Tolima,Andean,2021,1800.0,23311,56803,75536.9,47.6,0.0,0,108
+Rioblanco,Tolima,Andean,2022,1800.0,23539,59308,77043.8,45.2,0.0,1,1019
+Rioblanco,Tolima,Andean,2023,1800.0,23768,51914,74669.7,45.4,0.0,2,185
+Neiva,Huila,Andean,2015,1500.0,21094,131920,25631.8,37.6,0.0,0,223
+Neiva,Huila,Andean,2016,1500.0,21314,131297,25970.6,37.9,0.0,0,469
+Neiva,Huila,Andean,2017,1500.0,21534,125798,27523.6,37.6,0.0,0,179
+Neiva,Huila,Andean,2018,1500.0,21753,137525,26688.5,35.8,0.0,0,201
+Neiva,Huila,Andean,2019,1500.0,21973,145252,26267.7,35.2,0.0,0,60
+Neiva,Huila,Andean,2020,1500.0,22193,141275,30389.3,35.7,0.0,1,135
+Neiva,Huila,Andean,2021,1500.0,22413,144748,28211.4,36.9,0.0,0,30
+Neiva,Huila,Andean,2022,1500.0,22632,155653,27786.3,36.5,0.0,1,266
+Neiva,Huila,Andean,2023,1500.0,22852,168340,27980.3,34.2,0.0,0,366
+Pitalito,Huila,Andean,2015,600.0,13585,20230,2111.9,34.0,0.0,0,18
+Pitalito,Huila,Andean,2016,600.0,13727,20236,2163.0,34.2,0.0,0,26
+Pitalito,Huila,Andean,2017,600.0,13868,21247,2462.7,33.5,0.0,1,22
+Pitalito,Huila,Andean,2018,600.0,14010,20010,2447.3,31.8,0.0,1,52
+Pitalito,Huila,Andean,2019,600.0,14151,23255,2389.2,34.4,0.0,1,203
+Pitalito,Huila,Andean,2020,600.0,14293,24011,2474.8,32.1,0.0,0,172
+Pitalito,Huila,Andean,2021,600.0,14434,23805,2562.9,32.7,0.0,1,286
+Pitalito,Huila,Andean,2022,600.0,14576,24346,2567.2,30.4,0.0,0,91
+Pitalito,Huila,Andean,2023,600.0,14717,25230,2480.7,30.7,0.0,1,40
+La Plata,Huila,Andean,2015,1400.0,12240,18343,11956.3,51.5,0.0,0,69
+La Plata,Huila,Andean,2016,1400.0,12367,18171,12156.2,53.5,0.0,0,239
+La Plata,Huila,Andean,2017,1400.0,12495,18529,12127.9,51.3,0.0,1,227
+La Plata,Huila,Andean,2018,1400.0,12622,19357,13487.4,51.6,0.0,0,76
+La Plata,Huila,Andean,2019,1400.0,12750,19371,13129.5,53.0,0.0,0,196
+La Plata,Huila,Andean,2020,1400.0,12877,20625,13764.1,51.7,0.0,0,40
+La Plata,Huila,Andean,2021,1400.0,13005,23055,12881.7,50.2,0.0,0,84
+La Plata,Huila,Andean,2022,1400.0,13132,21428,14113.6,49.5,0.0,0,225
+La Plata,Huila,Andean,2023,1400.0,13260,22677,13914.9,49.4,0.0,0,642
+Algeciras,Huila,Andean,2015,600.0,26034,7734,13413.5,36.2,0.0,0,41
+Algeciras,Huila,Andean,2016,600.0,26306,8253,13605.0,35.2,0.0,0,24
+Algeciras,Huila,Andean,2017,600.0,26577,8295,14610.6,33.6,0.0,0,2
+Algeciras,Huila,Andean,2018,600.0,26848,9111,14925.5,34.7,0.0,0,7
+Algeciras,Huila,Andean,2019,600.0,27119,8793,15511.3,34.1,0.0,0,19
+Algeciras,Huila,Andean,2020,600.0,27390,8752,14597.6,33.1,0.0,0,28
+Algeciras,Huila,Andean,2021,600.0,27661,9429,15553.6,33.5,0.0,0,53
+Algeciras,Huila,Andean,2022,600.0,27933,9546,15630.7,32.1,0.0,0,100
+Algeciras,Huila,Andean,2023,600.0,28204,9829,15587.2,33.0,0.0,0,27
+Tunja,Boyacá,Andean,2015,120.0,1558,4325,2561.2,25.3,0.0,0,6
+Tunja,Boyacá,Andean,2016,120.0,1575,4424,2674.0,24.7,0.0,0,1
+Tunja,Boyacá,Andean,2017,120.0,1591,4530,2647.4,24.0,0.0,1,1
+Tunja,Boyacá,Andean,2018,120.0,1607,4691,2918.8,25.3,0.0,0,0
+Tunja,Boyacá,Andean,2019,120.0,1623,4800,2795.7,24.5,0.0,0,0
+Tunja,Boyacá,Andean,2020,120.0,1640,4758,2949.6,24.2,0.0,0,0
+Tunja,Boyacá,Andean,2021,120.0,1656,5050,2813.5,23.9,0.0,1,0
+Tunja,Boyacá,Andean,2022,120.0,1672,5452,2864.6,23.0,0.0,0,0
+Tunja,Boyacá,Andean,2023,120.0,1688,5320,3090.2,23.6,0.0,0,2
+Puerto Boyacá,Boyacá,Andean,2015,1500.0,26225,28089,41547.8,43.3,0.0,0,82
+Puerto Boyacá,Boyacá,Andean,2016,1500.0,26498,28780,42516.9,43.3,0.0,0,475
+Puerto Boyacá,Boyacá,Andean,2017,1500.0,26771,29870,42632.7,42.4,0.0,1,164
+Puerto Boyacá,Boyacá,Andean,2018,1500.0,27044,30807,44556.8,42.1,0.0,0,0
+Puerto Boyacá,Boyacá,Andean,2019,1500.0,27317,32084,44409.1,40.8,0.0,0,517
+Puerto Boyacá,Boyacá,Andean,2020,1500.0,27591,35268,45664.7,40.2,0.0,1,215
+Puerto Boyacá,Boyacá,Andean,2021,1500.0,27864,33064,46148.5,41.1,0.0,0,48
+Puerto Boyacá,Boyacá,Andean,2022,1500.0,28137,39792,45905.6,39.9,0.0,0,113
+Puerto Boyacá,Boyacá,Andean,2023,1500.0,28410,37277,49544.7,40.5,0.0,0,187
+Otanche,Boyacá,Andean,2015,500.0,29491,15583,11012.2,57.2,0.0,0,81
+Otanche,Boyacá,Andean,2016,500.0,29798,17228,11850.3,55.4,0.0,0,29
+Otanche,Boyacá,Andean,2017,500.0,30105,18794,10862.6,56.6,0.0,1,50
+Otanche,Boyacá,Andean,2018,500.0,30412,19513,11428.6,54.6,0.0,0,70
+Otanche,Boyacá,Andean,2019,500.0,30720,19166,12229.1,55.7,0.0,0,38
+Otanche,Boyacá,Andean,2020,500.0,31027,18879,12070.5,53.6,0.0,1,89
+Otanche,Boyacá,Andean,2021,500.0,31334,21139,11539.2,55.0,0.0,0,45
+Otanche,Boyacá,Andean,2022,500.0,31641,20380,12213.5,53.5,0.0,0,557
+Otanche,Boyacá,Andean,2023,500.0,31948,22277,11810.2,52.8,0.0,1,530
+Manizales,Caldas,Andean,2015,510.0,48817,9578,13988.1,26.7,0.0,3,123
+Manizales,Caldas,Andean,2016,510.0,49325,10204,14727.3,25.7,0.0,2,61
+Manizales,Caldas,Andean,2017,510.0,49834,10666,14548.3,26.4,0.0,4,128
+Manizales,Caldas,Andean,2018,510.0,50342,10776,15941.1,25.1,0.0,3,127
+Manizales,Caldas,Andean,2019,510.0,50851,11313,15863.5,25.3,0.0,3,45
+Manizales,Caldas,Andean,2020,510.0,51359,10824,15984.2,26.1,0.0,2,130
+Manizales,Caldas,Andean,2021,510.0,51868,12211,14986.8,24.8,0.0,3,158
+Manizales,Caldas,Andean,2022,510.0,52376,12356,16548.5,24.0,0.0,3,150
+Manizales,Caldas,Andean,2023,510.0,52885,11982,16799.0,24.1,0.0,3,113
+Pensilvania,Caldas,Andean,2015,1100.0,5055,5305,13405.3,55.7,0.0,1,36
+Pensilvania,Caldas,Andean,2016,1100.0,5108,5326,14516.3,54.2,0.0,0,75
+Pensilvania,Caldas,Andean,2017,1100.0,5160,5350,14441.3,54.4,0.0,1,0
+Pensilvania,Caldas,Andean,2018,1100.0,5213,5831,13689.2,55.1,0.0,1,47
+Pensilvania,Caldas,Andean,2019,1100.0,5265,5722,14423.8,54.7,0.0,2,147
+Pensilvania,Caldas,Andean,2020,1100.0,5318,6133,15078.3,55.3,0.0,1,113
+Pensilvania,Caldas,Andean,2021,1100.0,5371,6579,15786.8,53.5,0.0,1,277
+Pensilvania,Caldas,Andean,2022,1100.0,5423,6399,15873.3,54.1,0.0,0,183
+Pensilvania,Caldas,Andean,2023,1100.0,5476,6811,14588.7,51.9,0.0,1,47
+Pereira,Risaralda,Andean,2015,600.0,12493,14389,9099.0,66.0,0.0,0,21
+Pereira,Risaralda,Andean,2016,600.0,12623,15419,9451.2,64.9,0.0,0,26
+Pereira,Risaralda,Andean,2017,600.0,12753,15902,9200.2,64.4,0.0,0,33
+Pereira,Risaralda,Andean,2018,600.0,12883,15479,9668.2,64.0,0.0,0,0
+Pereira,Risaralda,Andean,2019,600.0,13013,17099,10864.6,62.0,0.0,0,15
+Pereira,Risaralda,Andean,2020,600.0,13143,16952,9791.8,62.3,0.0,0,27
+Pereira,Risaralda,Andean,2021,600.0,13273,18306,9445.9,62.6,0.0,0,31
+Pereira,Risaralda,Andean,2022,600.0,13403,18429,10700.6,62.4,0.0,1,43
+Pereira,Risaralda,Andean,2023,600.0,13534,19274,11447.5,62.0,0.0,0,36
+Armenia,Quindío,Andean,2015,120.0,6547,1065,571.5,63.8,0.0,0,1
+Armenia,Quindío,Andean,2016,120.0,6615,1019,682.6,62.3,0.0,1,4
+Armenia,Quindío,Andean,2017,120.0,6683,1095,616.4,62.4,0.0,0,0
+Armenia,Quindío,Andean,2018,120.0,6751,1157,569.8,60.9,0.0,0,0
+Armenia,Quindío,Andean,2019,120.0,6819,1194,619.7,60.8,0.0,0,5
+Armenia,Quindío,Andean,2020,120.0,6887,1234,653.3,59.8,0.0,0,3
+Armenia,Quindío,Andean,2021,120.0,6956,1301,616.3,59.9,0.0,0,3
+Armenia,Quindío,Andean,2022,120.0,7024,1183,681.9,60.1,0.0,0,3
+Armenia,Quindío,Andean,2023,120.0,7092,1378,696.1,59.5,0.0,0,6
+Bogotá D.C.,Cundinamarca,Andean,2015,1600.0,183099,10512,24471.6,16.0,0.0,0,6
+Bogotá D.C.,Cundinamarca,Andean,2016,1600.0,185007,10980,23068.3,17.3,0.0,0,4
+Bogotá D.C.,Cundinamarca,Andean,2017,1600.0,186914,11718,24671.9,15.5,0.0,1,14
+Bogotá D.C.,Cundinamarca,Andean,2018,1600.0,188821,11670,23274.3,14.9,0.0,0,12
+Bogotá D.C.,Cundinamarca,Andean,2019,1600.0,190728,12217,23414.9,15.1,0.0,0,3
+Bogotá D.C.,Cundinamarca,Andean,2020,1600.0,192636,13210,25062.8,15.0,0.0,1,8
+Bogotá D.C.,Cundinamarca,Andean,2021,1600.0,194543,13494,26580.2,13.9,0.0,1,1
+Bogotá D.C.,Cundinamarca,Andean,2022,1600.0,196450,13619,26164.9,13.8,0.0,0,9
+Bogotá D.C.,Cundinamarca,Andean,2023,1600.0,198358,14101,26153.3,13.3,0.0,0,4
+Soacha,Cundinamarca,Andean,2015,185.0,11175,1321,1174.0,26.3,0.0,0,2
+Soacha,Cundinamarca,Andean,2016,185.0,11291,1537,1235.2,26.2,0.0,0,3
+Soacha,Cundinamarca,Andean,2017,185.0,11407,1508,1244.0,27.1,0.0,0,3
+Soacha,Cundinamarca,Andean,2018,185.0,11524,1458,1143.7,26.1,0.0,1,1
+Soacha,Cundinamarca,Andean,2019,185.0,11640,1517,1228.8,26.6,0.0,0,0
+Soacha,Cundinamarca,Andean,2020,185.0,11757,1652,1206.4,24.7,0.0,1,0
+Soacha,Cundinamarca,Andean,2021,185.0,11873,1528,1335.4,23.5,0.0,0,1
+Soacha,Cundinamarca,Andean,2022,185.0,11989,1659,1394.0,23.2,0.0,0,0
+Soacha,Cundinamarca,Andean,2023,185.0,12106,1723,1318.0,23.8,0.0,0,0
+La Palma,Cundinamarca,Andean,2015,200.0,84915,3968,6593.1,5.5,0.0,1,3
+La Palma,Cundinamarca,Andean,2016,200.0,85799,4362,6654.7,6.0,0.0,0,3
+La Palma,Cundinamarca,Andean,2017,200.0,86684,4279,6861.5,5.1,0.0,0,4
+La Palma,Cundinamarca,Andean,2018,200.0,87569,4942,7365.6,6.0,0.0,0,5
+La Palma,Cundinamarca,Andean,2019,200.0,88453,4855,7371.1,4.5,0.0,0,10
+La Palma,Cundinamarca,Andean,2020,200.0,89338,4998,7011.3,3.7,0.0,0,21
+La Palma,Cundinamarca,Andean,2021,200.0,90222,5245,7384.5,5.0,0.0,0,48
+La Palma,Cundinamarca,Andean,2022,200.0,91107,5014,7281.9,4.4,0.0,0,12
+La Palma,Cundinamarca,Andean,2023,200.0,91991,5522,8058.7,3.0,0.0,0,0
+Sincelejo,Sucre,Caribbean,2015,280.0,13985,2339,758.6,50.4,0.0,1,38
+Sincelejo,Sucre,Caribbean,2016,280.0,14131,2729,839.3,48.2,0.0,0,4
+Sincelejo,Sucre,Caribbean,2017,280.0,14277,2957,819.0,48.2,0.0,0,7
+Sincelejo,Sucre,Caribbean,2018,280.0,14422,2715,818.4,48.9,0.0,0,8
+Sincelejo,Sucre,Caribbean,2019,280.0,14568,2983,907.6,47.0,0.0,1,39
+Sincelejo,Sucre,Caribbean,2020,280.0,14714,2940,816.5,47.6,0.0,1,23
+Sincelejo,Sucre,Caribbean,2021,280.0,14859,3270,966.2,47.4,0.0,0,46
+Sincelejo,Sucre,Caribbean,2022,280.0,15005,3068,952.3,47.1,0.0,0,0
+Sincelejo,Sucre,Caribbean,2023,280.0,15151,3175,907.8,46.9,0.0,0,105
+San Onofre,Sucre,Caribbean,2015,1100.0,29281,19816,6167.5,79.7,0.0,0,54
+San Onofre,Sucre,Caribbean,2016,1100.0,29586,20306,6205.8,81.0,0.0,0,121
+San Onofre,Sucre,Caribbean,2017,1100.0,29891,20302,6785.1,79.8,0.0,1,311
+San Onofre,Sucre,Caribbean,2018,1100.0,30196,24560,6470.7,80.4,0.0,0,189
+San Onofre,Sucre,Caribbean,2019,1100.0,30501,22185,6939.5,79.4,0.0,1,109
+San Onofre,Sucre,Caribbean,2020,1100.0,30806,23079,7039.4,78.3,0.0,0,93
+San Onofre,Sucre,Caribbean,2021,1100.0,31111,24637,6557.7,77.3,0.0,0,138
+San Onofre,Sucre,Caribbean,2022,1100.0,31416,26010,7168.3,76.1,0.0,0,86
+San Onofre,Sucre,Caribbean,2023,1100.0,31721,25708,7435.1,76.2,0.0,0,80
+Barranquilla,Atlántico,Caribbean,2015,155.0,234374,2777,1004.3,7.7,0.0,1,2
+Barranquilla,Atlántico,Caribbean,2016,155.0,236816,2957,1015.5,8.2,0.0,2,2
+Barranquilla,Atlántico,Caribbean,2017,155.0,239257,2910,1001.8,8.1,0.0,0,1
+Barranquilla,Atlántico,Caribbean,2018,155.0,241699,3082,948.6,7.9,0.0,2,0
+Barranquilla,Atlántico,Caribbean,2019,155.0,244140,3238,1033.2,7.4,0.0,2,0
+Barranquilla,Atlántico,Caribbean,2020,155.0,246581,3506,1003.9,7.9,0.0,2,0
+Barranquilla,Atlántico,Caribbean,2021,155.0,249023,3372,1003.2,5.0,0.0,0,0
+Barranquilla,Atlántico,Caribbean,2022,155.0,251464,3359,1030.7,5.9,0.0,2,0
+Barranquilla,Atlántico,Caribbean,2023,155.0,253906,3590,1096.9,5.8,0.0,2,0
+Sabanalarga,Atlántico,Caribbean,2015,400.0,11581,8447,4802.5,30.3,0.0,1,0
+Sabanalarga,Atlántico,Caribbean,2016,400.0,11702,8276,5046.8,30.7,0.0,0,27
+Sabanalarga,Atlántico,Caribbean,2017,400.0,11823,8497,5444.1,29.5,0.0,1,75
+Sabanalarga,Atlántico,Caribbean,2018,400.0,11943,8691,5134.9,29.2,0.0,1,83
+Sabanalarga,Atlántico,Caribbean,2019,400.0,12064,9164,5565.7,27.4,0.0,2,37
+Sabanalarga,Atlántico,Caribbean,2020,400.0,12185,8627,5576.9,29.3,0.0,1,24
+Sabanalarga,Atlántico,Caribbean,2021,400.0,12305,9958,5658.1,29.4,0.0,1,57
+Sabanalarga,Atlántico,Caribbean,2022,400.0,12426,9736,5585.5,27.3,0.0,0,200
+Sabanalarga,Atlántico,Caribbean,2023,400.0,12547,10556,5959.8,28.0,0.0,2,58

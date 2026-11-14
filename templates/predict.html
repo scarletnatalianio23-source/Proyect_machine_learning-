@@ -1,0 +1,304 @@
+{% extends "base.html" %}
+{% block title %}Early-warning model | Forest Awareness{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/predict.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+{% endblock %}
+
+{% block content %}
+<section class="pred-hero">
+    <div class="container">
+        <h1 class="pred-title">Forest loss forecast by municipality</h1>
+        <p class="pred-lead">
+            Choose a municipality or type your own data. The {{ best_name }} model forecasts the hectares of forest it could lose
+            in the next three years and shows an alert level.
+            {% if can_simulate %}As {{ ROLE_LABELS[current_user['role']]|lower }}, you can also test what-if scenarios.{% endif %}
+        </p>
+    </div>
+</section>
+
+<section class="pred-body">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+                <form method="post" action="{{ url_for('predict_page') }}" class="pred-card" id="predict-form" novalidate>
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    <h2 class="pred-card-title"><i class="bi bi-pencil-square me-2"></i>Enter the data</h2>
+
+                    <label class="form-label fw-semibold" for="municipality">Start from a municipality <span class="text-muted fw-normal">(optional)</span></label>
+                    <select class="form-select mb-4" id="municipality" name="municipality"
+                            data-municipalities='{{ municipalities|tojson }}'>
+                        <option value="">Custom values</option>
+                        {% for m in municipalities %}
+                        <option value="{{ m.label }}" {% if m.label == selected %}selected{% endif %}>{{ m.label }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <h3 class="form-section"><i class="bi bi-clock-history me-1"></i>Recent history: hectares lost</h3>
+                    <div class="row g-2 mb-3">
+                        {% for name in history_fields %}
+                        <div class="col-4">
+                            <label class="form-label small fw-semibold" for="{{ name }}">{{ last_year - 2 + loop.index0 }}</label>
+                            <div class="input-group input-group-sm">
+                                <input type="number" inputmode="decimal" class="form-control {% if name in errors %}is-invalid{% endif %}"
+                                       id="{{ name }}" name="{{ name }}" min="0" max="60000" step="any" value="{{ values.get(name, '') }}" required>
+                                <span class="input-group-text">ha</span>
+                            </div>
+                            {% if name in errors %}<div class="small text-danger">{{ errors[name] }}</div>{% endif %}
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <h3 class="form-section"><i class="bi bi-sliders me-1"></i>Current conditions</h3>
+                    {% for name, label, unit, low, high, step, icon, help in fields %}
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold" for="{{ name }}">
+                            <i class="bi {{ icon }} me-1 field-icon"></i>{{ label }}
+                        </label>
+                        <div class="input-group">
+                            <input type="number" inputmode="decimal" class="form-control {% if name in errors %}is-invalid{% endif %}"
+                                   id="{{ name }}" name="{{ name }}" min="{{ low }}" max="{{ high }}" step="{{ step }}"
+                                   value="{{ values.get(name, '') }}" required>
+                            <span class="input-group-text">{{ unit }}</span>
+                            {% if name in errors %}<div class="invalid-feedback">{{ errors[name] }}</div>{% endif %}
+                        </div>
+                        <div class="form-text">{{ help }}</div>
+                    </div>
+                    {% endfor %}
+
+                    {% if can_simulate %}
+                    <div class="scenario-box">
+                        <h3 class="form-section mb-1"><i class="bi bi-diagram-3 me-1"></i>What-if scenario <span class="chip amber ms-1">Authority</span></h3>
+                        <p class="small text-muted mb-3">Move the sliders to test an intervention. The forecast is recalculated with the changed conditions in all three years.</p>
+                        {% for name, label, low, high, step, suffix in scenario_fields %}
+                        <div class="slider-row">
+                            <label for="{{ name }}" class="small fw-semibold">{{ label }}</label>
+                            <input type="range" class="form-range" id="{{ name }}" name="{{ name }}" min="{{ low }}" max="{{ high }}" step="{{ step }}" value="{{ scen_values[name] }}">
+                            <output class="slider-out" data-for="{{ name }}" data-suffix="{{ suffix }}"></output>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <div class="d-flex gap-2 mt-4">
+                        <button type="submit" class="btn btn-predict flex-grow-1">
+                            <i class="bi bi-magic me-2"></i>Forecast forest loss
+                        </button>
+                        <a href="{{ url_for('predict_page') }}" class="btn btn-outline-secondary">Clear</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-lg-6">
+                {% if result %}
+                {% set f = result.forecast %}
+                <div class="pred-card pred-result accent-{{ result.color }}" id="result" aria-live="polite">
+                    <div class="rf-hero">
+                        <span class="rf-model"><i class="bi bi-cpu me-2"></i>{{ result.name }} prediction</span>
+                        <p class="rf-where">{{ selected or 'Your own data' }} &middot; forecast for {{ f[0].year }}</p>
+                        <p class="rf-number">{{ '{:,}'.format(f[0].estimate) }}</p>
+                        <p class="rf-unit">hectares of forest could be lost</p>
+                        <p class="rf-range">Likely range: <strong>{{ '{:,}'.format(f[0].low) }}</strong> to <strong>{{ '{:,}'.format(f[0].high) }}</strong> ha</p>
+
+                        <div class="rf-tiles">
+                            <div class="rf-tile">
+                                <span class="rf-tile-label">Alert level</span>
+                                <span class="rf-tile-value"><span class="level-badge">{{ result.level }}</span></span>
+                            </div>
+                            <div class="rf-tile">
+                                <span class="rf-tile-label">Chance of a high alert</span>
+                                <span class="rf-tile-value">{{ result.prob }}%</span>
+                            </div>
+                            <div class="rf-tile">
+                                <span class="rf-tile-label">Compared with {{ last_year }}</span>
+                                <span class="rf-tile-value">
+                                    {% if result.change > 0 %}<span class="trend up"><i class="bi bi-arrow-up-right"></i> {{ result.change }}%</span>
+                                    {% elif result.change < 0 %}<span class="trend down"><i class="bi bi-arrow-down-right"></i> {{ -result.change }}%</span>
+                                    {% else %}<span class="trend">No change</span>{% endif %}
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="rf-sentence">
+                            In plain words: with the data entered, <strong>{{ selected or 'this place' }}</strong> could lose about
+                            <strong>{{ '{:,}'.format(f[0].estimate) }} hectares</strong> of forest in {{ f[0].year }}, roughly
+                            {{ '{:,}'.format((f[0].estimate * 1.4)|round|int) }} football fields. It lost {{ '{:,}'.format(result.last) }} ha in {{ last_year }}.
+                        </p>
+                    </div>
+
+                    {% set felled = [ (f[0].estimate / 50)|round(0, 'ceil')|int, 100 ]|min %}
+                    <div class="forest" data-felled="{{ felled }}" role="img" aria-label="{{ felled }} of 100 trees felled">
+                        <div class="forest-grid" id="forest-grid"></div>
+                        <p class="forest-caption">
+                            <i class="bi bi-tree-fill tree-on"></i> standing
+                            <i class="bi bi-circle-fill stump-dot"></i> felled in {{ f[0].year }}
+                            <span class="forest-scale">1 tree = 50 ha{% if f[0].estimate > 5000 %} &middot; capped at 5,000 ha{% endif %}</span>
+                        </p>
+                        <p class="forest-fields"><i class="bi bi-trophy-fill me-1"></i>About <strong>{{ '{:,}'.format((f[0].estimate * 1.4)|round|int) }}</strong> football fields of forest</p>
+                    </div>
+
+                    <div class="prob-box">
+                        <div class="d-flex justify-content-between small"><span>Chance of a High alert or worse in {{ f[0].year }}</span><strong>{{ result.prob }}%</strong></div>
+                        <div class="bar-track"><span class="bar-fill" style="width: {{ result.prob }}%; background: var(--coral)"></span></div>
+                    </div>
+
+                    <h3 class="drivers-title">Next three years</h3>
+                    <div class="year-cards">
+                        {% for item in f %}
+                        <div class="year-card">
+                            <div class="yc-year">{{ item.year }}</div>
+                            <div class="yc-num">{{ '{:,}'.format(item.estimate) }}</div>
+                            <div class="yc-range">{{ '{:,}'.format(item.low) }} to {{ '{:,}'.format(item.high) }} ha</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <p class="small text-muted mt-2 mb-0">Years 2 and 3 build on the previous forecast, so the range widens. Conditions are assumed to stay as entered.</p>
+
+                    <div class="chart-box mt-3" style="height:260px"><canvas id="chart-forecast"></canvas></div>
+
+                    {% if result.scenario %}
+                    <div class="scenario-result {% if result.avoided > 0 %}good{% else %}bad{% endif %}">
+                        <i class="bi {% if result.avoided > 0 %}bi-shield-check{% else %}bi-exclamation-octagon{% endif %}"></i>
+                        <div>
+                            {% if result.avoided > 0 %}
+                            <strong>{{ '{:,}'.format(result.avoided) }} ha avoided</strong> over three years with this scenario
+                            ({{ '{:,}'.format(result.scenario|sum(attribute='estimate')) }} ha instead of {{ '{:,}'.format(f|sum(attribute='estimate')) }} ha).
+                            {% elif result.avoided < 0 %}
+                            <strong>{{ '{:,}'.format(-result.avoided) }} ha more</strong> over three years with this scenario.
+                            {% else %}This scenario does not change the forecast.{% endif %}
+                            <div class="small text-muted">The simulator shows associations learned from simulated data, not proven cause and effect.</div>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <h3 class="drivers-title">What moves this forecast</h3>
+                    <ul class="drivers">
+                        {% for d in result.drivers %}
+                        <li>
+                            <span class="drv-name">{{ d.label }}</span>
+                            <span class="drv-track"><span class="drv-fill {{ d.direction }}" style="width: {{ d.width }}%"></span></span>
+                            <span class="drv-dir">{% if d.direction == 'up' %}<i class="bi bi-arrow-up-right"></i> raises{% else %}<i class="bi bi-arrow-down-right"></i> lowers{% endif %}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+
+                    <div class="advice">
+                        <h3 class="drivers-title mt-0"><i class="bi bi-megaphone me-1"></i>What to do</h3>
+                        <ul class="mb-0">{% for tip in result.advice %}<li>{{ tip }}</li>{% endfor %}</ul>
+                    </div>
+                </div>
+                <div id="forecast-data" data-chart='{{ result.chart|tojson }}' hidden></div>
+                {% else %}
+                <div class="pred-card pred-empty">
+                    <i class="bi bi-tree-fill empty-icon"></i>
+                    <h2 class="pred-card-title">Your forecast will appear here</h2>
+                    <p>Pick a municipality to fill the form, check the numbers and press <strong>Forecast forest loss</strong>.</p>
+                </div>
+                {% endif %}
+
+                <div class="pred-card pred-about mt-4">
+                    <h3 class="about-title"><i class="bi bi-info-circle me-2"></i>About the model</h3>
+                    <p class="mb-2">
+                        <strong>{{ best_name }}</strong> is the model that won the <a href="{{ url_for('models_page') }}">comparison</a>
+                        (average error of {{ mae }} ha when forecasting years it had not seen).
+                    </p>
+                    <p class="about-note mb-0">
+                        <i class="bi bi-exclamation-triangle me-1"></i>
+                        Educational prototype trained on a <strong>simulated</strong> dataset. Results are illustrative and are not official IDEAM figures.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function () {
+    var select = document.getElementById("municipality");
+    var list = JSON.parse(select.dataset.municipalities);
+    var names = ["loss_a", "loss_b", "loss_c", "area_km2", "population", "cattle_heads", "planted_area_ha", "nbi_pct", "coca_ha", "armed_groups"];
+
+    select.addEventListener("change", function () {
+        var m = list.find(function (item) { return item.label === select.value; });
+        if (!m) { return; }
+        names.forEach(function (n) {
+            var input = document.getElementById(n);
+            input.value = m[n];
+            input.classList.remove("is-invalid");
+        });
+    });
+    names.forEach(function (n) {
+        document.getElementById(n).addEventListener("input", function () { select.value = ""; });
+    });
+
+    // Scenario sliders show their value
+    Array.prototype.forEach.call(document.querySelectorAll(".slider-out"), function (out) {
+        var input = document.getElementById(out.dataset.for);
+        function show() {
+            var v = Number(input.value);
+            out.textContent = (v > 0 ? "+" : "") + v + out.dataset.suffix;
+            out.classList.toggle("changed", v !== 0);
+        }
+        input.addEventListener("input", show);
+        show();
+    });
+
+    // Animated forest: felled trees fall one by one
+    var forest = document.querySelector(".forest");
+    if (forest) {
+        var grid = document.getElementById("forest-grid");
+        var felled = parseInt(forest.dataset.felled, 10) || 0;
+        var order = [];
+        for (var i = 0; i < 100; i++) { order.push(i); }
+        var seed = 7;
+        for (var j = order.length - 1; j > 0; j--) {
+            seed = (seed * 9301 + 49297) % 233280;
+            var k = Math.floor(seed / 233280 * (j + 1));
+            var tmp = order[j]; order[j] = order[k]; order[k] = tmp;
+        }
+        var cells = [];
+        for (var c = 0; c < 100; c++) {
+            var cell = document.createElement("span");
+            cell.className = "tree-cell";
+            cell.innerHTML = '<i class="bi bi-tree-fill tree"></i><i class="stump"></i>';
+            cell.style.setProperty("--sway", (c % 7) * 0.35 + "s");
+            grid.appendChild(cell);
+            cells.push(cell);
+        }
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        order.slice(0, felled).forEach(function (index, n) {
+            setTimeout(function () { cells[index].classList.add("felled"); },
+                       reduce ? 0 : 500 + n * Math.min(60, 2200 / Math.max(felled, 1)));
+        });
+    }
+
+    // Forecast chart: history, forecast, range and optional scenario
+    var holder = document.getElementById("forecast-data");
+    if (holder && typeof Chart !== "undefined") {
+        var d = JSON.parse(holder.dataset.chart);
+        var sets = [
+            { label: "Low", data: d.low, borderColor: "transparent", backgroundColor: "transparent", pointRadius: 0, fill: false },
+            { label: "Likely range", data: d.high, borderColor: "transparent", backgroundColor: "rgba(217,120,45,.18)", pointRadius: 0, fill: "-1" },
+            { label: "History", data: d.history, borderColor: "#1f2a1c", backgroundColor: "#1f2a1c", tension: .25, pointRadius: 3 },
+            { label: "Forecast", data: d.forecast, borderColor: "#d9782d", backgroundColor: "#d9782d", borderDash: [6, 4], tension: .25, pointRadius: 4 }
+        ];
+        if (d.scenario) {
+            sets.push({ label: "Scenario", data: d.scenario, borderColor: "#6f9a55", backgroundColor: "#6f9a55", borderDash: [2, 3], tension: .25, pointRadius: 4 });
+        }
+        new Chart(document.getElementById("chart-forecast"), {
+            type: "line", data: { labels: d.years, datasets: sets },
+            options: { maintainAspectRatio: false, spanGaps: false,
+                       plugins: { legend: { position: "bottom", labels: { filter: function (item) { return item.text !== "Low"; } } } },
+                       scales: { y: { beginAtZero: true, title: { display: true, text: "Hectares per year" } } } }
+        });
+    }
+
+    var result = document.getElementById("result");
+    if (result && window.innerWidth < 992) { result.scrollIntoView({ behavior: "smooth", block: "start" }); }
+})();
+</script>
+{% endblock %}

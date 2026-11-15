@@ -1,9 +1,0 @@
-variable,asimetría ANTES,asimetría DESPUÉS (log1p)
-lag0,5.94,-0.5
-lag1,6.04,-0.42
-lag2,5.99,-0.36
-area_km2,6.17,0.39
-population,5.65,-0.04
-cattle_heads,9.74,0.11
-planted_area_ha,2.9,-0.48
-coca_ha,5.95,1.2

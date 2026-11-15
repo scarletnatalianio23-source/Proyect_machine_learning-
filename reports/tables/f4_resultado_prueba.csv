@@ -1,5 +1,0 @@
-Modelo,MAE (ha),RMSE (ha),R² (log),R² (ha)
-Random Forest · Sin PCA (seleccionado),337.189,967.473,0.597,0.726
-Referente: Igual al año pasado,352.271,1055.886,0.571,0.674
-Referente: Promedio de los últimos 3 años,370.521,990.031,0.575,0.713
-Referente: Siempre la mediana,605.814,1920.373,-0.003,-0.079

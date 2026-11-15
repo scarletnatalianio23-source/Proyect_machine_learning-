@@ -1,4 +1,0 @@
-Criterio,Definición,Resultado en prueba 2023,Veredicto
-C1,El MAE en prueba (2023) debe ser MENOR O IGUAL que el del referente ingenuo 'igual al año pasado',337.2 ha vs 352.3 ha,CUMPLE
-C2,"El R² (escala log) en prueba debe ser ≥ 0,60",0.597,NO CUMPLE
-C3,"El intervalo de incertidumbre (±0,67σ, nominal 50 %) debe tener cobertura empírica entre 40 % y 60 % en prueba",55.3 %,CUMPLE

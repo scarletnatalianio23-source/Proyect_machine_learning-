@@ -145,7 +145,7 @@ DOC["references"].sort(key=lambda r: r.lower())
 # Resources shown on the home page (technical report, evidence, repository, system, guide, video).
 REPO_URL = "https://github.com/scarletnatalianio23-source/Proyect_machine_learning-"
 APP_URL = "https://forest-awareness-4qpy.onrender.com/"
-VIDEO_URL = ""  # paste the final video link here when it is published
+VIDEO_URL = "https://mailunicundiedu.sharepoint.com/:v:/r/sites/MachineLearningVideoFinal/_layouts/15/stream.aspx?id=%2Fsites%2FMachineLearningVideoFinal%2FShared%20Documents%2FGeneral%2FRecordings%2FFinal%20project%20video-20261116_225610-Grabaci%C3%B3n%20de%20la%20reuni%C3%B3n.mp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&share=cQqeBj3D84g1TJjge7r1xWl3EgUBGa--WEDb2dY4cNgdTNPRHA"
 RESOURCES = [
     {"icon": "bi-file-earmark-pdf", "title": "Technical report (PDF)", "text": "Final report with every PGC section, the six CRISP-ML(Q) phases, testing, deployment and each member's contributions.", "url": REPO_URL + "/blob/r0611/docs/Forest_Awareness_Technical_Report.pdf"},
     {"icon": "bi-diagram-3", "title": "CRISP-ML(Q) evidence", "text": "What each phase produced and where to find it in the repository.", "url": REPO_URL + "/blob/r0611/docs/CRISP-ML_EVIDENCE.md"},

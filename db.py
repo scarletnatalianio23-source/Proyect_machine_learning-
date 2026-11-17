@@ -11,10 +11,11 @@ DB_PATH = Path(os.environ.get("FOREST_DB", BASE / "instance" / "forest.db"))
 
 ROLES = ("citizen", "authority", "admin")
 ROLE_LABELS = {"citizen": "Citizen", "authority": "Authority", "admin": "Administrator"}
-# Institutional codes needed to register as authority or administrator (change them with env vars).
+# Institutional codes needed to register as authority or administrator. They come only from
+# environment variables (never from the repository); without them those roles cannot be registered.
 ROLE_CODES = {
-    "authority": os.environ.get("AUTHORITY_CODE", "AUTH-2026"),
-    "admin": os.environ.get("ADMIN_CODE", "ADMIN-2026"),
+    "authority": os.environ.get("AUTHORITY_CODE", ""),
+    "admin": os.environ.get("ADMIN_CODE", ""),
 }
 
 SCHEMA = """
@@ -42,11 +43,14 @@ CREATE TABLE IF NOT EXISTS forecasts (
 );
 """
 
-DEMO_USERS = [
-    ("Admin Demo", "admin@forest.test", "Admin123!", "admin"),
-    ("Authority Demo", "entity@forest.test", "Entity123!", "authority"),
-    ("Citizen Demo", "citizen@forest.test", "Citizen123!", "citizen"),
+# Optional test accounts for the instructor. An account is created on a brand-new database only if its
+# password is set in the environment (TEST_ADMIN_PASSWORD, TEST_AUTHORITY_PASSWORD, TEST_CITIZEN_PASSWORD).
+_TEST_ACCOUNTS = [
+    ("Admin Test", "admin@forest.test", "TEST_ADMIN_PASSWORD", "admin"),
+    ("Authority Test", "entity@forest.test", "TEST_AUTHORITY_PASSWORD", "authority"),
+    ("Citizen Test", "citizen@forest.test", "TEST_CITIZEN_PASSWORD", "citizen"),
 ]
+DEMO_USERS = [(n, e, os.environ[v], r) for n, e, v, r in _TEST_ACCOUNTS if os.environ.get(v)]
 
 
 def get_db():
@@ -65,7 +69,7 @@ def close_db(_exc=None):
 
 
 def init_db():
-    """Create the tables and, on a brand-new database, three demo accounts."""
+    """Create the tables and, on a brand-new database, the optional test accounts."""
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     db = sqlite3.connect(DB_PATH)
     db.executescript(SCHEMA)

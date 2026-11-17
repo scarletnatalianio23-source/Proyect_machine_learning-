@@ -79,17 +79,33 @@ DOC = {
                  "a decision policy through trial and reward; here, how to assign limited monitoring teams."},
     ],
     "phases": [
-        {"weeks": "Weeks 1-2", "name": "Understanding", "text": "Problem statement, objectives, review of IDEAM sources and public datasets."},
-        {"weeks": "Weeks 3-4", "name": "Data", "text": "Design and generation of the simulated municipal dataset, documentation of every variable."},
-        {"weeks": "Weeks 5-6", "name": "Modeling", "text": "Training and time-based comparison of the three models; analysis and choice of the final model."},
-        {"weeks": "Weeks 7-8", "name": "Application", "text": "Flask web app: registration, login and roles, forecast, alerts, scenario simulator and dashboard."},
-        {"weeks": "Week 9", "name": "Testing and delivery", "text": "Tests by role, documentation, final presentation."},
+        {"weeks": "All members", "name": "1. Business and data understanding",
+         "text": "Define the problem and the success criterion (lowest error on unseen years), review the IDEAM sources and the open municipal dataset, set the objectives and the three user roles. Deliverable: problem statement, objectives and the first draft of the data dictionary."},
+        {"weeks": "Julián", "name": "2. Data preparation",
+         "text": "Generate the simulated municipal dataset (seed 2026), document every variable, check ranges, log-transform the losses and build the panel with the losses of the three previous years. Deliverable: dataset CSV, DATA_DICTIONARY.md and generate_dataset.py."},
+        {"weeks": "Julián, Scarlet", "name": "3. Modeling",
+         "text": "Train linear regression, Random Forest and Gradient Boosting; fit K-Means (k = 4) on municipality profiles; implement Q-learning for 10 teams and 8 departments. Deliverable: train_models.py and models/bundle.joblib."},
+        {"weeks": "Scarlet", "name": "4. Evaluation",
+         "text": "Time-based validation on 2021, 2022 and 2023 with MAE, RMSE and R², comparison against three naive baselines, model selection and the plain-language Models page. Deliverable: models/report.json and the Models page."},
+        {"weeks": "Iris", "name": "5. Deployment",
+         "text": "Flask application with registration, login, three roles, CSRF protection, SQLite, forecast page with alerts and scenario simulator, authority dashboard, and publication on Render. Deliverable: published system and repository with README."},
+        {"weeks": "Iris, Scarlet", "name": "6. Monitoring and maintenance",
+         "text": "Forecast history with CSV export, administrator retraining, role-based functional tests and a maintenance procedure that compares new errors with the 319.1 ha reference. Deliverable: History page, retrain function and docs/CRISP-ML_EVIDENCE.md."},
     ],
     "method_note": (
-        "The methodology follows the CRISP-DM cycle (understanding, data, modeling, evaluation, deployment). "
-        "The web application is built with Flask and Bootstrap, and versioned with Git using one branch per work package."
+        "The methodology follows the six phases of CRISP-ML(Q): business and data understanding, data preparation, modeling, "
+        "evaluation, deployment, and monitoring and maintenance. The web application is built with Flask and Bootstrap and "
+        "versioned with Git using one branch per work package. The three members worked on every phase; the label shows who led each one."
     ),
     "references": [
+        'Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A., Tyukavina, A., Thau, D., Stehman, S. V., Goetz, S. J., Loveland, T. R., Kommareddy, A., Egorov, A., Chini, L., Justice, C. O., & Townshend, J. R. G. (2013). High-resolution global maps of 21st-century forest cover change. *Science, 342*(6160), 850-853. https://doi.org/10.1126/science.1244693',
+        'MacQueen, J. (1967). Some methods for classification and analysis of multivariate observations. In L. M. Le Cam & J. Neyman (Eds.), *Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability* (Vol. 1, pp. 281-297). University of California Press.',
+        'Rousseeuw, P. J. (1987). Silhouettes: A graphical aid to the interpretation and validation of cluster analysis. *Journal of Computational and Applied Mathematics, 20*, 53-65. https://doi.org/10.1016/0377-0427(87)90125-7',
+        'Studer, S., Bui, T. B., Drescher, C., Hanuschkin, A., Winkler, L., Peters, S., & Müller, K.-R. (2021). Towards CRISP-ML(Q): A machine learning process model with quality assurance methodology. *Machine Learning and Knowledge Extraction, 3*(2), 392-413. https://doi.org/10.3390/make3020020',
+        'Watkins, C. J. C. H., & Dayan, P. (1992). Q-learning. *Machine Learning, 8*(3-4), 279-292. https://doi.org/10.1007/BF00992698',
+        'Wirth, R., & Hipp, J. (2000). CRISP-DM: Towards a standard process model for data mining. In *Proceedings of the 4th International Conference on the Practical Applications of Knowledge Discovery and Data Mining* (pp. 29-39). Practical Application Company.',
+        'Redacción Cambio. (2024, July 8). *Gobierno presenta la cifra más baja en deforestación de los últimos 23 años*. Cambio. https://cambiocolombia.com/medio-ambiente/deforestacion-2023-disminucion-record-minambiente',
+        'Beltrán, J. (2025, July 30). *Aumentó la deforestación en Colombia: en el último año se perdieron más de 113.000 hectáreas*. Cambio. https://cambiocolombia.com/medio-ambiente/articulo/2025/7/aumento-la-deforestacion-en-colombia-en-el-ultimo-ano-se-perdieron-mas-de-113000',
         "Breiman, L. (2001). Random forests. *Machine Learning, 45*(1), 5-32. https://doi.org/10.1023/A:1010933404324",
         "Friedman, J. H. (2001). Greedy function approximation: A gradient boosting machine. *The Annals of Statistics, 29*(5), 1189-1232. https://doi.org/10.1214/aos/1013203451",
         "Hyndman, R. J., & Athanasopoulos, G. (2021). *Forecasting: Principles and practice* (3rd ed.). OTexts. https://otexts.com/fpp3/",
@@ -117,3 +133,24 @@ PROJECT = {
     "references": {"title": "References", "color": "#f15bb5",
                    "items": [r.replace("*", "") for r in DOC["references"]]},
 }
+
+
+DOC["references"].append(
+    "Hansen, M. C., Krylov, A., Tyukavina, A., Potapov, P. V., Turubanova, S., Zutta, B., Ifo, S., Margono, B., Stolle, F., & Moore, R. (2016). Humid tropical forest disturbance alerts using Landsat data. *Environmental Research Letters, 11*(3), Article 034008. https://doi.org/10.1088/1748-9326/11/3/034008")
+DOC["references"].append(
+    "Instituto de Hidrología, Meteorología y Estudios Ambientales. (n.d.). *¿Cómo el IDEAM mide y genera la cifra anual oficial de cambio de la superficie del bosque en Colombia?* [Guide]. "
+    "https://www.ideam.gov.co/sites/default/files/transparencia/informaciondelaentidad/noticias/guia6bpv_v5.pdf")
+DOC["references"].sort(key=lambda r: r.lower())
+
+# Resources shown on the home page (technical report, evidence, repository, system, guide, video).
+REPO_URL = "https://github.com/scarletnatalianio23-source/Proyect_machine_learning-"
+APP_URL = "https://forest-awareness-4qpy.onrender.com/"
+VIDEO_URL = ""  # paste the final video link here when it is published
+RESOURCES = [
+    {"icon": "bi-file-earmark-pdf", "title": "Technical report (PDF)", "text": "Final report with every PGC section, the six CRISP-ML(Q) phases, testing, deployment and each member's contributions.", "url": REPO_URL + "/blob/r0611/docs/Forest_Awareness_Technical_Report.pdf"},
+    {"icon": "bi-diagram-3", "title": "CRISP-ML(Q) evidence", "text": "What each phase produced and where to find it in the repository.", "url": REPO_URL + "/blob/r0611/docs/CRISP-ML_EVIDENCE.md"},
+    {"icon": "bi-github", "title": "Repository", "text": "Source code, training and evaluation scripts, dataset, dependencies and README.", "url": REPO_URL},
+    {"icon": "bi-box-arrow-up-right", "title": "Published system", "text": "The deployed application. Operational modules require an account.", "url": APP_URL},
+    {"icon": "bi-book", "title": "User documentation", "text": "Step-by-step guide for citizens, authorities and administrators.", "url": REPO_URL + "/blob/r0611/docs/USER_GUIDE.md"},
+    {"icon": "bi-camera-video", "title": "Presentation video", "text": "20-minute defense in English by the three team members.", "url": VIDEO_URL},
+]

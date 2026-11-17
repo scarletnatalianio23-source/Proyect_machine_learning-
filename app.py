@@ -15,7 +15,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 
 import db
 import ml
-from content import DOC, PROJECT, STATS
+from content import DOC, PROJECT, RESOURCES, STATS
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "dev-only-change-me")
@@ -192,8 +192,8 @@ def access():
                 errors.append("The password needs at least 8 characters.")
             if password != request.form.get("password2", ""):
                 errors.append("The passwords do not match.")
-            if role != "citizen" and not secrets.compare_digest(
-                    request.form.get("code", "").strip(), db.ROLE_CODES[role]):
+            if role != "citizen" and not (db.ROLE_CODES[role] and secrets.compare_digest(
+                    request.form.get("code", "").strip(), db.ROLE_CODES[role])):
                 errors.append(f"The institutional access code for {db.ROLE_LABELS[role]} is not valid.")
             if not errors:
                 try:
@@ -233,7 +233,7 @@ def logout():
 # ---------------------------------------------------------------------------
 @app.route("/")
 def home():
-    return render_template("index.html", stats=STATS, project=PROJECT, doc=DOC)
+    return render_template("index.html", stats=STATS, project=PROJECT, doc=DOC, resources=RESOURCES)
 
 
 @app.route("/project")

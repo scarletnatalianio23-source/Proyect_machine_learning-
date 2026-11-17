@@ -308,6 +308,23 @@
             </div>
         </article>
 
+        <article class="doc-block reveal" data-reveal id="resources">
+            <span class="doc-num">7</span>
+            <div>
+                <h3>Project resources</h3>
+                <div class="doc-grid">
+                    {% for r in resources %}
+                    <div class="doc-card c{{ loop.index0 % 5 }}">
+                        <h4><i class="bi {{ r.icon }} me-2"></i>{{ r.title }}</h4>
+                        <p>{{ r.text }}</p>
+                        {% if r.url %}<a href="{{ r.url }}" target="_blank" rel="noopener" class="resource-link">Open <i class="bi bi-arrow-up-right"></i></a>
+                        {% else %}<span class="resource-link muted">Link available when the video is published</span>{% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </article>
+
         <div class="text-center mt-5">
             <a href="{{ url_for('models_page') }}" class="btn btn-sun btn-lg">Next: compare the models <i class="bi bi-arrow-right ms-1"></i></a>
         </div>

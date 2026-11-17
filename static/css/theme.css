@@ -220,3 +220,14 @@ h1, .hero-title, .xhero h1, .pred-title { font-weight: 300; }
 .form-check-input:checked { background-color: var(--coral); border-color: var(--coral); }
 .btn-outline-secondary { --bs-btn-color: #6b5a3a; --bs-btn-border-color: #cdbf9d; --bs-btn-hover-bg: #6b5a3a; --bs-btn-hover-border-color: #6b5a3a; }
 .home-leaves span { opacity: .45; }
+
+/* Critical alert (dark brown badge) needs light text */
+.accent-plum .level-badge { color: #f8f3e6; }
+
+/* Methodology: owner labels may need two lines; resources links */
+.doc-weeks { white-space: normal; }
+.resource-link { display: inline-block; margin-top: .4rem; font-weight: 700; font-size: .88rem; color: #8a5a2b; text-decoration: none; }
+.resource-link:hover { text-decoration: underline; }
+.resource-link.muted { color: #8b8470; font-weight: 400; font-style: italic; }
+.home-dark .resource-link { color: var(--amber); }
+.home-dark .resource-link.muted { color: #bfb69b; }
